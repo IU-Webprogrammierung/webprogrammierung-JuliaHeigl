@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thematischer Blog über System im Garten, beim Gaming und auf Tour.">
+
+    <title>System in die Sache bringen</title>
+
+    <link rel="icon" href="assets/images/system.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+
+    <nav aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="wandern.html">Wandern</a></li>
+            <li><a href="radfahren.html">Radfahren</a></li>
+            <li><a href="garten.html">Garten</a></li>
+            <li><a href="gaming-online.html">Gaming online</a></li>
+            <li><a href="gaming-offline.html">Gaming offline</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <h1>Finde dein System</h1>
+        <p>
+            Du weißt nicht, was du hier überhaupt suchst?
+        </p>
+        <p>
+            Finde mit diesem kleinen Quiz heraus, wo du System in deine Sachen bringen könntest.
+        </p>
+        <p>
+            Wähle jeweils die auf dich am besten zutreffende Antwort aus, um direkt Themenvorschläge zu erhalten, die zu deinen Interessen passen.
+        </p>
+
+
+        <form>
+            <fieldset>
+                <legend>Wie sieht deine Ernährung aus?</legend>
+
+                <input type="radio" id="hotel-mama" name="quiz-ernaehrung" value="hotel-mama" required>
+                <label for="hotel-mama">Hotel Mama schmeckt am besten.</label><br>
+
+                <input type="radio" id="mcdonalds" name="quiz-ernaehrung" value="mcdonalds" required>
+                <label for="mcdonalds">Ich bin Stammkunde bei McDonalds.</label><br>
+
+                <input type="radio" id="jagd" name="quiz-ernaehrung" value="jagd" required>
+                <label for="jagd">Ich jage mir mein Essen selbst.</label><br>
+
+                <input type="radio" id="moehren" name="quiz-ernaehrung" value="moehren" required>
+                <label for="moehren">Meine Möhrchen hole ich mir aus dem eigenen Garten.</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Zockt das Kind in dir immer noch ab und zu gerne am PC?</legend>
+
+                <input type="radio" id="tetris" name="quiz-gaming" value="tetris" required>
+                <label for="tetris">Mein Abakus schafft leider nicht mehr als Tetris.</label><br>
+
+                <input type="radio" id="controller" name="quiz-gaming" value="controller" required>
+                <label for="controller">Ich bin schon mit dem Controller in der Hand auf die Welt gekommen.</label><br>
+
+                <input type="radio" id="minigames" name="quiz-gaming" value="minigames" required>
+                <label for="minigames">Die kostenlosen Mini-Games aus Computer-Zeitschriften sind als Zeitvertreib zwischendurch mal ganz nett.</label><br>
+
+                <input type="radio" id="programmierer" name="quiz-gaming" value="programmierer" required>
+                <label for="programmierer">Ich programmiere meine Spiele sogar selbst.</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Gehst du gerne wandern?</legend>
+
+                <input type="radio" id="seilbahn" name="quiz-wandern" value="seilbahn" required>
+                <label for="seilbahn">Nur wenn die Seilbahn bis zum Gipfel fährt und es am Ziel eine deftige Brotzeit gibt.</label><br>
+
+                <input type="radio" id="wegziel" name="quiz-wandern" value="wegziel" required>
+                <label for="wegziel">Der Weg ist das Ziel - Hauptsache viel Natur und wenig Zivilisation.</label><br>
+
+                <input type="radio" id="selfie" name="quiz-wandern" value="selfie" required>
+                <label for="selfie">Alles hat seinen Preis - auch ein Selfie am Gipfelkreuz.</label><br>
+
+                <input type="radio" id="gewaltmarsch" name="quiz-wandern" value="gewaltmarsch" required>
+                <label for="gewaltmarsch">Bei weniger als 30 km Länge und 1500 Höhenmeter rentiert es sich gar nicht loszulaufen. </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Was hältst du von einem Brettspieleabend?</legend>
+
+                <input type="radio" id="froehlicher-abend" name="quiz-brettspiele" value="froehlicher-abend" required>
+                <label for="froehlicher-abend">Nur wenn wir möglichst schnell zum feucht-fröhlichen Teil des Abends übergehen.</label><br>
+
+                <input type="radio" id="regeln-mensch" name="quiz-brettspiele" value="regeln-mensch" required>
+                <label for="regeln-mensch">Wie waren nochmal die Regeln von Mensch ärgere dich nicht?</label><br>
+
+                <input type="radio" id="komplexe-spielanleitung" name="quiz-brettspiele" value="komplexe-spielanleitung" required>
+                <label for="komplexe-spielanleitung">Wenn das Spiel nicht weniger als 30 Seiten Anleitung hat und mindestens 4 Stunden dauert, bin ich sofort mit dabei.</label><br>
+
+                <input type="radio" id="spielefundus" name="quiz-brettspiele" value="spielefundus" required>
+                <label for="spielefundus">Soll ich eine kleine Auswahl aus meinem 300-qm-Spielefundus mitbringen?</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Bist du sportbegeistert?</legend>
+
+                <input type="radio" id="chips" name="quiz-sport" value="chips" required>
+                <label for="chips">Ja - auf dem Sofa mit der Chipstüte neben mir.</label><br>
+
+                <input type="radio" id="fitnessapp" name="quiz-sport" value="fitnessapp" required>
+                <label for="fitnessapp">Ja - sonst erreiche ich die Ziele meiner Fitness-App nicht.</label><br>
+
+                <input type="radio" id="masochist" name="quiz-sport" value="masochist" required>
+                <label for="masochist">Nein - das Leben ist viel zu kurz, um sich derart masochistischen Freizeitaktivitäten zu widmen.</label><br>
+
+                <input type="radio" id="sportpensum" name="quiz-sport" value="sportpensum" required>
+                <label for="sportpensum">Wenn ich mein zweistündiges tägliches Sportpensum nicht erfüllt habe, bin ich ungenießbar.</label>
+            </fieldset>
+
+            <input type="submit" value="Themenvorschläge anzeigen">
+        </form>
+    </main>
+
+
+    <footer>
+        <nav aria-label="Footer-Navigation">
+            <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <p>© 2026 Julia Heigl - System in die Sache bringen</p>
+    </footer>
+
+<script src="assets/js/script.js"></script>    
+</body>
+</html>
