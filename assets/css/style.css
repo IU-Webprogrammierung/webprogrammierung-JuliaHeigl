@@ -1,0 +1,152 @@
+
+:root {
+    padding: 0;
+
+    /* Variablen Flächenfarben */
+    --color-main: #5B7F8F;
+    --color-second:  #244F63;
+    --color-neutral:  #3C3C3C; 
+    --color-accent: #D0DAE4;
+
+
+    /* Variablen Textfarben */
+    --color-text-main: #202020; 
+    --color-text-accent: #FFFFFF;
+    --color-text-muted: rgba(255,255,255,0.85);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Barlow', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* HEADER GRUNDLAGE */
+.site-header {
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1rem;
+    background-color: var(--color-main);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* DUNKLE BOX */
+.header-overlay {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: var(--color-neutral);
+    color: var(--color-text-accent);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+}
+
+/* TITELBLOCK */
+.header-titel {
+    text-align: center;
+    margin: 0 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.header-titel h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.08em;
+}
+
+.header-titel p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: var(--color-text-muted)
+}
+
+
+/* LOGO */
+.header-logo {
+    width: 80px;
+    height: auto;
+}
+
+.spiegel{
+    transform: scaleX(-1);
+}
+
+.main-nav {
+    background-color: var(--color-second);
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 0; 
+    box-shadow: 0 2px 6px var(--color-neutral);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    flex: 1;
+    max-width: 11rem;
+    border-right: 1px solid var(--color-accent);
+    display: flex; 
+}
+
+.main-nav li:first-child {
+    border-left: 1px solid var(--color-accent);
+}
+
+.main-nav a {
+    flex: 1;                 
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    padding: 0.5rem 1rem;
+    text-align: center;
+
+    color: var(--color-text-accent);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    transition: background-color 0.2s ease;
+}
+
+
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.main-nav a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: -2px;
+}
+
+main {
+    max-width: 70rem; 
+    margin: 0 auto;   
+    padding: 0 1rem;  
+    line-height: 1.6; 
+    font-size: 1rem;  
+    color: var(--color-text-main);
+}
+
