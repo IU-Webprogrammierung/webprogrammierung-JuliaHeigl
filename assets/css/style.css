@@ -4,7 +4,7 @@
 
     /* Variablen Flächenfarben */
     --color-main: #5B7F8F;
-    --color-second:  #244F63;
+    --color-second:  #355E6F;
     --color-neutral:  #3C3C3C; 
     --color-accent: #D0DAE4;
 
@@ -14,6 +14,8 @@
     --color-text-accent: #FFFFFF;
     --color-text-muted: rgba(255,255,255,0.85);
 }
+
+
 
 body {
     margin: 0;
@@ -26,7 +28,7 @@ h1, h2 {
     font-family: 'Orbitron', sans-serif;
 }
 
-/* HEADER GRUNDLAGE */
+/* Header Hintergrund */
 .site-header {
     background-image: url("../images/background.png");
     background-size: cover;
@@ -36,7 +38,7 @@ h1, h2 {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* DUNKLE BOX */
+/* Dunkle Box für Titel */
 .header-overlay {
     max-width: 70%;
     margin: 0 auto;
@@ -52,7 +54,7 @@ h1, h2 {
     border-radius: 8px;
 }
 
-/* TITELBLOCK */
+/* Titelbox */
 .header-titel {
     text-align: center;
     margin: 0 1rem;
@@ -74,7 +76,7 @@ h1, h2 {
 }
 
 
-/* LOGO */
+/* Logo */
 .header-logo {
     width: 80px;
     height: auto;
@@ -148,5 +150,31 @@ main {
     line-height: 1.6; 
     font-size: 1rem;  
     color: var(--color-text-main);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-main:    #1E2F38;   
+    --color-second:  #243C47;   
+    --color-neutral: #404040;   
+    --color-accent:  #8FAFC0;   
+
+    --color-text-main:   #202020;
+    --color-text-accent: #FFFFFF;
+    --color-text-muted:  rgba(255,255,255,0.7);
+  }
+
+  .site-header {
+    background: var(--color-second);
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .main-nav {
+      background: color-mix(in srgb, var(--color-second) 50%, black);
+    }
 }
 
