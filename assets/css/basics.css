@@ -1,13 +1,20 @@
+/* 
+   Breakpoints (Mobile First)
+   Mobil:   360px – 767px
+   Tablet:   768px – 1023px
+   Desktop:  1024px+
+*/
 
 :root {
     padding: 0;
+
+    /* Farbschema*/
 
     /* Variablen Flächenfarben */
     --color-main: #5B7F8F;
     --color-second:  #355E6F;
     --color-neutral:  #3C3C3C; 
     --color-accent: #D0DAE4;
-
 
     /* Variablen Textfarben */
     --color-text-main: #202020; 
@@ -27,6 +34,8 @@ body {
 h1, h2 {
     font-family: 'Orbitron', sans-serif;
 }
+
+/*Header */
 
 /* Header Hintergrund */
 .site-header {
@@ -86,6 +95,7 @@ h1, h2 {
     transform: scaleX(-1);
 }
 
+/* Hauptnavigation */
 .main-nav {
     background-color: var(--color-second);
     padding: 0 1rem;
@@ -143,6 +153,7 @@ h1, h2 {
     outline-offset: -2px;
 }
 
+/* Main */
 main {
     max-width: 70rem; 
     margin: 0 auto;   
@@ -152,6 +163,7 @@ main {
     color: var(--color-text-main);
 }
 
+/* Footer */
 footer {
   background: var(--color-second);
   color: var(--color-text-muted);
@@ -187,30 +199,7 @@ footer p {
 }
 
 
-/*gaming-online.html*/
-/*Waffen-Liste*/
-.charakter-liste {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.6rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.charakter-liste li {
-  background: var(--color-accent);
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.4rem;
-  font-size: 0.85rem;
-}
-
-.charakter-liste li:focus,
-.charakter-liste li:hover {
-  background: var(--color-second);
-  color: var(--color-text-accent);
-  outline: none;
-}
 
 /*
 @media (prefers-color-scheme: dark) {

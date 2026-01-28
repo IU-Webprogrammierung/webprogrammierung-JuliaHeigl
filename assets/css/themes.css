@@ -1,0 +1,24 @@
+/*gaming-online.html*/
+/*Waffen-Liste*/
+.charakter-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.charakter-liste li {
+  background: var(--color-accent);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.charakter-liste li:focus,
+.charakter-liste li:hover {
+  background: var(--color-second);
+  color: var(--color-text-accent);
+  outline: none;
+}
