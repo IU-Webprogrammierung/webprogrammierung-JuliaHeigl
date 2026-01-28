@@ -152,6 +152,67 @@ main {
     color: var(--color-text-main);
 }
 
+footer {
+  background: var(--color-second);
+  color: var(--color-text-muted);
+  padding: 0.8rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+footer nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+footer nav a:hover,
+footer nav a:focus {
+  color: var(--color-text-accent);
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  opacity: 0.8;
+}
+
+
+/*gaming-online.html*/
+/*Waffen-Liste*/
+.charakter-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.charakter-liste li {
+  background: var(--color-accent);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.charakter-liste li:focus,
+.charakter-liste li:hover {
+  background: var(--color-second);
+  color: var(--color-text-accent);
+  outline: none;
+}
+
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --color-main:    #1E2F38;   
@@ -177,4 +238,4 @@ main {
       background: color-mix(in srgb, var(--color-second) 50%, black);
     }
 }
-
+*/
