@@ -22,3 +22,52 @@
   color: var(--color-text-accent);
   outline: none;
 }
+
+/* Mobil: gestapelte Tabelle */
+@media (max-width: 767px) {
+
+  .gaming-online table,
+  .gaming-online thead,
+  .gaming-online tbody,
+  .gaming-online th,
+  .gaming-online tr,
+  .gaming-online td {
+    display: block;
+  }
+
+  .gaming-online thead{
+    display: none;
+  }
+
+  .gaming-online tr {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .gaming-online td{
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+  }
+
+  .gaming-online td::before {
+    font-weight: 600;
+    opacity: 0.8;
+  }
+
+  /* thead jeweils als rechte Spalte, links Eigenschaftswerte */
+  .gaming-online td:nth-of-type(1)::before {
+    content: "Waffe";
+  }
+
+  .gaming-online td:nth-of-type(2)::before {
+    content: "Seltenheit";
+  }
+
+  .gaming-online td:nth-of-type(3)::before {
+    content: "Beste Charaktere";
+  }
+}
