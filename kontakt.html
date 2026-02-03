@@ -45,7 +45,7 @@
     </nav>
 
 
-    <main class="seitenlayout">
+    <main class="seitenlayout kontakt">
         <section class="content">
         <h1>Kontakt</h1>
         <p>
@@ -56,21 +56,38 @@
         </p>
 
         <form>
-            <label for="form-name">Dein Name:</label><br>
-            <input type="text" id="form-name" name="form-name"><br>
-            <label for="form-email">Deine E-Mail-Adresse:</label><br>
-            <input type="email" id="form-email" name="form-email" required><br>
-            <label for="form-anliegen">Dein Anliegen:</label><br>
-            <input type="text" id="form-anliegen" name="form-anliegen"><br>
-            <label for="form-nachricht">Nachricht:</label><br>
-            <textarea id="form-nachricht" name="form-nachricht" rows="5" required></textarea><br>
-            <input type="submit" value="Nachricht senden">
+            <fieldset>
+                <legend class="versteckt">Kontaktformular</legend>
+                <label for="form-name">Dein Name:</label>
+                <input type="text" id="form-name" name="form-name">
+                <label for="form-email">Deine E-Mail-Adresse<span aria-hidden="true">*</span>:</label>
+                <input type="email" id="form-email" name="form-email" required>
+                <label for="form-anliegen">Dein Anliegen:</label>
+                <input type="text" id="form-anliegen" name="form-anliegen">
+                <label for="form-nachricht">Nachricht<span aria-hidden="true">*</span>:</label>
+                <textarea id="form-nachricht" name="form-nachricht" rows="5" required></textarea>
+                <input type="submit" value="Nachricht absenden">
+            </fieldset>
         </form> 
+
+        <p>
+            * Pflichtfelder
+        </p>
 
         <p>
             Die eingegebenen Daten werden ausschließlich zur Bearbeitung der Anfrage verwendet
             und nicht gespeichert.
         </p>
+
+        <div class="form-success" hidden aria-live="polite">
+            <h2>Nachricht abgeschickt</h2>
+            <p>
+                Vielen Dank für deine Nachricht!  
+                Dieses Kontaktformular ist Teil eines Studienprojekts.
+                Es werden keine Daten gespeichert und keine E-Mails versendet.
+            </p>
+        </div>
+
         </section>
     </main>
 
