@@ -36,6 +36,7 @@ h1, h2 {
 }
 
 /* Buttons */
+.button,
 button,
 input[type="submit"],
 input[type="button"] {
@@ -49,22 +50,26 @@ input[type="button"] {
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
+.button,
 button:hover,
 input[type="submit"]:hover {
   background-color: var(--color-main);
 }
 
+.button,
 button:focus-visible,
 input[type="submit"]:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
 }
 
+.button,
 button:active,
 input[type="submit"]:active {
   transform: translateY(1px);
 }
 
+.button,
 button:disabled,
 input[type="submit"]:disabled {
   background-color: #aaa;
