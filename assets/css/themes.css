@@ -50,18 +50,24 @@
   }
 }
 
-
 @media (hover: hover) and (pointer: fine) {
-  .startseite-kachel-grid a:hover img,
-  .startseite-kachel-grid a:focus-visible img {
-    opacity: 0.4;
-  }
+  .startseite-kachel-grid{
+    a:hover img,
+    a:focus-visible img {
+      opacity: 0.4;
+    }
 
-  .startseite-kachel-grid a:hover .kachel-text,
-  .startseite-kachel-grid a:focus-visible .kachel-text {
-    opacity: 1;
-    outline: 3px solid var(--color-neutral);
-    outline-offset: 4px;
+    a:hover .kachel-text,
+    a:focus-visible .kachel-text {
+      opacity: 1;
+      outline: 3px solid var(--color-neutral);
+      outline-offset: 4px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--color-neutral);
+      outline-offset: 4px;
+    }
   }
 }
 
@@ -109,69 +115,66 @@
   list-style: none;
   padding: 0;
   margin: 0;
-}
 
-.charakter-liste li {
-  background: var(--color-accent);
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.4rem;
-  font-size: 0.85rem;
-}
+  li {
+    background: var(--color-accent);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+  }
 
-.charakter-liste li:focus,
-.charakter-liste li:hover {
-  background: var(--color-second);
-  color: var(--color-text-accent);
-  outline: none;
+  li:focus,
+  li:hover {
+    background: var(--color-second);
+    color: var(--color-text-accent);
+    outline: none;
+  }
 }
 
 /* Mobil: gestapelte Tabelle */
 @media (max-width: 767px) {
 
-  .gaming-online table,
-  .gaming-online thead,
-  .gaming-online tbody,
-  .gaming-online th,
-  .gaming-online tr,
-  .gaming-online td {
-    display: block;
-  }
+  .gaming-online {
+    table, thead, tbody, th, tr, td{
+      display: block;
+    }
 
-  .gaming-online thead{
-    display: none;
-  }
+    thead {
+      display: none;
+    }
 
-  .gaming-online tr {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-  }
+    tr {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+    }
 
-  .gaming-online td{
-    display: grid;
-    grid-template-columns: 8rem 1fr;
-    gap: 0.5rem;
-    padding: 0.25rem 0;
-  }
+    td{
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: 0.5rem;
+      padding: 0.25rem 0;
+    }
 
-  .gaming-online td::before {
-    font-weight: 600;
-    opacity: 0.8;
-  }
+    td::before {
+      font-weight: 600;
+      opacity: 0.8;
+    }
 
-  /* thead jeweils als rechte Spalte, links Eigenschaftswerte */
-  .gaming-online td:nth-of-type(1)::before {
-    content: "Waffe";
-  }
+    /* thead jeweils als rechte Spalte, links Eigenschaftswerte */
+    td:nth-of-type(1)::before {
+      content: "Waffe";
+    }
 
-  .gaming-online td:nth-of-type(2)::before {
-    content: "Seltenheit";
-  }
+    td:nth-of-type(2)::before {
+      content: "Seltenheit";
+    }
 
-  .gaming-online td:nth-of-type(3)::before {
-    content: "Beste Charaktere";
-  }
+    td:nth-of-type(3)::before {
+      content: "Beste Charaktere";
+    }
+  } 
 }
 
 /* Quiz */
@@ -186,12 +189,13 @@
   padding: 1.5rem;
   background-color: var(--color-accent);
   border-radius: 12px;
+
+  legend {
+    font-weight: 600;
+    font-size: 1.1em;
+  }
 }
 
-.quiz-frage legend {
-  font-weight: 600;
-  font-size: 1.1em;
-}
 
 .quiz-option {
   display: flex;
@@ -204,21 +208,25 @@
   border-radius: 8px;
   background-color: white;
   cursor: pointer;
-}
 
+  &:hover {
+    background-color: var(--color-main);
+    color: var(--color-text-accent)
+  }
 
-.quiz-option:hover {
-  background-color: var(--color-main);
-  color: var(--color-text-accent)
-}
+  &:focus-within {
+    outline: 2px solid var(--color-second);
+    outline-offset: 2px;
+  }
 
-.quiz-option input:focus-visible {
-  outline: 2px solid var(--color-second);
-  outline-offset: 2px;
-}
+  input{
+    outline: none;
+  }
 
-.quiz-option input:checked + span {
-  font-weight: 600;
+  input:checked + span {
+    font-weight: 600;
+  }
+
 }
 
 /* Quiz - Ergebnis */
@@ -226,20 +234,36 @@
   margin-top: 5rem;
 }
 
+ul.ergebnis-grid {
+  list-style: none;
+}
+
 .ergebnis-grid {
   display: grid;
   gap: 1.5rem;
   margin-right: 2rem;
-}
 
-.ergebnis-grid a {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-accent);
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
+  a {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-accent);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+
+    &:focus-visible {
+      outline: 3px solid var(--color-second);
+      outline-offset: 4px;
+    }
+  }
+
+  img {
+    width: 60%;
+    max-width: 160px;
+    margin: 1rem auto 0 auto;
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
@@ -249,38 +273,20 @@
   }
 
   .ergebnis-grid img {
-    margin-bottom: 1rem;
-  }
-}
-
-.ergebnis-grid a:focus-visible {
-  outline: 3px solid var(--color-second);
-  outline-offset: 4px;
-}
-
-ul.ergebnis-grid {
-  list-style: none;
-}
-
-.ergebnis-grid img {
-  width: 60%;
-  max-width: 160px;
-  margin: 1rem auto 0 auto;
-  display: block;
-}
-
-
-@media (min-width: 768px) {
-  .ergebnis-grid img {
     width: auto;
     max-width: 180px;
     margin: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
 .ergebnis-text {
   padding: 0.75rem 1rem 1rem;
   text-align: center;
+
+  h3 {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -289,69 +295,65 @@ ul.ergebnis-grid {
   }
 }
 
-.ergebnis-text h3 {
-  margin-top: 0;
-}
-
-
-
-
 
 /* Kontaktformular */
 
-.kontakt form {
-  background-color: var(--color-accent, #f7f7f7);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  max-width: 720px;
-}
+.kontakt{
+  form {
+    background-color: var(--color-accent, #f7f7f7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    max-width: 720px;
+  } 
 
+  fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
 
-.kontakt fieldset {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
 
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
+  label {
+    font-weight: 500;
+  }
 
-.kontakt label {
-  font-weight: 500;
-}
-
-.kontakt input:focus,
-.kontakt textarea:focus {
-  outline: 1.5px solid var(--color-neutral);
-  padding: 0.2rem 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 0.2rem;
-  font: inherit;
+  input:focus,
+  textarea:focus {
+    outline: 1.5px solid var(--color-neutral);
+    padding: 0.2rem 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    font: inherit;
+  }
 }
 
 @media (min-width: 768px) {
-  .kontakt fieldset {
-    grid-template-columns: 1fr 2fr;
-    column-gap: 1rem;
-    row-gap: 0.75rem;
-  }
+  .kontakt{
+    fieldset {
+      grid-template-columns: 1fr 2fr;
+      column-gap: 1rem;
+      row-gap: 0.75rem;
+    }
 
-  .kontakt label {
-    align-self: center;
-  }
+    label {
+      align-self: center;
+    }
 
-  .kontakt textarea,
-  .kontakt input[type="text"],
-  .kontakt input[type="email"] {
-    width: 100%;
-  }
+    textarea,
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+    }
 
-  .kontakt input[type="submit"] {
-    grid-column: 2;
-    justify-self: start;
-  }
+    input[type="submit"] {
+      grid-column: 2;
+      justify-self: start;
+    }
+  } 
 }
 
 
