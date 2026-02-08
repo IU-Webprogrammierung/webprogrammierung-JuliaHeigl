@@ -108,8 +108,89 @@
 
 /* wandern.html */
 /* Artikel für Gipfel */
+.wandern{
+  article {
+    display: grid;
+    align-items: start;
+    gap: 1rem;
+    margin: 3rem 0;
+    padding-bottom: 2rem;
 
+    /* Trennlinie vor und nach jedem Artikel */
+    border-bottom: 1.5px solid var(--color-second);
+    &:first-of-type {
+      border-top: 1.5px solid var(--color-second);
+      padding-top: 2rem;
+    }
 
+    h2{
+      font-family: 'Barlow';
+      margin-bottom: 0;
+    }
+
+    img {
+      justify-self: center;
+      align-self: center;
+      max-height: 250px;
+      max-width: 300px;
+      border-radius: 8px;
+      filter: contrast(1.05) saturate(1.05); /* Anpassung für Schärfe */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Blocksatz mit Silbentrennung für Artikel */
+    p {
+      text-align: justify;
+      hyphens: auto;
+      margin-top: 0;
+    }
+  }
+} 
+
+/* Anordnung Artikel für Tablet: Bild links, Text rechts */
+@media (min-width: 768px) {
+  .wandern {
+    article {
+      /* Grid mit 2 Spalten */
+      grid-template-columns: 1fr 2fr;
+      column-gap: 3rem;
+
+      h2 {
+        grid-column: 1 / -1;
+      }
+    }
+  } 
+}
+
+/* Anordnung Artikel für Desktop */
+@media (min-width: 1024px) {
+  .content article {
+    /* Reihenfolge: Bild links, Text rechts */
+    grid-template-areas:
+      "title title"
+      "image text";
+
+    h2 {
+      grid-area: title;
+    }
+
+    img {
+      grid-area: image;
+    }
+
+    p {
+      grid-area: text;
+    }
+
+    /* Reihenfolge umtauschen: Bild rechts, Text links */
+    &:nth-of-type(even) {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "title title"
+        "text image";
+    }
+  }
+}
 
 /* gaming-online.html */
 /* Waffen-Liste */
