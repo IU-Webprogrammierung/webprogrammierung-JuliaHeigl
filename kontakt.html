@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="assets/css/basics.css">
     <link rel="stylesheet" href="assets/css/themes.css">
 
-    <script src="assets/js/script.js" defer></script> 
+    <script src="assets/js/header.js" defer></script> 
+    <script src="assets/js/footer.js" defer></script> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,31 +22,7 @@
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="header-box">
-            <img src="assets/images/neuron.png" alt="System-Logo" class="header-logo spiegel">
-
-            <div class="header-titel">
-                <h1>System in die Sache bringen</h1>
-                <p>Beim Gaming. Im Garten. Auf Tour.</p>
-            </div>
-
-            <img src="assets/images/neuron.png" alt="System-logo" class="header-logo" aria-hidden="true">
-        </div>
-    </header>
-
-
-    <nav class="main-nav" aria-label="Hauptnavigation">
-        <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="wandern.html">Wandern</a></li>
-            <li><a href="radfahren.html">Radfahren</a></li>
-            <li><a href="garten.html">Garten</a></li>
-            <li><a href="gaming-online.html">Gaming online</a></li>
-            <li><a href="gaming-offline.html">Gaming offline</a></li>
-        </ul>
-    </nav>
-
+    <site-header></site-header>
 
     <main class="seitenlayout kontakt">
         <section class="content">
@@ -94,16 +71,7 @@
     </main>
 
 
-    <footer>
-        <nav aria-label="Footer-Navigation">
-            <ul>
-                <li><a href="impressum.html">Impressum</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-
-        <p>© 2026 Julia Heigl - System in die Sache bringen</p>
-    </footer>
+<site-footer></site-footer>
   
 </body>
 </html>
