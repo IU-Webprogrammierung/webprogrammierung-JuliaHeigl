@@ -334,33 +334,96 @@ main {
 
 
 /* Seitennavigation */
-.side-nav {
-    display: none;
+/* Seitennavigation für Mobil und Tablet zum Aufklappen oberhalb des Inhalts */
+@media (max-width: 1023px) {
+  /* Button für Inhaltsanzeige */
+  .button-side-nav {
+      display: inline-block;
+      background: var(--color-second);
+      color: var(--color-text-accent);
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+  }
+
+  .side-nav {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    
+    display: none;               
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5rem;
+    z-index: 2000;
+
+    /* Seitennavigation bei Klick auf Button anzeigen */
+    &.is-open {
+      display: flex;
+    }
+  }
+
+  .inner-side-nav {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    background: var(--color-second);
+    border-radius: 0.75rem;
+    padding: 1.2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li + li {
+      margin-top: 0.6rem;
+    }
+      a {
+      display: block;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.4rem;
+      text-decoration: none;
+      color: var(--color-text-accent);
+    }
+
+    a:hover,
+    a:focus {
+      background: color-mix(in srgb, var(--color-accent) 25%, transparent);
+    }
+  }
+
+    .button-side-nav-close {
+      margin-bottom: 0.6rem;
+    }
+
 }
 
-/* Button für Inhaltsanzeige */
-.button-side-nav {
-    display: inline-block;
-    background: var(--color-second);
-    color: var(--color-text-accent);
-    border: none;
-    padding: 0.6rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+@media (min-width: 768px) {
+  .button-side-nav {
+    margin-top: 0;        /* geringerer Abstand zur Mainnav bei Tablet */
+  }
 }
 
 /* Seitennavigation für Desktop-Variante als sticky Box auf der linken Seite */
 @media (min-width: 1024px) {
   .button-side-nav {
-      display: none;      /* Button verstecken */
+      display: none;      /* Button Inhalt anzeigen verstecken */
+  }
+
+  .button-side-nav-close{
+    display: none;        /* Button zum Schließen der Seitennavigation Mobil/Tablet verstecken */
   }
 
   .side-nav {
       grid-column: 1;     /* Seitennavigation in der ersten Grid-Spalte */
       align-self: start;  /* verhindert volle Höhe */
       display: block;
-      position: sticky;
+      position: sticky;   /* fix auf der linken Seite */
       top: 4rem;
       margin-right: .5rem;
 
@@ -396,6 +459,7 @@ main {
       border-radius: 0.4rem;
     }
   }
+
 }
 
 @media (min-width: 1024px) {
