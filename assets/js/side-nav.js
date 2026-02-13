@@ -1,6 +1,7 @@
-const button = document.querySelector('.button-side-nav');
-const sideNav = document.querySelector('.side-nav');
-const closeBtn = document.querySelector('.button-side-nav-close');
+const button = document.querySelector('.button-side-nav');            // Button Inhalt anzeigen
+const sideNav = document.querySelector('.side-nav');                  // ganze Seitennavigation
+const navLinks = document.querySelectorAll('.side-nav a');            // einzelner Link
+const closeBtn = document.querySelector('.button-side-nav-close');    // Button Seitennavigation schließen
 
 // Seitennavigation öffnet sich mit Klick auf Button
 button.addEventListener('click', () => {
@@ -21,4 +22,13 @@ closeBtn.addEventListener('click', () => {
   sideNav.classList.remove('is-open');
   button.setAttribute('aria-expanded', 'false');
 });
+
+// Seitennavigation schließt mit einem Klick auf einen Link
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    sideNav.classList.remove('is-open');
+    button.setAttribute('aria-expanded', 'false');
+  });
+});
+
 
