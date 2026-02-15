@@ -313,6 +313,10 @@ main {
     color: var(--color-text-main);
 }
 
+main * {
+  min-width: 0;
+}
+
 /* Grid-Layout Seitenlayout*/
 
 /* 1 Spalte für Mobil und Tablet*/

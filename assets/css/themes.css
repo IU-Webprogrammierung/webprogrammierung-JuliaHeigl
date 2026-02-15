@@ -192,6 +192,165 @@
   }
 }
 
+/* garten.html */
+/* Gemüse-Steckbriefe */
+.garten {
+  .pflanze {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-second);
+    transition: transform 0.2s ease;
+
+    &:first-of-type {
+      border-top: 2px solid var(--color-second);
+      padding-top: 2rem;
+    }
+
+    h2 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.8em;
+      margin-bottom: 0;
+    }
+
+    .garten-kurzbeschreibung {
+      margin-top: 0;
+      font-style: italic;
+      opacity: 0.8;
+    }
+
+    .garten-bild-hoch{
+      background-image: url("../images/rahmen-garten.png");
+    }
+
+    .garten-bild-quer{
+      background-image: url("../images/rahmen-garten-quer.png");
+    }
+
+    .garten-bild-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 4rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      max-width: 360px;
+      margin: 0 auto;
+
+      img {
+        max-height: 220px;
+        width: auto;
+      }
+    }
+
+    dl {
+      background: color-mix(in srgb, var(--color-second) 16%, transparent);
+      padding: 0.8rem 1.25rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.6rem 1.2rem;
+
+    }
+
+    dt {
+      font-weight: 600;
+      color: var(--color-second);
+      position: relative;
+      padding: 0.4rem 0.8rem 0 0.8rem;
+
+      &:not(:first-of-type) {
+        border-top: 1px solid color-mix(in srgb, var(--color-second) 25%, transparent);
+      }
+    }
+
+    dd {
+      margin: 0;
+      background: rgba(255,255,255,0.4);
+      padding: 0.3rem 0.6rem;
+      border-radius: 0.5rem;
+
+      ul {
+        padding-left: 1rem;
+        margin: 0.3rem 0 0;
+      }
+    
+      li {
+        margin-bottom: 0.3rem;
+      }
+
+      &:not(:first-of-type) {
+        border-top: 1px solid color-mix(in srgb, var(--color-second) 25%, transparent);
+      }
+    }
+  }
+}
+
+/* Tablet: Bild links, dl rechts */
+@media (min-width: 768px) {
+  .garten {
+    .pflanze {
+      grid-template-columns: 1fr 1.4fr;
+      align-items: start;
+      column-gap: 2rem;
+
+      h2,
+      .garten-kurzbeschreibung {
+        grid-column: 1 / -1;
+      }
+
+      img {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      dl {
+        grid-column: 2;
+        grid-row: 3;
+      }
+
+      /* dl als zweispaltiges Grid */
+      dl {
+        grid-template-columns: auto 1fr;
+      }
+
+      dt {
+        grid-column: 1;
+      }
+
+      dd {
+        grid-column: 2;
+      }
+    }
+  }
+}
+
+/* Desktop: Bild abwechselnd rechts/links */
+@media (min-width: 1024px) {
+  .garten {
+    .pflanze {
+      &:nth-of-type(even) {
+        grid-template-columns: 1.4fr 1fr;
+
+        img {
+          grid-column: 2;
+        }
+
+        dl {
+          grid-column: 1;
+        }
+      }
+    }
+  }
+}
+
 /* gaming-online.html */
 /* Waffen-Liste */
 .gaming-online {
