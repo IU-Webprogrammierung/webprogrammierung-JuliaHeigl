@@ -194,6 +194,47 @@
 
 /* gaming-online.html */
 /* Waffen-Liste */
+.gaming-online {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  thead {
+    background: var(--color-second);
+    color: var(--color-text-accent);
+  }
+
+  th, td {
+    padding: 0.55rem 0.6rem;
+    text-align: left;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid color-mix(in srgb, var(--color-second) 20%, transparent);
+  }
+
+  tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--color-second) 10%, transparent);
+  }
+
+  tbody tr:hover {
+    background: color-mix(in srgb, var(--color-main) 60%, transparent);
+  }
+
+  td[aria-label] {
+    letter-spacing: 0.15em;
+    color: #f5c518;
+    font-size: 1rem;
+  }
+}
+
+.waffe {
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
 .charakter-liste {
   display: flex;
   flex-wrap: wrap;
@@ -215,11 +256,27 @@
     color: var(--color-text-accent);
     outline: none;
   }
+
+  li.not-active {
+    background: var(--color-accent);
+    color: var(--color-text-main);
+  }
+}
+
+.waffe.is-highlighted {
+
+  background: color-mix(in srgb, var(--color-main) 40%, transparent);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  transform: translateY(-3px);
+}
+
+.waffe.is-dimmed {
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
 }
 
 /* Mobil: gestapelte Tabelle */
 @media (max-width: 767px) {
-
   .gaming-online {
     table, thead, tbody, th, tr, td{
       display: block;
@@ -255,6 +312,8 @@
 
     td:nth-of-type(2)::before {
       content: "Seltenheit";
+      color: var(--color-text-main);
+      letter-spacing: normal;
     }
 
     td:nth-of-type(3)::before {
