@@ -192,9 +192,17 @@
   }
 }
 
+/* radfahren.html */
+.radfahren img {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+}
+
 /* garten.html */
 /* Gemüse-Steckbriefe */
 .garten {
+
   .pflanze {
     display: grid;
     gap: 1rem;
@@ -205,7 +213,7 @@
 
     &:first-of-type {
       border-top: 2px solid var(--color-second);
-      padding-top: 2rem;
+      margin-top: 2.5rem;
     }
 
     h2 {
@@ -220,12 +228,20 @@
       opacity: 0.8;
     }
 
-    .garten-bild-hoch{
+    .garten-bild-hoch {
       background-image: url("../images/rahmen-garten.png");
+      img {
+        max-height: 220px;
+        width: auto;
+      }
     }
 
-    .garten-bild-quer{
+    .garten-bild-quer {
       background-image: url("../images/rahmen-garten-quer.png");
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
 
     .garten-bild-wrapper {
@@ -240,12 +256,10 @@
       background-position: center;
 
       max-width: 360px;
+      min-width: 0;
       margin: 0 auto;
 
-      img {
-        max-height: 220px;
-        width: auto;
-      }
+
     }
 
     dl {
@@ -298,6 +312,7 @@
   .garten {
     .pflanze {
       grid-template-columns: 1fr 1.4fr;
+      
       align-items: start;
       column-gap: 2rem;
 
@@ -318,7 +333,7 @@
 
       /* dl als zweispaltiges Grid */
       dl {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: minmax(7rem, 9rem) 1fr;
       }
 
       dt {
@@ -348,6 +363,14 @@
         }
       }
     }
+  }
+}
+
+/* Silbentrennung für dd Mobil und Tablet */
+@media (max-width: 1023px) {
+  .pflanze dd {
+    hyphens: auto;
+    word-break: break-word;
   }
 }
 
