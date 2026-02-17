@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="assets/css/themes.css">
 
     <script src="assets/js/header.js" defer></script> 
-    <script src="assets/js/footer.js" defer></script> 
+    <script src="assets/js/kontakt.js" defer></script> 
+    <script src="assets/js/header.js" defer></script> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,17 +35,17 @@
             Schreib mir über dieses Formular gerne eine E-Mail:
         </p>
 
-        <form>
+        <form class="kontakt-formular">
             <fieldset>
                 <legend class="versteckt">Kontaktformular</legend>
                 <label for="form-name">Dein Name:</label>
-                <input type="text" id="form-name" name="form-name">
+                <input type="text" id="form-name" name="form-name" placeholder="Maxi Musterfrau">
                 <label for="form-email">Deine E-Mail-Adresse<span aria-hidden="true">*</span>:</label>
-                <input type="email" id="form-email" name="form-email" required>
+                <input type="email" id="form-email" name="form-email" required placeholder="maxi.musterfrau@example.de">
                 <label for="form-anliegen">Dein Anliegen:</label>
-                <input type="text" id="form-anliegen" name="form-anliegen">
+                <input type="text" id="form-anliegen" name="form-anliegen" placeholder="z. B. Frage zu meinen Wander-Models">
                 <label for="form-nachricht">Nachricht<span aria-hidden="true">*</span>:</label>
-                <textarea id="form-nachricht" name="form-nachricht" rows="5" required></textarea>
+                <textarea id="form-nachricht" name="form-nachricht" rows="5" required placeholder="Schreibe hier, was dir auf der Seele brennt..."></textarea>
                 <input type="submit" value="Nachricht absenden">
             </fieldset>
         </form> 
@@ -58,7 +59,7 @@
             und nicht gespeichert.
         </p>
 
-        <div class="form-success" hidden aria-live="polite">
+        <div class="kontakt-form-gesendet" hidden aria-live="polite">
             <h2>Nachricht abgeschickt</h2>
             <p>
                 Vielen Dank für deine Nachricht!  
@@ -69,7 +70,6 @@
 
         </section>
     </main>
-
 
 <site-footer></site-footer>
   

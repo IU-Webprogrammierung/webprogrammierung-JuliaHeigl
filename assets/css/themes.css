@@ -630,7 +630,7 @@ ul.ergebnis-grid {
 
 /* Kontaktformular */
 
-.kontakt{
+.kontakt {
   form {
     background-color: var(--color-accent, #f7f7f7);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -651,6 +651,13 @@ ul.ergebnis-grid {
 
   label {
     font-weight: 500;
+
+    /* Pflichtfeld-Stern */
+    span {
+      color: #d64545;
+      font-weight: 600;
+      margin-left: 0.2rem;
+    }
   }
 
   input:focus,
@@ -660,6 +667,11 @@ ul.ergebnis-grid {
     border: 1px solid #ccc;
     border-radius: 0.2rem;
     font: inherit;
+  }
+
+.kontakt-formular ::placeholder {
+    opacity: 0.6;
+    font-style: italic;
   }
 }
 
@@ -679,6 +691,7 @@ ul.ergebnis-grid {
     input[type="text"],
     input[type="email"] {
       width: 100%;
+      font-family: 'Barlow', sans-serif;
     }
 
     input[type="submit"] {
@@ -687,5 +700,9 @@ ul.ergebnis-grid {
     }
   } 
 }
+
+
+
+
 
 
