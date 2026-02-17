@@ -58,7 +58,6 @@ input[type="submit"]:hover {
   background-color: var(--color-main);
 }
 
-.button,
 button:focus-visible,
 input[type="submit"]:focus-visible {
   outline: 3px solid var(--color-accent);
@@ -71,7 +70,6 @@ input[type="submit"]:active {
   transform: translateY(1px);
 }
 
-.button,
 button:disabled,
 input[type="submit"]:disabled {
   background-color: #aaa;
@@ -248,7 +246,7 @@ button.nav-mobil {
     display: block;
     background-color: var(--color-second);
     padding: 0 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     position: sticky;
     top: 0; 
     z-index: 1000;
@@ -258,7 +256,6 @@ button.nav-mobil {
       list-style: none;
       margin: 0;
       padding: 0;
-
       display: flex;
       justify-content: center;
     }

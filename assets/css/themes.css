@@ -701,6 +701,17 @@ ul.ergebnis-grid {
   } 
 }
 
+/* 404.html */
+.not-found {
+  img {
+    max-width: 100%;
+    height: auto;
+  } 
+
+  a {
+    text-decoration: none;
+  }
+}
 
 
 
