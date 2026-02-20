@@ -446,7 +446,6 @@
 }
 
 .waffe.is-highlighted {
-
   background: color-mix(in srgb, var(--color-main) 40%, transparent);
   box-shadow: 0 6px 18px rgba(0,0,0,0.5);
   transform: translateY(-3px);
@@ -504,7 +503,200 @@
   } 
 }
 
-/* Quiz */
+
+/* gaming-offline.html */
+
+/* Filter */
+.filter-gaming-offline {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+
+  fieldset {
+    border: 1px solid var(--color-neutral);
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--color-accent);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+    background-color: var(--color-main);
+    color: var(--color-text-accent);
+    border: 1px solid var(--color-neutral);
+    border-radius: 0.5rem;
+    transform: translateY(-0.3rem);
+  }
+
+  label {
+
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+
+    &:hover {
+    background: color-mix(in srgb, var(--color-accent) 15%, transparent);
+    }
+  }
+
+  input[type="checkbox"] {
+    accent-color: var(--color-accent);
+    cursor: pointer;
+  }
+}
+
+/* Desktop und Tablet: drei Spalten für Filter*/
+@media (min-width: 768px) {
+    .filter-gaming-offline {
+        grid-template-columns: repeat(3, 1fr);
+
+        legend {
+          background-color: var(--color-accent);
+          color: var(--color-text-main);
+        }
+
+        fieldset {
+          background: var(--color-main);
+          color: var(--color-text-accent)
+        }
+
+    }
+}
+
+/* Tabelle Tier List Konzerne */
+.table-gaming-offline caption {
+  color: var(--color-text-main);
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+/* Tablet und Desktop */
+  @media (min-width: 768px) {
+  .table-gaming-offline {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background: var(--color-main);
+    color: var(--color-text-accent);
+    border-radius: 12px;
+    overflow: hidden;
+
+    thead {
+      background: var(--color-neutral);
+
+      th {
+        padding: 0.8rem;
+        text-align: left;
+        cursor: pointer;
+        position: relative;
+        transition: background 0.2s ease;
+        user-select: none;
+
+        &:hover {
+          background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+        }
+      }
+
+      /* Sortierpfeile */
+      .asc::after {
+        content: " ▲";
+        opacity: 1;
+        color: #ff7b00;
+      }
+
+      .desc::after {
+        content: " ▼";
+        opacity: 1;
+        color: #ff7b00;
+      }
+    }
+
+    tbody {
+      tr{
+        background: color-mix(in srgb, var(--color-second) 90%, transparent);
+      }
+
+      tr:nth-child(even) {
+        background: color-mix(in srgb, var(--color-second) 40%, transparent);
+      }
+
+      tr:hover {
+        background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+        transition: background 0.15s ease;
+      }
+
+      th, td {
+        padding: 0.75rem;  
+      }
+
+      th {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      td {
+        border-bottom: 1px solid var(--color-neutral);
+      }
+    }
+  }
+}
+
+
+/* Mobil */
+@media (max-width: 767px) {
+  .table-gaming-offline{
+    width: 100%;
+    border-collapse: collapse;
+  
+    thead {
+        display: none;
+    }
+
+    tbody {
+      tr {
+        display: block;
+        margin-bottom: 1.25rem;
+        background: var(--color-main);
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+
+      td {
+        display: grid;
+        grid-template-columns: minmax(6rem, 40%) 1fr;
+        gap: 0.5rem;
+        padding: 0.25rem 0;
+        border: none;
+
+        &::before {
+          content: attr(data-label);
+          font-weight: 600;
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+/* quiz.html */
 .quiz {
   display: flex;
   flex-direction: column;
@@ -523,15 +715,12 @@
   }
 }
 
-
 .quiz-option {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-
   padding: 0.75rem 1rem;
   margin-bottom: 0.5rem;
-
   border-radius: 8px;
   background-color: white;
   cursor: pointer;
@@ -553,7 +742,6 @@
   input:checked + span {
     font-weight: 600;
   }
-
 }
 
 /* Quiz - Ergebnis */
@@ -570,7 +758,6 @@ ul.ergebnis-grid {
   display: grid;
   gap: 1.5rem;
   
-
   a {
     display: flex;
     flex-direction: column;
@@ -629,7 +816,6 @@ ul.ergebnis-grid {
 
 
 /* Kontaktformular */
-
 .kontakt {
   form {
     background-color: var(--color-accent, #f7f7f7);

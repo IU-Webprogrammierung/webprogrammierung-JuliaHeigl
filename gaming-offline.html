@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/themes.css">
 
     <script src="assets/js/header.js" defer></script> 
+    <script src="assets/js/gaming-offline.js" defer></script> 
     <script src="assets/js/footer.js" defer></script> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,10 +61,9 @@
 
         <section>
             <h3>Filter</h3>
-            <form class="filter-form-mars">
-
+            <form class="filter-gaming-offline">
                 <fieldset>
-                    <legend>Rating:</legend>
+                    <legend>Rating</legend>
                     <input type="checkbox" name="rating[]" value="SS" id="rating-SS">
                     <label for="rating-SS">SS</label><br>
                     <input type="checkbox" name="rating[]" value="S" id="rating-S">
@@ -77,7 +77,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Erweiterungen:</legend>
+                    <legend>Erweiterungen</legend>
                     <input type="checkbox" name="erweiterungen[]" value="Grundspiel" id="erweiterungen-grundspiel">
                     <label for="erweiterungen-grundspiel">Grundspiel</label><br>
                     <input type="checkbox" name="erweiterungen[]" value="Venus" id="erweiterungen-venus">
@@ -93,7 +93,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Schwierigkeitsgrad:</legend>
+                    <legend>Schwierigkeitsgrad</legend>
                     <input type="checkbox" name="schwierigkeitsgrad[]" value="einfach" id="schwierigkeitsgrad-einfach">
                     <label for="schwierigkeitsgrad-einfach">einfach</label><br>
                     <input type="checkbox" name="schwierigkeitsgrad[]" value="mittel" id="schwierigkeitsgrad-mittel">
@@ -101,211 +101,214 @@
                     <input type="checkbox" name="schwierigkeitsgrad[]" value="schwer" id="schwierigkeitsgrad-schwer">
                     <label for="schwierigkeitsgrad-schwer">schwer</label><br>
                 </fieldset>
+
+                <button type="reset">Filter zurücksetzen</button>
             </form>
         </section>
 
-         <table>
+        <table class="table-gaming-offline">
             <caption>Tier List der Konzerne in Terraforming Mars</caption>
 
             <thead>
                 <tr>
-                    <th scope="col">Konzern</th>
-                    <th scope="col">Ranking</th>
-                    <th scope="col">Erweiterung</th>
-                    <th scope="col">Stärke</th>
-                    <th scope="col">Schwierigkeitsgrad</th>
+                    <th scope="col" data-sort="text">Konzern</th>
+                    <th scope="col" data-sort="ranking">Ranking</th>
+                    <th scope="col" data-sort="text">Erweiterung</th>
+                    <th scope="col" data-sort="text">Stärke</th>
+                    <th scope="col" data-sort="text">Schwierigkeitsgrad</th>
                 </tr>
             </thead>
             
             <tbody>
-                <tr>
-                    <td>Tharsis Republic</td>
-                    <td>SS</td>
-                    <td>Grundspiel</td>
-                    <td>Städte</td>
-                    <td>mittel</td>
+                <tr data-rating="SS" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Tharsis Republic</td>
+                    <td data-label="Ranking">SS</td>
+                    <td data-label="Erweiterung">Grundspiel</td>
+                    <td data-label="Stärke">Städte</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Ecoline</td>
-                    <td>SS</td>
-                    <td>Grundspiel</td>
-                    <td>Pflanzen</td>
-                    <td>einfach</td>
+
+                <tr data-rating="SS" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Ecoline</td>
+                    <td data-label="Ranking">SS</td>
+                    <td data-label="Erweiterung">Grundspiel</td>
+                    <td data-label="Stärke">Pflanzen</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Helion</td>
-                    <td>S</td>
-                    <td>Grundspiel</td>
-                    <td>Wärme</td>
-                    <td>mittel</td>
+                <tr data-rating="S" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Helion</td>
+                    <td data-label="Ranking">S</td>
+                    <td data-label="Erweiterung">Grundspiel</td>
+                    <td data-label="Stärke">Wärme</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Interplanetary Cinematics</td>
-                    <td>S</td>
-                    <td>Grundspiel</td>
-                    <td>Starteinkommen</td>
-                    <td>einfach</td>
+                <tr data-rating="S" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Interplanetary Cinematics</td>
+                    <td data-label="Ranking">S</td>
+                    <td data-label="Erweiterung">Grundspiel</td>
+                    <td data-label="Stärke">Starteinkommen</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Mining Guild</td>
-                    <td>A</td>
-                    <td>Grundspiel</td>
-                    <td>Ressourcen</td>
-                    <td>mittel</td>
+                <tr data-rating="A" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Mining Guild</td>
+                    <td data-label="Ranking">A</td>
+                    <td data-label="Erweiterung">Grundspiel</td>
+                    <td data-label="Stärke">Ressourcen</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Inventrix</td>
-                    <td>S</td>
-                    <td>Grundspiel</td>
-                    <td>globale Bedingungen</td>
-                    <td>mittel</td>
+                <tr data-rating="S" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Inventrix</td>
+                    <td data-label="Ranking">S</td>
+                    <td data-label="Erweiterung">Grundspiel</td>
+                    <td data-label="Stärke">globale Bedingungen</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Thorgate</td>
-                    <td>C</td>
-                    <td>Grundspiel</td>
-                    <td>Energie</td>
-                    <td>einfach</td>
+                <tr data-rating="C" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Thorgate</td>
+                    <td data-label="Ranking">C</td>
+                    <td data-label="Erweiterung">Grundspiel</td>
+                    <td data-label="Stärke">Energie</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Credicore</td>
-                    <td>B</td>
-                    <td>Grundspiel</td>
-                    <td>Megacredits</td>
-                    <td>mittel</td>
+                <tr data-rating="B" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Credicore</td>
+                    <td data-label="Ranking">B</td>
+                    <td data-label="Erweiterung">Grundspiel</td>
+                    <td data-label="Stärke">Megacredits</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>United Nations Mars Initiative</td>
-                    <td>C</td>
-                    <td>Grundspiel</td>
-                    <td>Siegpunkte</td>
-                    <td>mittel</td>
+                <tr data-rating="C" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">United Nations Mars Initiative</td>
+                    <td data-label="Ranking">C</td>
+                    <td data-label="Erweiterung">Grundspiel</td>
+                    <td data-label="Stärke">Siegpunkte</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Celestic</td>
-                    <td>A</td>
-                    <td>Venus</td>
-                    <td>Schweber</td>
-                    <td>mittel</td>
+                <tr data-rating="A" data-erweiterung="Venus" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Celestic</td>
+                    <td data-label="Ranking">A</td>
+                    <td data-label="Erweiterung">Venus</td>
+                    <td data-label="Stärke">Schweber</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Manutech</td>
-                    <td>SS</td>
-                    <td>Venus</td>
-                    <td>Ressourcen</td>
-                    <td>mittel</td>
+                <tr data-rating="SS" data-erweiterung="Venus" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Manutech</td>
+                    <td data-label="Ranking">SS</td>
+                    <td data-label="Erweiterung">Venus</td>
+                    <td data-label="Stärke">Ressourcen</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Viror</td>
-                    <td>S</td>
-                    <td>Venus</td>
-                    <td>Aktionen</td>
-                    <td>mittel</td>
+                <tr data-rating="S" data-erweiterung="Venus" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Viror</td>
+                    <td data-label="Ranking">S</td>
+                    <td data-label="Erweiterung">Venus</td>
+                    <td data-label="Stärke">Aktionen</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Aphrodite</td>
-                    <td>C</td>
-                    <td>Venus</td>
-                    <td>Starteinkommen</td>
-                    <td>einfach</td>
+                <tr data-rating="C" data-erweiterung="Venus" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Aphrodite</td>
+                    <td data-label="Ranking">C</td>
+                    <td data-label="Erweiterung">Venus</td>
+                    <td data-label="Stärke">Starteinkommen</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Morning Star Inc.</td>
-                    <td>B</td>
-                    <td>Venus</td>
-                    <td>Starteinkommen</td>
-                    <td>einfach</td>
+                <tr data-rating="B" data-erweiterung="Venus" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Morning Star Inc.</td>
+                    <td data-label="Ranking">B</td>
+                    <td data-label="Erweiterung">Venus</td>
+                    <td data-label="Stärke">Starteinkommen</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Vitor</td>
-                    <td>SS</td>
-                    <td>Präludium</td>
-                    <td>Siegpunkte</td>
-                    <td>einfach</td>
+                <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Vitor</td>
+                    <td data-label="Ranking">SS</td>
+                    <td data-label="Erweiterung">Präludium</td>
+                    <td data-label="Stärke">Siegpunkte</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Robinson Industries</td>
-                    <td>S</td>
-                    <td>Präludium</td>
-                    <td>Ressourcen</td>
-                    <td>mittel</td>
+                <tr data-rating="S" data-erweiterung="Präludium" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Robinson Industries</td>
+                    <td data-label="Ranking">S</td>
+                    <td data-label="Erweiterung">Präludium</td>
+                    <td data-label="Stärke">Ressourcen</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Point Luna</td>
-                    <td>SS</td>
-                    <td>Präludium</td>
-                    <td>Karten</td>
-                    <td>einfach</td>
+                <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Point Luna</td>
+                    <td data-label="Ranking">SS</td>
+                    <td data-label="Erweiterung">Präludium</td>
+                    <td data-label="Stärke">Karten</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Valley Trust</td>
-                    <td>SS</td>
-                    <td>Präludium</td>
-                    <td>Präludium</td>
-                    <td>einfach</td>
+                <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Valley Trust</td>
+                    <td data-label="Ranking">SS</td>
+                    <td data-label="Erweiterung">Präludium</td>
+                    <td data-label="Stärke">Präludium</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Cheung Shing Mars</td>
-                    <td>SS</td>
-                    <td>Präludium</td>
-                    <td>Gebäudekarten</td>
-                    <td>einfach</td>
+                <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Cheung Shing Mars</td>
+                    <td data-label="Ranking">SS</td>
+                    <td data-label="Erweiterung">Präludium</td>
+                    <td data-label="Stärke">Gebäudekarten</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Poseidon</td>
-                    <td>SS</td>
-                    <td>Kolonien</td>
-                    <td>Kolonien</td>
-                    <td>mittel</td>
+                <tr data-rating="SS" data-erweiterung="Kolonien" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Poseidon</td>
+                    <td data-label="Ranking">SS</td>
+                    <td data-label="Erweiterung">Kolonien</td>
+                    <td data-label="Stärke">Kolonien</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Aridor</td>
-                    <td>S</td>
-                    <td>Kolonien</td>
-                    <td>Einkommen</td>
-                    <td>einfach</td>
+                <tr data-rating="S" data-erweiterung="Kolonien" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Aridor</td>
+                    <td data-label="Ranking">S</td>
+                    <td data-label="Erweiterung">Kolonien</td>
+                    <td data-label="Stärke">Einkommen</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Stormcraft</td>
-                    <td>C</td>
-                    <td>Kolonien</td>
-                    <td>Schweber</td>
-                    <td>mittel</td>
+                <tr data-rating="C" data-erweiterung="Kolonien" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Stormcraft</td>
+                    <td data-label="Ranking">C</td>
+                    <td data-label="Erweiterung">Kolonien</td>
+                    <td data-label="Stärke">Schweber</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Arklight</td>
-                    <td>C</td>
-                    <td>Kolonien</td>
-                    <td>Tiere/Pflanzen</td>
-                    <td>einfach</td>
+                <tr data-rating="C" data-erweiterung="Kolonien" data-schwierigkeitsgrad="einfach">
+                    <td data-label="Konzern">Arklight</td>
+                    <td data-label="Ranking">C</td>
+                    <td data-label="Erweiterung">Kolonien</td>
+                    <td data-label="Stärke">Tiere/Pflanzen</td>
+                    <td data-label="Schwierigkeitsgrad">einfach</td>
                 </tr>
-                <tr>
-                    <td>Polyphemos</td>
-                    <td>B</td>
-                    <td>Kolonien</td>
-                    <td>Starteinkommen</td>
-                    <td>schwer</td>
+                <tr data-rating="B" data-erweiterung="Kolonien" data-schwierigkeitsgrad="schwer">
+                    <td data-label="Konzern">Polyphemos</td>
+                    <td data-label="Ranking">B</td>
+                    <td data-label="Erweiterung">Kolonien</td>
+                    <td data-label="Stärke">Starteinkommen</td>
+                    <td data-label="Schwierigkeitsgrad">schwer</td>
                 </tr>
-                <tr>
-                    <td>Splice</td>
-                    <td>C</td>
-                    <td>Konzerne</td>
-                    <td>Mikroben</td>
-                    <td>mittel</td>
+                <tr data-rating="C" data-erweiterung="Konzerne" data-schwierigkeitsgrad="mittel">
+                    <td data-label="Konzern">Splice</td>
+                    <td data-label="Ranking">C</td>
+                    <td data-label="Erweiterung">Konzerne</td>
+                    <td data-label="Stärke">Mikroben</td>
+                    <td data-label="Schwierigkeitsgrad">mittel</td>
                 </tr>
-                <tr>
-                    <td>Recyclon</td>
-                    <td>C</td>
-                    <td>Konzerne</td>
-                    <td>Pflanzen/Mikroben</td>
-                    <td>schwer</td>
+                <tr data-rating="C" data-erweiterung="Konzerne" data-schwierigkeitsgrad="schwer">
+                    <td data-label="Konzern">Recyclon</td>
+                    <td data-label="Ranking">C</td>
+                    <td data-label="Erweiterung">Konzerne</td>
+                    <td data-label="Stärke">Pflanzen/Mikroben</td>
+                    <td data-label="Schwierigkeitsgrad">schwer</td>
                 </tr>
-                <tr>
-                    <td>Arcadian Communities</td>
-                    <td>C</td>
-                    <td>Konzerne</td>
-                    <td>Aktionen</td>
-                    <td>schwer</td>
+                <tr data-rating="C" data-erweiterung="Konzerne" data-schwierigkeitsgrad="schwer">
+                    <td data-label="Konzern">Arcadian Communities</td>
+                    <td data-label="Ranking">C</td>
+                    <td data-label="Erweiterung">Konzerne</td>
+                    <td data-label="Stärke">Aktionen</td>
+                    <td data-label="Schwierigkeitsgrad">schwer</td>
                 </tr>
             </tbody>
         </table> 
