@@ -693,9 +693,6 @@
 }
 
 
-
-
-
 /* quiz.html */
 .quiz {
   display: flex;
@@ -747,6 +744,7 @@
 /* Quiz - Ergebnis */
 .quiz-ergebnis {
   margin-top: 5rem;
+  display: none;
 }
 
 ul.ergebnis-grid {
@@ -812,6 +810,10 @@ ul.ergebnis-grid {
   .ergebnis-text {
     text-align: left;
   }
+}
+
+.quiz-kein-ergebnis {
+  margin-top: 2rem;
 }
 
 
