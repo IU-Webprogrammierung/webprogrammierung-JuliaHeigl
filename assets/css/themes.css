@@ -229,7 +229,7 @@
     }
 
     .garten-bild-hoch {
-      background-image: url("../images/rahmen-garten.png");
+      background-image: url("../images/garten/rahmen-garten.png");
       img {
         max-height: 220px;
         width: auto;
@@ -237,7 +237,7 @@
     }
 
     .garten-bild-quer {
-      background-image: url("../images/rahmen-garten-quer.png");
+      background-image: url("../images/garten/rahmen-garten-quer.png");
       img {
         max-width: 100%;
         height: auto;

@@ -87,7 +87,7 @@ input[type="checkbox"] {
 
 /* Header Hintergrund */
 .site-header {
-    background-image: url("../images/background.png");
+    background-image: url("../images/global/background.png");
     background-size: cover;
     background-position: center;
     padding: 2rem 1rem;
@@ -541,7 +541,7 @@ footer {
 
   .site-header {
     background: var(--color-second);
-    background-image: url("../images/background.png");
+    background-image: url("../images/global/background.png");
     background-size: cover;
     background-position: center;
     padding: 2rem 1rem;
