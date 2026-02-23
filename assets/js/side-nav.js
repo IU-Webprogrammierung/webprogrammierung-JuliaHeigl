@@ -7,6 +7,13 @@ const closeBtn = document.querySelector('.button-side-nav-close');    // Button 
 button.addEventListener('click', () => {
   const isOpen = sideNav.classList.toggle('is-open');
   button.setAttribute('aria-expanded', isOpen);
+
+  // Fokus auf ersten Link
+  if (isOpen) {
+    navLinks[0].focus(); 
+  } else {
+    button.focus();
+  }
 });
 
 // Seitennavigation schließt mit Klick auf Bereich außerhalb der Navigation
@@ -29,6 +36,15 @@ navLinks.forEach(link => {
     sideNav.classList.remove('is-open');
     button.setAttribute('aria-expanded', 'false');
   });
+});
+
+// Seitennavigation schließt mit Esc
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && sideNav.classList.contains('is-open')) {
+    sideNav.classList.remove('is-open');
+    button.setAttribute('aria-expanded', 'false');
+    button.focus();
+  }
 });
 
 
