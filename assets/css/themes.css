@@ -565,7 +565,6 @@
           background: var(--color-main);
           color: var(--color-text-accent)
         }
-
     }
 }
 
@@ -736,9 +735,23 @@
     outline: none;
   }
 
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+  }
+
   input:checked + span {
     font-weight: 600;
   }
+
+  &:has(input:checked) {
+    background: var(--color-second);
+    color: var(--color-text-accent);
+    border-color: var(--color-second);
+    outline: 2px solid var(--color-second);
+    outline-offset: 2px;
+  } 
 }
 
 /* Quiz - Ergebnis */

@@ -6,8 +6,6 @@
 */
 
 :root {
-    padding: 0;
-
     /* Farbschema*/
 
     /* Variablen Flächenfarben */
@@ -70,18 +68,29 @@ input[type="submit"]:active {
   transform: translateY(1px);
 }
 
-button:disabled,
-input[type="submit"]:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
 input[type="radio"],
 input[type="checkbox"] {
   accent-color: var(--color-second);
 }
 
+/* Links */
+a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+/* Skip-Link */
+.skip-link:focus {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-text-main);
+  z-index: 3000;
+  clip: auto;
+}
 
 /*Header */
 
@@ -471,12 +480,10 @@ main * {
   }
 }
 
-
-
 /* Footer */
 footer {
   background: var(--color-second);
-  color: var(--color-text-muted);
+  color: var(--color-text-accent);
   padding: 0.8rem 1rem;
   margin-top: 3rem;
   font-size: 0.85rem;
