@@ -30,11 +30,19 @@ closeBtn.addEventListener('click', () => {
   button.setAttribute('aria-expanded', 'false');
 });
 
-// Seitennavigation schließt mit einem Klick auf einen Link
+// Seitennavigation schließt mit einem Klick auf einen Link und Fokus auf Ziel
 navLinks.forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
+
+    const targetId = link.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+
     sideNav.classList.remove('is-open');
     button.setAttribute('aria-expanded', 'false');
+
+    if (target) {
+      target.focus();
+    }
   });
 });
 
