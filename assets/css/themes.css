@@ -408,7 +408,8 @@
     background: color-mix(in srgb, var(--color-second) 10%, transparent);
   }
 
-  tbody tr:hover {
+  tbody tr:hover,
+  tbody tr:focus-within {
     background: color-mix(in srgb, var(--color-main) 60%, transparent);
   }
 
