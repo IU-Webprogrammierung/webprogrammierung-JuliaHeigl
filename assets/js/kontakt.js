@@ -5,6 +5,9 @@ form.addEventListener('submit', (event) => {
     // Neuladen verhindern
     event.preventDefault(); 
 
+    // Erfolgsmeldung ausblenden
+    nachrichtGesendet.hidden = true;
+
     // Validierung required-Attribute und E-Mail-Adresse
     if (form.checkValidity()) {
         // Erfolgsnachricht anzeigen
