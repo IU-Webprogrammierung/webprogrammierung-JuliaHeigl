@@ -560,6 +560,11 @@
     accent-color: var(--color-accent);
     cursor: pointer;
   }
+
+  input:checked + label {
+    font-weight: 600;
+    color: var(--color-text-main);
+  }
 }
 
 /* Desktop und Tablet: drei Spalten für Filter*/

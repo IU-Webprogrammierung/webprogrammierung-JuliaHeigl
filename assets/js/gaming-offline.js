@@ -1,6 +1,6 @@
 // Filter
-const filterForm = document.querySelector(".filter-gaming-offline");
-const rows = document.querySelectorAll("tbody tr");
+const filterForm = document.querySelector(".filter-gaming-offline");    // Filterbereich
+const rows = document.querySelectorAll("tbody tr");                     // Zeilen der Tier List
 
 filterForm.addEventListener("change", () => {
 
@@ -42,21 +42,21 @@ filterForm.addEventListener("change", () => {
         }
 
         // Sichtbarkeit setzen
-        row.style.display = sichtbar ? "" : "none";
+        row.hidden = !sichtbar;
     });
 });
 
 // Filter zurücksetzen --> Reset-Button
 filterForm.addEventListener("reset", () => {
-    rows.forEach(row => row.style.display = "");
+    rows.forEach(row => row.hidden = false);
 });
 
 
 
 // Sortierung Tier List
-const table = document.querySelector("table");
-const headers = table.querySelectorAll("thead th");
-const tbody = table.querySelector("tbody");
+const table = document.querySelector(".table-gaming-offline");      // Tabelle Tier List
+const headers = table.querySelectorAll("thead th");                 // Tabellenkopf
+const tbody = table.querySelector("tbody");                         // Tabelleninhalt
 
 headers.forEach((header, index) => {
 
@@ -85,16 +85,27 @@ headers.forEach((header, index) => {
             // Sortierung für Spalte Ranking (SS > S > A > B > C)
             const rankingReihenfolge = ["SS", "S", "A", "B", "C"];
 
-            if (rankingReihenfolge.includes(zelleA)) {
+            // Sortierart: Ranking oder Text
+            const sortTyp = header.dataset.sort;
+
+            // Sortierung für Ranking
+            if (sortTyp === "ranking") {
                 return (rankingReihenfolge.indexOf(zelleA) - rankingReihenfolge.indexOf(zelleB)) * richtung;
             }
 
-            // Textsortierung
+            // Standard: Textsortierung
             return zelleA.localeCompare(zelleB, "de") * richtung;
         });
 
         // Tabelle neu zusammensetzen
         reihen.forEach(row => tbody.appendChild(row));
+
+        // ARIA-Attribute für aufsteigende/absteigende Sortierung setzen
+        headers.forEach(th => th.setAttribute("aria-sort", "none"));
+        header.setAttribute(
+            "aria-sort",
+            isAufsteigend ? "descending" : "ascending"
+        );
     });
 
 });
