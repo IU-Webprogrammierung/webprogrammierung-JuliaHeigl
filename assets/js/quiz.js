@@ -29,6 +29,10 @@ quizForm.addEventListener("submit", function(e) {
 
   e.preventDefault();
 
+  // Ergebnisbereich verstecken
+  ergebnisSection.hidden = true;
+  keinErgebnisSection.hidden = true;
+
   // Ergebnisanzeige zurücksetzen
   ergebnisKacheln.forEach(kachel => {
     kachel.hidden = true;
@@ -58,9 +62,7 @@ quizForm.addEventListener("submit", function(e) {
   } else {
 
   // Falls mindestens ein passendes Thema gefunden wurde: Kacheln/Links zu Themenseiten einblenden
-    keinErgebnisSection.hidden = true;
-
-    ergebnisSection.style.display = "block";
+    ergebnisSection.hidden = false;
 
     passendeThemen.forEach(thema => {
       const link = document.querySelector(`.ergebnis-${thema}`);

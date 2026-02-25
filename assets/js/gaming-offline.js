@@ -51,8 +51,6 @@ filterForm.addEventListener("reset", () => {
     rows.forEach(row => row.hidden = false);
 });
 
-
-
 // Sortierung Tier List
 const table = document.querySelector(".table-gaming-offline");      // Tabelle Tier List
 const headers = table.querySelectorAll("thead th");                 // Tabellenkopf
