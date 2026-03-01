@@ -25,7 +25,7 @@ const ergebnisSection = document.querySelector(".quiz-ergebnis");
 const ergebnisKacheln = document.querySelectorAll(".ergebnis-grid li");
 const keinErgebnisSection = document.querySelector(".quiz-kein-ergebnis");
 
-quizForm.addEventListener("submit", function(e) {
+quizForm.addEventListener("submit", function (e) {
 
   e.preventDefault();
 
@@ -36,7 +36,7 @@ quizForm.addEventListener("submit", function(e) {
   // Ergebnisanzeige zurücksetzen
   ergebnisKacheln.forEach(kachel => {
     kachel.hidden = true;
-    }
+  }
   );
 
   // Alle ausgewählten Antworten sammeln
@@ -61,7 +61,7 @@ quizForm.addEventListener("submit", function(e) {
 
   } else {
 
-  // Falls mindestens ein passendes Thema gefunden wurde: Kacheln/Links zu Themenseiten einblenden
+    // Falls mindestens ein passendes Thema gefunden wurde: Kacheln/Links zu Themenseiten einblenden
     ergebnisSection.hidden = false;
 
     passendeThemen.forEach(thema => {

@@ -1,9 +1,9 @@
-const form = document.querySelector('.kontakt-formular');      
+const form = document.querySelector('.kontakt-formular');
 const nachrichtGesendet = document.querySelector('.kontakt-form-gesendet');     // Erfolgsnachricht unterhalb Formular
 
 form.addEventListener('submit', (event) => {
     // Neuladen verhindern
-    event.preventDefault(); 
+    event.preventDefault();
 
     // Erfolgsmeldung ausblenden
     nachrichtGesendet.hidden = true;

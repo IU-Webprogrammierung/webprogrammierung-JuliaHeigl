@@ -6,18 +6,18 @@
 */
 
 :root {
-    /* Farbschema*/
+  /* Farbschema*/
 
-    /* Variablen Flächenfarben */
-    --color-main: #5B7F8F;
-    --color-second:  #355E6F;
-    --color-neutral:  #3C3C3C; 
-    --color-accent: #D0DAE4;
+  /* Variablen Flächenfarben */
+  --color-main: #5B7F8F;
+  --color-second: #355E6F;
+  --color-neutral: #3C3C3C;
+  --color-accent: #D0DAE4;
 
-    /* Variablen Textfarben */
-    --color-text-main: #202020; 
-    --color-text-accent: #FFFFFF;
-    --color-text-muted: rgba(255,255,255,0.85);
+  /* Variablen Textfarben */
+  --color-text-main: #202020;
+  --color-text-accent: #FFFFFF;
+  --color-text-muted: rgba(255, 255, 255, 0.85);
 }
 
 html {
@@ -25,14 +25,15 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    font-family: 'Barlow', sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 
-h1, h2 {
-    font-family: 'Orbitron', sans-serif;
+h1,
+h2 {
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Buttons, Checkboxen, Radiobuttons, Inputs */
@@ -78,6 +79,7 @@ a:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
 }
+
 /* Skip-Link */
 .skip-link:focus {
   position: absolute;
@@ -96,33 +98,33 @@ a:focus-visible {
 
 /* Header Hintergrund */
 .site-header {
-    background-image: url("../images/global/background.png");
-    background-size: cover;
-    background-position: center;
-    padding: 2rem 1rem;
-    background-color: var(--color-main);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    position: relative;
+  background-image: url("../images/global/background.png");
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 1rem;
+  background-color: var(--color-main);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 /* Dunkle Box für Titel */
 .header-box {
-    max-width: 65%;
-    margin: 0 auto;
-    background-color: var(--color-neutral);
-    color: var(--color-text-accent);
+  max-width: 65%;
+  margin: 0 auto;
+  background-color: var(--color-neutral);
+  color: var(--color-text-accent);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 
-    padding: 1rem 0.7rem;
-    border-radius: 8px;
+  padding: 1rem 0.7rem;
+  border-radius: 8px;
 }
 
 @media (min-width: 768px) {
-  .header-box{
+  .header-box {
     max-width: 70%;
     padding: 1.5rem 1rem;
   }
@@ -130,9 +132,9 @@ a:focus-visible {
 
 /* Titelbox */
 .header-titel {
-    text-align: center;
-    margin: 0 1rem;
-    font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  margin: 0 1rem;
+  font-family: 'Orbitron', sans-serif;
 
   h1 {
     margin: 0;
@@ -150,10 +152,11 @@ a:focus-visible {
 }
 
 @media (min-width: 768px) {
-  .header-titel{
+  .header-titel {
     h1 {
       font-size: 2.2rem;
     }
+
     p {
       font-size: 1.1rem;
     }
@@ -175,8 +178,8 @@ a:focus-visible {
 }
 
 /* Logo auf der rechten Seite spiegeln */
-.spiegel{
-    transform: scaleX(-1);
+.spiegel {
+  transform: scaleX(-1);
 }
 
 /* Hauptnavigation */
@@ -225,7 +228,7 @@ button.nav-mobil {
     list-style: none;
   }
 
-  .main-nav li + li {
+  .main-nav li+li {
     border-top: 1px solid var(--color-accent);
   }
 
@@ -240,14 +243,15 @@ button.nav-mobil {
   }
 
   .main-nav a:active {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
+
   /* Hamburger-Menü bei Tablet und Desktop ausblenden */
-  .nav-mobil{
+  .nav-mobil {
     display: none;
   }
 
@@ -257,7 +261,7 @@ button.nav-mobil {
     padding: 0 1rem;
     margin-bottom: 1rem;
     position: sticky;
-    top: 0; 
+    top: 0;
     z-index: 1000;
     box-shadow: 0 2px 6px var(--color-neutral);
 
@@ -273,7 +277,7 @@ button.nav-mobil {
       flex: 1;
       max-width: 11rem;
       border-right: 1px solid var(--color-accent);
-      display: flex; 
+      display: flex;
 
       &:first-child {
         border-left: 1px solid var(--color-accent);
@@ -281,10 +285,10 @@ button.nav-mobil {
     }
 
     a {
-      flex: 1;                 
+      flex: 1;
       display: flex;
-      align-items: center;     
-      justify-content: center; 
+      align-items: center;
+      justify-content: center;
       padding: 0.5rem 1rem;
       text-align: center;
 
@@ -301,7 +305,7 @@ button.nav-mobil {
         background-color: rgba(255, 255, 255, 0.12);
       }
 
-      &:focus-visible{
+      &:focus-visible {
         outline: 2px solid var(--color-accent);
         outline-offset: -2px;
       }
@@ -311,12 +315,12 @@ button.nav-mobil {
 
 /* Main */
 main {
-    max-width: 80rem; 
-    margin: 0 auto;  
-    padding: 0 1rem;  
-    line-height: 1.6; 
-    font-size: 1rem;  
-    color: var(--color-text-main);
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--color-text-main);
 }
 
 main * {
@@ -326,20 +330,21 @@ main * {
 /* Grid-Layout Seitenlayout*/
 
 /* 1 Spalte für Mobil und Tablet*/
-.seitenlayout{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    align-items: start;
+.seitenlayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
 /* 3 Spalten für Desktop, links Seitennavigation, mitte content, rechts weißer Rand */
 @media (min-width: 1024px) {
   .seitenlayout {
     grid-template-columns:
-      150px                 /* Seitennavigation */
-      minmax(0, 1fr)
-      120px;                /* Abstand zum rechten Bildschirmrand */
+      150px
+      /* Seitennavigation */
+      minmax(0, 1fr) 120px;
+    /* Abstand zum rechten Bildschirmrand */
     column-gap: 1.5rem;
   }
 }
@@ -348,24 +353,25 @@ main * {
 /* Seitennavigation */
 /* Seitennavigation für Mobil und Tablet zum Aufklappen oberhalb des Inhalts */
 @media (max-width: 1023px) {
+
   /* Button für Inhaltsanzeige */
   .button-side-nav {
-      display: inline-block;
-      background: var(--color-second);
-      color: var(--color-text-accent);
-      border: none;
-      padding: 0.6rem 1rem;
-      border-radius: 0.5rem;
-      font-size: 0.9rem;
-      margin-top: 1rem;
+    display: inline-block;
+    background: var(--color-second);
+    color: var(--color-text-accent);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
   }
 
   .side-nav {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.4);
-    
-    display: none;               
+    background: rgba(0, 0, 0, 0.4);
+
+    display: none;
     align-items: flex-start;
     justify-content: center;
     padding-top: 5rem;
@@ -384,7 +390,7 @@ main * {
     background: var(--color-second);
     border-radius: 0.75rem;
     padding: 1.2rem;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 
     ul {
       list-style: none;
@@ -392,10 +398,11 @@ main * {
       margin: 0;
     }
 
-    li + li {
+    li+li {
       margin-top: 0.6rem;
     }
-      a {
+
+    a {
       display: block;
       padding: 0.4rem 0.8rem;
       border-radius: 0.4rem;
@@ -409,48 +416,54 @@ main * {
     }
   }
 
-    .button-side-nav-close {
-      margin-bottom: 0.6rem;
-    }
+  .button-side-nav-close {
+    margin-bottom: 0.6rem;
+  }
 
 }
 
 @media (min-width: 768px) {
   .button-side-nav {
-    margin-top: 0;        /* geringerer Abstand zur Mainnav bei Tablet */
+    margin-top: 0;
+    /* geringerer Abstand zur Mainnav bei Tablet */
   }
 }
 
 /* Seitennavigation für Desktop-Variante als sticky Box auf der linken Seite */
 @media (min-width: 1024px) {
   .button-side-nav {
-      display: none;      /* Button Inhalt anzeigen verstecken */
+    display: none;
+    /* Button Inhalt anzeigen verstecken */
   }
 
-  .button-side-nav-close{
-    display: none;        /* Button zum Schließen der Seitennavigation Mobil/Tablet verstecken */
+  .button-side-nav-close {
+    display: none;
+    /* Button zum Schließen der Seitennavigation Mobil/Tablet verstecken */
   }
 
   .side-nav {
-      grid-column: 1;     /* Seitennavigation in der ersten Grid-Spalte */
-      align-self: start;  /* verhindert volle Höhe */
-      display: block;
-      position: sticky;   /* fix auf der linken Seite */
-      top: 4rem;
-      margin-right: .5rem;
+    grid-column: 1;
+    /* Seitennavigation in der ersten Grid-Spalte */
+    align-self: start;
+    /* verhindert volle Höhe */
+    display: block;
+    position: sticky;
+    /* fix auf der linken Seite */
+    top: 4rem;
+    margin-right: .5rem;
 
-      a:hover,
-      a:focus {
-        background: color-mix(in srgb, var(--color-accent) 25%, transparent);
-        color: var(--color-text-accent);
-      }
+    a:hover,
+    a:focus {
+      background: color-mix(in srgb, var(--color-accent) 25%, transparent);
+      color: var(--color-text-accent);
+    }
   }
 
   .inner-side-nav {
     background: color-mix(in srgb, var(--color-second) 92%, black);
     padding: 1rem;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
     ul {
       list-style: none;
@@ -458,7 +471,7 @@ main * {
       margin: 0;
     }
 
-    li + li {
+    li+li {
       margin-top: 0.4rem;
     }
 
@@ -508,7 +521,7 @@ footer {
       color: var(--color-text-accent);
       text-decoration: underline;
     }
-  } 
+  }
 
   p {
     margin: 0;

@@ -79,7 +79,7 @@ charakterItems.forEach(item => {
             updateHighlight();
         }
     });
-    
+
     // Klick auf Charakter
     item.addEventListener('click', () => {
         const charakter = item.dataset.charakter;
@@ -88,14 +88,14 @@ charakterItems.forEach(item => {
         if (lockedCharakter === charakter) {
             lockedCharakter = null;
         } else {
-        // anderenfalls Charakter fixieren
+            // anderenfalls Charakter fixieren
             lockedCharakter = charakter;
         }
 
         // Waffen und Charakter bei fixierten Charakter hervorheben, anderenfalls Highlighting entfernen
         updateHighlight();
     });
-    
+
 });
 
 // Highlighting bei Esc zurücksetzen

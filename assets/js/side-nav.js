@@ -10,7 +10,7 @@ button.addEventListener('click', () => {
 
   // Fokus auf ersten Link
   if (isOpen) {
-    navLinks[0].focus(); 
+    navLinks[0].focus();
   } else {
     button.focus();
   }
