@@ -5,6 +5,18 @@ class SiteHeader extends HTMLElement {
     const html = await response.text();
     this.innerHTML = html;
 
+    /* aktuelle Seite setzen */
+    const links = this.querySelectorAll('.main-nav a');
+    const aktuelleSeite = window.location.pathname.split('/').pop() || 'index.html';
+
+    links.forEach(link => {
+      const linkHref = link.getAttribute('href');
+
+      if (linkHref === aktuelleSeite) {
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+
     // ARIA-Attribute setzen
     const toggle = this.querySelector('.nav-mobil');
     const nav = this.querySelector('.main-nav');
