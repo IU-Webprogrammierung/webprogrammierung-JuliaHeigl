@@ -553,7 +553,6 @@
   }
 
   label {
-
     align-items: center;
     gap: 0.5rem;
     padding: 0.35rem 0.1rem;
@@ -937,5 +936,171 @@ ul.ergebnis-grid {
 
   a {
     text-decoration: none;
+  }
+}
+
+/* Dark-Scheme */
+@media (prefers-color-scheme: dark) {
+  /* garten.html */
+  .garten {
+    .pflanze {
+      dl {
+        background-color: var(--color-accent);
+      }
+
+      dd {
+        background-color: var(--color-second);
+      }
+    }
+  }
+
+  /* gaming-online.html */
+  .gaming-online {
+    tbody tr {
+      border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
+    }
+
+    tbody tr:nth-child(even) {
+      background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    }
+
+    tbody tr:hover,
+    tbody tr:focus-within {
+      background: color-mix(in srgb, var(--color-accent) 60%, transparent);
+      color: var(--color-text-black);
+    }
+
+    .charakter-liste {
+      li {
+        background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+        color: var(--color-text-accent);
+      }
+
+      li:focus,
+      li:hover {
+        background: var(--color-second);
+        color: var(--color-text-accent);
+        outline: none;
+      }
+
+      li.not-active {
+        background: color-mix(in srgb, var(--color-accent) 80%, transparent);
+        color: var(--color-text-black);
+      }
+    }
+
+    .waffe.is-highlighted {
+      background: color-mix(in srgb, var(--color-main) 80%, transparent);
+      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+      color: var(--color-text-accent);
+    }
+  }
+
+  /* gestapelte Tabelle für Waffenliste (Mobil)*/
+  @media (max-width: 767px) {
+    .gaming-online {
+      tbody tr {
+        background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+      }
+
+      tbody tr:nth-child(even) {
+        background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+      }
+
+      tbody tr:hover,
+      tbody tr:focus-within {
+        background: color-mix(in srgb, var(--color-accent) 40%, transparent);
+        color: var(--color-text-main);
+
+        td:nth-of-type(2)::before {
+          color: var(--color-text-main);
+        }
+      }
+
+      li:focus,
+      li:hover {
+        background: color-mix(in srgb, var(--color-second) 40%, transparent);
+        color: var(--color-text-accent);
+        outline: none;
+      }
+
+      li.not-active {
+        background: var(--color-accent);
+        color: var(--color-text-main);
+      }
+
+      .waffe.is-highlighted {
+        background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+        box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+        color: var(--color-text-accent);
+
+        td:nth-of-type(2)::before {
+          color: var(--color-text-main);
+        }
+      }
+    }
+  }
+
+  /* gaming-offline.html */
+  .filter-gaming-offline {
+    legend {
+      color: var(--color-text-black);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .filter-gaming-offline {
+      color: var(--color-text-black);
+
+      legend {
+        color: var(--color-text-main);
+      }
+    }
+  }
+
+  /* quiz.html */
+  .quiz-frage {
+    background: color-mix(in srgb, var(--color-accent) 50%, transparent);
+
+    legend {
+      background: var(--color-accent);
+      color: var(--color-text-black);
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .quiz-option {
+      background-color: var(--color-accent);
+      color: var(--color-text-black);
+
+      &:hover {
+        background-color: var(--color-main);
+        color: var(--color-text-accent)
+      }
+
+      &:focus-within {
+        outline: 2px solid var(--color-second);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .ergebnis-grid {
+    a {
+      background: color-mix(in srgb, var(--color-accent) 60%, transparent);
+      color: var(--color-text-black);
+    }
+  }
+
+  /* impressum.html */
+  address {
+    a {
+      color: var(--color-text-main);
+    }
+  }
+
+  /* kontakt.html */
+  .kontakt-formular {
+    color: var(--color-text-black);
   }
 }
