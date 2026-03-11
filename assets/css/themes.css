@@ -207,7 +207,6 @@
 /* garten.html */
 /* Gemüse-Steckbriefe */
 .garten {
-
   .pflanze {
     display: grid;
     gap: 1rem;
@@ -265,8 +264,6 @@
       max-width: 360px;
       min-width: 0;
       margin: 0 auto;
-
-
     }
 
     dl {
@@ -278,7 +275,6 @@
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 0.6rem 1.2rem;
-
     }
 
     dt {
