@@ -33,20 +33,20 @@
 </head>
 
 <body>
-    <a href="#hauptinhalt" class="versteckt skip-link">
+    <a href="#hauptinhalt" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-base-200 focus:px-4 focus:py-2 rounded">
         Zum Hauptinhalt springen
     </a>
     <site-header></site-header>
 
-    <main class="seitenlayout" id="hauptinhalt">
-        <section class="content">
-            <p>
+    <main class="max-w-6xl mx-auto sm:px-10 lg:px-24 py-6" id="hauptinhalt">
+        <section class="prose max-w-none mb-10">
+            <p class="mb-4">
                 Systeme begegnen uns überall im Leben.
                 Ob im Straßenverkehr, bei der Urlaubsplanung oder in der Küchenschublade - Strukturen können im Alltag
                 eine große Hilfe darstellen.
                 Sie sind jedoch nicht nur praktisch, sondern können auch einfach nerdig sein und Spaß machen.
             </p>
-            <p>
+            <p class="mb-4">
                 Auf dieser Website findest du ein bisschen Inspiration, wie sich Nützliches und Humorvolles systematisch
                 verbinden lassen.
             </p>
@@ -54,56 +54,53 @@
                 Viel Spaß beim Stöbern und Entdecken!
             </p>
 
-            <h2 class="versteckt">Themenübersicht</h2>
-            <section class="startseite-kachel-grid">
-                <a href="wandern.html">
-                    <img src="assets/images/themes/wandern.png" alt="Illustration Gipfel-Diagramm" loading="lazy">
-                    <div class="kachel-text">
-                        <h3>Wandern</h3>
-                        <p>Die Seven Summits von Bodenmais - Natur pur auf den höchsten Gipfeln im Bayerischen Wald</p>
+            <h2 class="sr-only">Themenübersicht</h2>
+            <section class="grid gap-6 md:gap-12 md:grid-cols-2 lg:grid-cols-3 mt-10 px-4">
+                <a href="wandern.html" class="group relative block w-full max-w-64 lg:max-w-72 overflow-hidden rounded-xl shadow-lg md:justify-self-end">
+                    <img src="assets/images/themes/wandern.png" alt="Illustration Gipfel-Diagramm" loading="lazy" class="w-full h-full object-cover opacity-70 lg:opacity-100 transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-4 bg-black/40 lg:bg-black/60 lg:opacity-0 lg:group-hover:opacity-100 lg:group-focus:opacity-100 transition-opacity">
+                        <h3 class="text-white text-lg font-bold font-[Orbitron]">Wandern</h3>
+                        <p class="text-white text-sm">Die Seven Summits von Bodenmais - Natur pur auf den höchsten Gipfeln im Bayerischen Wald</p>
                     </div>
                 </a>
 
-                <a href="garten.html">
-                    <img src="assets/images/themes/garten.png" alt="Illustration Garten-Utensilien" loading="lazy">
-                    <div class="kachel-text">
-                        <h3>Garten</h3>
-                        <p>Unkrautpflege, Schneckenparadies und Ernteglück - Ökologisches Gärtnern für faule
-                            Gemüsebauern</p>
+                <a href="garten.html" class="group relative block w-full max-w-64 lg:max-w-72 overflow-hidden rounded-xl shadow-lg md:justify-self-start">
+                    <img src="assets/images/themes/garten.png" alt="Illustration Garten-Utensilien" loading="lazy" class="w-full h-full object-cover opacity-70 lg:opacity-100 transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-4 bg-black/40 lg:bg-black/60 lg:opacity-0 lg:group-hover:opacity-100 lg:group-focus:opacity-100 transition-opacity">
+                        <h3 class="text-white text-lg font-bold font-[Orbitron]">Garten</h3>
+                        <p class="text-white text-sm">Unkrautpflege, Schneckenparadies und Ernteglück - Ökologisches Gärtnern für faule Gemüsebauern</p>
                     </div>
                 </a>
 
-                <a href="gaming-online.html">
-                    <img src="assets/images/themes/gaming-online.png" alt="Illustration Gaming-Equipment" loading="lazy">
-                    <div class="kachel-text">
-                        <h3>Gaming online</h3>
-                        <p>Genshin Impact - Tipps und Tricks rund um das beliebte Fantasy-Action-Rollenspiel</p>
+                <a href="gaming-online.html" class="group relative block w-full max-w-64 lg:max-w-72 overflow-hidden rounded-xl shadow-lg md:justify-self-end">
+                    <img src="assets/images/themes/gaming-online.png" alt="Illustration Gaming-Equipment" loading="lazy" class="w-full h-full object-cover opacity-70 lg:opacity-100 transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-4 bg-black/40 lg:bg-black/60 lg:opacity-0 lg:group-hover:opacity-100 lg:group-focus:opacity-100 transition-opacity">
+                        <h3 class="text-white text-lg font-bold font-[Orbitron]">Gaming online</h3>
+                        <p class="text-white text-sm mt-4">Genshin Impact - Tipps und Tricks rund um das beliebte Fantasy-Action-Rollenspiel</p>
                     </div>
                 </a>
 
-                <a href="gaming-offline.html">
-                    <img src="assets/images/themes/gaming-offline.png" alt="Illustration Brettspiel" loading="lazy">
-                    <div class="kachel-text">
-                        <h3>Gaming offline</h3>
-                        <p>Terraforming Mars - Wir erobern uns systematisch den Mars</p>
+                <a href="gaming-offline.html" class="group relative block w-full max-w-64 lg:max-w-72 overflow-hidden rounded-xl shadow-lg md:justify-self-start">
+                    <img src="assets/images/themes/gaming-offline.png" alt="Illustration Brettspiel" loading="lazy" class="w-full h-full object-cover opacity-70 lg:opacity-100 transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-4 bg-black/40 lg:bg-black/60 lg:opacity-0 lg:group-hover:opacity-100 lg:group-focus:opacity-100 transition-opacity">
+                        <h3 class="text-white text-lg font-bold font-[Orbitron]">Gaming offline</h3>
+                        <p class="text-white text-sm mt-4">Terraforming Mars - Wir erobern uns systematisch den Mars</p>
                     </div>
                 </a>
 
-                <a href="radfahren.html">
-                    <img src="assets/images/themes/fahrrad.png" alt="Illustration auseinandergebautes Fahrrad" loading="lazy">
-                    <div class="kachel-text">
-                        <h3>Radfahren</h3>
-                        <p>On the road auf zwei Rädern - Touren, Kauftipps und mehr</p>
+                <a href="radfahren.html" class="group relative block w-full max-w-64 lg:max-w-72 overflow-hidden rounded-xl shadow-lg md:justify-self-end">
+                    <img src="assets/images/themes/fahrrad.png" alt="Illustration auseinandergebautes Fahrrad" loading="lazy" class="w-full h-full object-cover opacity-70 lg:opacity-100 transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-4 bg-black/40 lg:bg-black/60 lg:opacity-0 lg:group-hover:opacity-100 lg:group-focus:opacity-100 transition-opacity">
+                        <h3 class="text-white text-lg font-bold font-[Orbitron]">Radfahren</h3>
+                        <p class="text-white text-sm mt-4">On the road auf zwei Rädern - Touren, Kauftipps und mehr</p>
                     </div>
                 </a>
 
-                <a href="quiz.html">
-                    <img src="assets/images/themes/quiz.png" alt="Illustration Lotterierad mit Fragezeichen" loading="lazy">
-                    <div class="kachel-text">
-                        <h3>Finde dein System</h3>
-                        <p>
-                            System ist für dich ein Fremdwort?
-                            Finde heraus, bei welchem System auch du ein Match finden könntest
+                <a href="quiz.html" class="group relative block w-full max-w-64 lg:max-w-72 overflow-hidden rounded-xl shadow-lg md:justify-self-start">
+                    <img src="assets/images/themes/quiz.png" alt="Illustration Lotterierad mit Fragezeichen" loading="lazy" class="w-full h-full object-cover opacity-70 lg:opacity-100 transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-4 bg-black/40 lg:bg-black/60 lg:opacity-0 lg:group-hover:opacity-100 lg:group-focus:opacity-100 transition-opacity">
+                        <h3 class="text-white text-lg font-bold font-[Orbitron]">Finde dein System</h3>
+                        <p class="text-white text-sm mt-4">System ist für dich ein Fremdwort? Finde heraus, bei welchem System auch du ein Match finden könntest
                         </p>
                     </div>
                 </a>
