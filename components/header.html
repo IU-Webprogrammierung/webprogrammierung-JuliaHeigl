@@ -13,21 +13,59 @@
         <!-- rechtes Logo -->
         <img src="assets/images/global/neuron.png" alt="Logo Neuron" aria-hidden="true" class="hidden lg:block w-20">
     </div>
+</header>
 
-    <button class="absolute top-3 right-3 md:hidden bg-[var(--color-second)] text-[var(--color-text-accent)] px-3 py-1 rounded-md text-xl" aria-label="Hauptmenü" aria-expanded="false" aria-controls="hauptnavigation">
+<nav aria-label="Hauptnavigation" id="hauptnavigation" class="main-nav bg-[var(--color-second)] md:sticky md:top-0 md:px-2 md:z-50 shadow-md">
+
+    <!-- Mobil Hamburger-Menü -->
+    <button id="nav-mobil"
+    class="md:hidden absolute top-3 right-3 text-xl bg-[var(--color-neutral)] text-[var(--color-text-accent)] px-3 py-1 rounded"
+    aria-label="Hauptmenü" aria-expanded="false" aria-controls="nav-list">
         ☰
     </button>
 
-</header>
+    <ul id="nav-list" class="hidden md:justify-center w-full flex-col md:flex md:h-full md:flex-row md:items-stretch md:text-center md:uppercase font-semibold md:font-medium list-none m-0 p-0 tracking-wide text-[var(--color-text-muted)] md:text-[var(--color-text-accent)]">
 
+        <li class="md:flex md:flex-1 md:max-w-[11rem] md:border-x border-[var(--color-accent)]">
+            <a href="index.html" 
+            class="flex flex-1 items-center md:justify-center py-2 px-4 hover:bg-white/10 focus:bg-white/10">
+            Startseite
+            </a>
+        </li>
 
-<nav class="main-nav" aria-label="Hauptnavigation" id="hauptnavigation">
-    <ul>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="wandern.html">Wandern</a></li>
-        <li><a href="radfahren.html">Radfahren</a></li>
-        <li><a href="garten.html">Garten</a></li>
-        <li><a href="gaming-online.html">Gaming online</a></li>
-        <li><a href="gaming-offline.html">Gaming offline</a></li>
+        <li class="md:flex md:flex-1 md:max-w-[11rem] max-md:border-t md:border-r border-[var(--color-accent)]">
+            <a href="wandern.html"
+            class="flex flex-1 items-center md:justify-center py-2 px-4 hover:bg-white/10 focus:bg-white/10">
+            Wandern
+            </a>
+        </li>
+
+        <li class="md:flex md:flex-1 md:max-w-[11rem] max-md:border-t md:border-r border-[var(--color-accent)]">
+            <a href="radfahren.html"
+            class="flex flex-1 items-center md:justify-center py-2 px-4 hover:bg-white/10 focus:bg-white/10">
+            Radfahren
+            </a>
+        </li>
+
+        <li class="md:flex md:flex-1 md:max-w-[11rem] max-md:border-t md:border-r border-[var(--color-accent)]">
+            <a href="garten.html"
+            class="flex flex-1 items-center md:justify-center py-2 px-4 hover:bg-white/10 focus:bg-white/10">
+            Garten
+            </a>
+        </li>
+
+        <li class="md:flex md:flex-1 md:max-w-[11rem] max-md:border-t md:border-r border-[var(--color-accent)]">
+            <a href="gaming-online.html"
+            class="flex flex-1 items-center md:justify-center py-2 px-4 hover:bg-white/10 focus:bg-white/10">
+            Gaming online
+            </a>
+        </li>
+
+        <li class="md:flex md:flex-1 md:max-w-[11rem] max-md:border-t md:border-r border-[var(--color-accent)]">
+            <a href="gaming-offline.html"
+            class="flex flex-1 items-center md:justify-center py-2 px-4 hover:bg-white/10 focus:bg-white/10">
+            Gaming offline
+            </a>
+        </li>
     </ul>
 </nav>
