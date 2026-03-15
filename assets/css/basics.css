@@ -25,9 +25,6 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-
   font-family: 'Barlow', sans-serif;
 }
 
@@ -80,26 +77,11 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-/* Skip-Link */
-.skip-link:focus {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: auto;
-  height: auto;
-  padding: 0.5rem 1rem;
-  background: var(--color-accent);
-  color: var(--color-text-main);
-  z-index: 3000;
-  clip: auto;
-}
-
 /*Header */
 /* Hauptnavigation */
 /* aktuelle Seite hervorheben */
 .main-nav a[aria-current="page"] {
   background-color: rgba(255, 255, 255, 0.1);
-  text-decoration: underline;
   font-weight: 600;
 }
 
@@ -286,16 +268,16 @@ a:focus-visible {
 
 
 /* Dark-Scheme */
-/*
+
 @media (prefers-color-scheme: dark) {
   :root{
-      /* Variablen Flächenfarben *//*
+      /* Variablen Flächenfarben */
     --color-main:    #1E2F38;   
     --color-second:  #243C47;   
     --color-neutral: #404040;   
     --color-accent:  #8FAFC0;  
 
-      /* Variablen Textfarben *//*
+      /* Variablen Textfarben */
       --color-text-main: rgba(255, 255, 255, 0.85);
       --color-text-accent: #FFFFFF;
       --color-text-black: #101010;
@@ -306,4 +288,3 @@ a:focus-visible {
     background-color: #202020;
   }
 }
-*/

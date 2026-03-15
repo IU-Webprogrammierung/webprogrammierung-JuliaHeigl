@@ -73,8 +73,10 @@ Die grundlegende Seitenstruktur wird mithilfe von Flexbox umgesetzt, bei einzeln
 
 Die Website bietet ein dunkles Farbschema, dass sich dan den Dark-Mode-Einstellungen des Betriebssystems orientiert.
 
-### Refactoring mit CSS-Framework Tailwind und DaisyUI
+### Refactoring mit CSS-Framework Tailwind
 Neuer Branch in GitHub für Refactoring mit Tailwind am 11.03.2026 erstellt
+
+Da im Rahmen dieses Studienprojekts ein Build-Prozess nicht praktikabel war, wurde Tailwind über das CDN eingebunden. Eine Auslagerung der Tailwind-Klassen in eine externe CSS-Datei war daher nicht möglich, sodass die Klassen direkt in den HTML-Elementen stehen und Wiederholungen unvermeidbar waren.
 
 ## Responsives Konzept
 Für die responsive Darstellung werden zwei Breakpoints bei 768 Pixel und 1024 Pixel definiert. Daraus ergeben sich folgende Ansichten:
