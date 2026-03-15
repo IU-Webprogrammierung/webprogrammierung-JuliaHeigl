@@ -10,7 +10,7 @@
 
     <link rel="icon" href="assets/images/garten/neuron.png">
 
-    <!-- Tailwind und DaisyUI -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- eigenes CSS -->
@@ -31,18 +31,19 @@
 </head>
 
 <body>
-    <a href="#hauptinhalt" class="versteckt skip-link">
+    <a href="#hauptinhalt"
+        class="sr-only focus:not-sr-only focus:absolute focus:mt-2 focus:ml-2 focus:px-4 focus:py-2 focus:underline focus:bg-[var(--color-accent)] focus:text-[var(--color-text-main)] focus:z-[3000]">
         Zum Hauptinhalt springen
     </a>
     <site-header></site-header>
 
-    <main class="seitenlayout radfahren" id="hauptinhalt">
-        <section class="content">
-            <h1>Radfahren - On the road auf zwei Rädern</h1>
-            <p role="status">
+    <main class="max-w-6xl mx-auto max-lg:mx-6 lg:mx-48 pt-6 text-[var(--color-text-main)]" id="hauptinhalt">
+        <section class="">
+            <h1 class="text-4xl font-bold mb-6 mt-4">Radfahren - On the road auf zwei Rädern</h1>
+            <p role="status" class="mb-4">
                 Diese Themenseite befindet sich derzeit noch in Vorbereitung.
             </p>
-            <p>
+            <p class="mb-8">
                 Mein besattelter Testpartner sammelt aktuell fleißig Kilometer, testet Touren und arbeitet an
                 aussagekräftigen Streckenprofilen.
                 Langfristig wird es hier außerdem Kauftipps geben - für alle, die den perfekten Kameraden auf zwei
@@ -50,7 +51,6 @@
             </p>
 
             <img src="assets/images/radfahren/zerlegtes-fahrrad.png" alt="Illustration Fahrradteile" loading="lazy">
-
         </section>
     </main>
 
