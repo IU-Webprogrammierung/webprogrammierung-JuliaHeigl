@@ -10,7 +10,7 @@
 
     <link rel="icon" href="assets/images/garten/neuron.png">
 
-    <!-- Tailwind und DaisyUI -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- eigenes CSS -->
@@ -31,58 +31,70 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <a href="#hauptinhalt" class="versteckt skip-link">
+<body class="font-[Barlow]">
+    <a href="#hauptinhalt"
+        class="sr-only focus:not-sr-only focus:absolute focus:mt-2 focus:ml-2 focus:px-4 focus:py-2 focus:underline focus:bg-[var(--color-accent)] focus:text-[var(--color-text-main)] focus:z-[3000]">
         Zum Hauptinhalt springen
     </a>
     <site-header></site-header>
 
-    <main class="seitenlayout kontakt" id="hauptinhalt">
-        <section class="content">
-            <h1>Kontakt</h1>
-            <p>
+    <main class="max-lg:mx-6 lg:ml-8 pt-4 lg:grid lg:grid-cols-[150px_minmax(0,1fr)_160px] lg:gap-10" id="hauptinhalt">
+        <section class="max-lg:mx-6 lg:mt-6 text-[var(--color-text-main)] lg:col-start-2">
+            <h1 class="font-[Orbitron] text-3xl font-bold mb-6">Kontakt</h1>
+            <p class="mb-4">
                 Fragen? Wünsche? Anregungen? Bug oder Easteregg gefunden?
             </p>
-            <p>
+            <p class="mb-8">
                 Schreib mir über dieses Formular gerne eine E-Mail:
             </p>
 
-            <form class="kontakt-formular">
-                <fieldset>
-                    <legend class="versteckt">Kontaktformular</legend>
-                    <label for="form-name">Dein Name:</label>
-                    <input type="text" id="form-name" name="form-name" placeholder="Maxi Musterfrau">
-                    <label for="form-email">Deine E-Mail-Adresse<span aria-hidden="true">*</span>:</label>
-                    <input type="email" id="form-email" name="form-email" required aria-required="true"
-                        placeholder="maxi.musterfrau@example.de">
-                    <label for="form-anliegen">Dein Anliegen:</label>
-                    <input type="text" id="form-anliegen" name="form-anliegen"
-                        placeholder="z. B. Frage zu meinen Wander-Models">
-                    <label for="form-nachricht">Nachricht<span aria-hidden="true">*</span>:</label>
-                    <textarea id="form-nachricht" name="form-nachricht" rows="5" required aria-required="true"
-                        placeholder="Schreibe hier, was dir auf der Seele brennt..."></textarea>
-                    <input type="submit" value="Nachricht absenden">
+            <form class="max-w-[720px] bg-[var(--color-accent)] shadow-md p-6 rounded-xl dark:text-[var(--color-text-black)] kontakt-formular">
+                <fieldset class="grid grid-cols-1 gap-3 md:grid-cols-[1fr_2fr] md:gap-x-4 md:gap-y-3 border-0 p-0 m-0">
+                    <legend class="sr-only">Kontaktformular</legend>
+                    
+                    <label for="form-name" class="font-medium md:self-center">Dein Name:</label>
+                    <input type="text" id="form-name" name="form-name" placeholder="Maxi Musterfrau"
+                        class="border border-gray-300 rounded px-1 py-1
+                        focus:outline focus:outline-[1.5px] focus:outline-[var(--color-neutral)] placeholder:italic placeholder:opacity-60 transition-transform duration-150 focus:scale-[1.02]"/>
+
+                    <label for="form-email" class="font-medium md:self-center">Deine E-Mail-Adresse<span aria-hidden="true" class="text-red-600 font-semibold ml-[0.2rem]">*</span>:</label>
+                    <input type="email" id="form-email" name="form-email" required aria-required="true" placeholder="maxi.musterfrau@example.de"
+                        class="border border-gray-300 rounded px-1 py-1 focus:outline focus:outline-[1.5px] focus:outline-[var(--color-neutral)] placeholder:italic placeholder:opacity-60 transition-transform duration-150 focus:scale-[1.02]"/>
+
+                    <label for="form-anliegen" class="font-medium md:self-center">Dein Anliegen:</label>
+                    <input type="text" id="form-anliegen" name="form-anliegen" placeholder="z. B. Frage zu meinen Wander-Models"
+                        class="border border-gray-300 rounded px-1 py-1 focus:outline focus:outline-[1.5px] focus:outline-[var(--color-neutral)] placeholder:italic placeholder:opacity-60 transition-transform duration-150 focus:scale-[1.02]"/>
+
+                    <label for="form-nachricht" class="font-medium md:self-center">Nachricht<span aria-hidden="true" class="text-red-600 font-semibold ml-[0.2rem]">*</span>:</label>
+                    <textarea id="form-nachricht" name="form-nachricht" rows="5" required aria-required="true" placeholder="Schreibe hier, was dir auf der Seele brennt..."
+                        class="border border-gray-300 rounded px-1 py-1 focus:outline focus:outline-[1.5px] focus:outline-[var(--color-neutral)] placeholder:italic placeholder:opacity-60 transition-transform duration-150 focus:scale-[1.02]"></textarea>
+
+                    <input type="submit" value="Nachricht absenden"
+                        class="mt-2 md:col-start-2 md:justify-self-start bg-[var(--color-second)] text-[var(--color-text-accent)]
+                            px-4 py-2 rounded-lg text-sm hover:brightness-110 focus:outline focus:outline-2 focus:outline-[var(--color-neutral)] focus:outline-offset-2 cursor-pointer"/>                  
                 </fieldset>
             </form>
 
-            <p>
-                * Pflichtfelder
+            <p class="mt-4">
+            * Pflichtfelder
             </p>
 
-            <p>
-                Die eingegebenen Daten werden ausschließlich zur Bearbeitung der Anfrage verwendet
-                und nicht gespeichert.
+            <p class="mt-2">
+            Die eingegebenen Daten werden ausschließlich zur Bearbeitung der Anfrage verwendet
+            und nicht gespeichert.
             </p>
 
-            <div class="kontakt-form-gesendet" hidden aria-live="polite">
-                <h2>Nachricht abgeschickt</h2>
-                <p>
-                    Vielen Dank für deine Nachricht!
-                    Dieses Kontaktformular ist Teil eines Studienprojekts.
-                    Es werden keine Daten gespeichert und keine E-Mails versendet.
-                </p>
+            <div class="kontakt-form-gesendet mt-4 py-4 rounded-xl shadow-md" hidden aria-live="polite">
+
+            <h2 class="font-[Orbitron] text-2xl font-bold mb-4">Nachricht abgeschickt</h2>
+
+            <p>
+            Vielen Dank für deine Nachricht!
+            Dieses Kontaktformular ist Teil eines Studienprojekts.
+            Es werden keine Daten gespeichert und keine E-Mails versendet.
+            </p>
+
             </div>
-
         </section>
     </main>
 

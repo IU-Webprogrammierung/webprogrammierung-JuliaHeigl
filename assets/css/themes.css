@@ -472,79 +472,6 @@ ul.ergebnis-grid {
   margin-top: 2rem;
 }
 
-
-/* Kontaktformular */
-.kontakt {
-  form {
-    background-color: var(--color-accent, #f7f7f7);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    max-width: 720px;
-  }
-
-  fieldset {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-
-    border: 0;
-    padding: 0;
-    margin: 0;
-  }
-
-  label {
-    font-weight: 500;
-
-    /* Pflichtfeld-Stern */
-    span {
-      color: #d64545;
-      font-weight: 600;
-      margin-left: 0.2rem;
-    }
-  }
-
-  input:focus,
-  textarea:focus {
-    outline: 1.5px solid var(--color-neutral);
-    padding: 0.2rem 0.3rem;
-    border: 1px solid #ccc;
-    border-radius: 0.2rem;
-    font: inherit;
-  }
-
-  .kontakt-formular ::placeholder {
-    opacity: 0.6;
-    font-style: italic;
-  }
-}
-
-@media (min-width: 768px) {
-  .kontakt {
-    fieldset {
-      grid-template-columns: 1fr 2fr;
-      column-gap: 1rem;
-      row-gap: 0.75rem;
-    }
-
-    label {
-      align-self: center;
-    }
-
-    textarea,
-    input[type="text"],
-    input[type="email"] {
-      width: 100%;
-      font-family: 'Barlow', sans-serif;
-    }
-
-    input[type="submit"] {
-      grid-column: 2;
-      justify-self: start;
-    }
-  }
-}
-
 /* 404.html */
 .not-found {
   img {
@@ -559,18 +486,7 @@ ul.ergebnis-grid {
 
 /* Dark-Scheme */
 @media (prefers-color-scheme: dark) {
-  /* garten.html */
-  .garten {
-    .pflanze {
-      dl {
-        background-color: var(--color-accent);
-      }
 
-      dd {
-        background-color: var(--color-second);
-      }
-    }
-  }
 
   /* gaming-online.html */
   .gaming-online {
@@ -715,10 +631,5 @@ ul.ergebnis-grid {
     a {
       color: var(--color-text-main);
     }
-  }
-
-  /* kontakt.html */
-  .kontakt-formular {
-    color: var(--color-text-black);
   }
 }
