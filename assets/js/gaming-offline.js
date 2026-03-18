@@ -1,54 +1,54 @@
+
 // Filter
 const filterForm = document.querySelector(".filter-gaming-offline");    // Filterbereich
 const rows = document.querySelectorAll("tbody tr");                     // Zeilen der Tier List
+const inputs = filterForm.querySelectorAll("input[type='checkbox']");   // Checkboxen Filter
 
-filterForm.addEventListener("change", () => {
+inputs.forEach(input => {
 
-    // Alle aktiven Filter sammeln
-    const aktiveRatings = Array.from(
-        filterForm.querySelectorAll('input[name="rating[]"]:checked')
-    ).map(cb => cb.value);
+    input.addEventListener("change", () => {
 
-    const aktiveErweiterungen = Array.from(
-        filterForm.querySelectorAll('input[name="erweiterungen[]"]:checked')
-    ).map(cb => cb.value);
+        const aktiveRatings = Array.from(
+            filterForm.querySelectorAll('input[name="rating[]"]:checked')
+        ).map(cb => cb.value);
 
-    const aktiveSchwierigkeit = Array.from(
-        filterForm.querySelectorAll('input[name="schwierigkeitsgrad[]"]:checked')
-    ).map(cb => cb.value);
+        const aktiveErweiterungen = Array.from(
+            filterForm.querySelectorAll('input[name="erweiterungen[]"]:checked')
+        ).map(cb => cb.value);
 
-    // Jede Tabellenzeile prüfen
-    rows.forEach(row => {
+        const aktiveSchwierigkeit = Array.from(
+            filterForm.querySelectorAll('input[name="schwierigkeitsgrad[]"]:checked')
+        ).map(cb => cb.value);
 
-        const rowRating = row.dataset.rating;
-        const rowErweiterungen = row.dataset.erweiterung;
-        const rowSchwierigkeit = row.dataset.schwierigkeitsgrad;
+        rows.forEach(row => {
 
-        let sichtbar = true;
+            const rowRating = row.dataset.rating;
+            const rowErweiterungen = row.dataset.erweiterung;
+            const rowSchwierigkeit = row.dataset.schwierigkeitsgrad;
 
-        // Rating prüfen
-        if (aktiveRatings.length > 0 && !aktiveRatings.includes(rowRating)) {
-            sichtbar = false;
-        }
+            let sichtbar = true;
 
-        // Erweiterung prüfen
-        if (aktiveErweiterungen.length > 0 && !aktiveErweiterungen.includes(rowErweiterungen)) {
-            sichtbar = false;
-        }
+            if (aktiveRatings.length > 0 && !aktiveRatings.includes(rowRating)) {
+                sichtbar = false;
+            }
 
-        // Schwierigkeit prüfen
-        if (aktiveSchwierigkeit.length > 0 && !aktiveSchwierigkeit.includes(rowSchwierigkeit)) {
-            sichtbar = false;
-        }
+            if (aktiveErweiterungen.length > 0 && !aktiveErweiterungen.includes(rowErweiterungen)) {
+                sichtbar = false;
+            }
 
-        // Sichtbarkeit setzen
-        row.hidden = !sichtbar;
+            if (aktiveSchwierigkeit.length > 0 && !aktiveSchwierigkeit.includes(rowSchwierigkeit)) {
+                sichtbar = false;
+            }
+            row.style.display = sichtbar ? '' : 'none';
+        });
     });
 });
 
 // Filter zurücksetzen --> Reset-Button
 filterForm.addEventListener("reset", () => {
-    rows.forEach(row => row.hidden = false);
+    rows.forEach(row => {
+        row.style.display = ''; 
+    });
 });
 
 // Sortierung Tier List
@@ -77,8 +77,8 @@ headers.forEach((header, index) => {
 
         // Sortierung mit sort()
         reihen.sort((a, b) => {
-            const zelleA = a.children[index].textContent.trim();
-            const zelleB = b.children[index].textContent.trim();
+            const zelleA = a.children[index].dataset.value ?? a.children[index].innerText.trim();
+            const zelleB = b.children[index].dataset.value ?? b.children[index].innerText.trim();
 
             // Sortierung für Spalte Ranking (SS > S > A > B > C)
             const rankingReihenfolge = ["SS", "S", "A", "B", "C"];
@@ -105,5 +105,4 @@ headers.forEach((header, index) => {
             isAufsteigend ? "descending" : "ascending"
         );
     });
-
 });
