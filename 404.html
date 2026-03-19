@@ -8,9 +8,9 @@
 
     <title>System in die Sache bringen</title>
 
-    <link rel="icon" href="assets/images/garten/neuron.png">
+    <link rel="icon" href="assets/images/global/neuron.png">
 
-    <!-- Tailwind und DaisyUI -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- eigenes CSS -->
@@ -31,28 +31,29 @@
 </head>
 
 <body>
-    <a href="#hauptinhalt" class="versteckt skip-link">
+    <a href="#hauptinhalt"
+        class="sr-only focus:not-sr-only focus:absolute focus:mt-2 focus:ml-2 focus:px-4 focus:py-2 focus:underline focus:bg-[var(--color-accent)] focus:text-[var(--color-text-main)] focus:z-[3000]">
         Zum Hauptinhalt springen
     </a>
     <site-header></site-header>
 
-    <main class="seitenlayout" id="hauptinhalt">
-        <section class="content not-found">
-            <h1>404 - System not found</h1>
+    <main class="max-lg:mx-2 lg:ml-8 pt-4 lg:grid lg:grid-cols-[150px_minmax(0,1fr)_160px] lg:gap-10" id="hauptinhalt">
+        <section class="max-lg:mx-6 lg:mt-6 text-[var(--color-text-main)] lg:col-start-2">
+            <h1 class="font-[Orbitron] text-3xl font-bold mb-6">404 - System not found</h1>
 
-            <p>
+            <p class="mb-4">
                 Ups. Dieses System ist leider nicht auffindbar.
             </p>
 
-            <p>
+            <p class="mb-6">
                 Entweder hat sich ein Tippfehler eingeschlichen oder diese Seite existiert (noch) nicht.
                 Selbst die beste Struktur hilft manchmal nicht gegen Chaos.
             </p>
 
-            <img src="assets/images/global/404haufen.png" alt="Illustration chaotischer Gerümpel-Haufen">
+            <img src="assets/images/global/404haufen.png" class="mb-8" alt="Illustration chaotischer Gerümpel-Haufen">
 
             <p>
-                <a href="index.html" class="button">Zurück zur Ordnung</a>
+                <a href="index.html" class="bg-[var(--color-second)] text-[var(--color-text-accent)] px-4 py-2 rounded-lg cursor-pointer hover:brightness-110 dark:hover:bg-[color-mix(in_srgb,var(--color-second)_50%,transparent)]">Zurück zur Ordnung</a>
             </p>
         </section>
     </main>

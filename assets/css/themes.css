@@ -163,23 +163,6 @@
   }
 }
 
-
-/* 404.html */
-.not-found {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  a {
-    text-decoration: none;
-  }
-}
-
-
-
-
-
 /* Dark-Scheme */
 @media (prefers-color-scheme: dark) {
   /* gaming-online.html */
