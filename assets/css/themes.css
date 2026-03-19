@@ -251,13 +251,4 @@
       }
     }
   }
-
-
-
-  /* impressum.html */
-  address {
-    a {
-      color: var(--color-text-main);
-    }
-  }
 }
