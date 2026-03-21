@@ -1,74 +1,6 @@
 /* gaming-online.html */
 /* Waffen-Liste */
 .gaming-online {
-  .waffen-wrapper {
-    scroll-margin-top: 60px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
-  }
-
-  thead {
-    background: var(--color-second);
-    color: var(--color-text-accent);
-  }
-
-  th,
-  td {
-    padding: 0.55rem 0.6rem;
-    text-align: left;
-  }
-
-  tbody tr {
-    border-bottom: 1px solid color-mix(in srgb, var(--color-second) 20%, transparent);
-  }
-
-  tbody tr:nth-child(even) {
-    background: color-mix(in srgb, var(--color-second) 10%, transparent);
-  }
-
-  tbody tr:hover,
-  tbody tr:focus-within {
-    background: color-mix(in srgb, var(--color-main) 60%, transparent);
-  }
-
-  td[aria-label] {
-    letter-spacing: 0.15em;
-    color: #f5c518;
-    font-size: 1rem;
-  }
-}
-
-.waffe {
-  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-}
-
-.charakter-liste {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.6rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    background: var(--color-accent);
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.4rem;
-    font-size: 0.85rem;
-  }
-
-  li:focus,
-  li:hover {
-    background: var(--color-second);
-    color: var(--color-text-accent);
-    outline: none;
-  }
-
   li.not-active {
     background: var(--color-accent);
     color: var(--color-text-main);
@@ -86,114 +18,12 @@
   transition: opacity 0.2s ease;
 }
 
-/* Mobil: gestapelte Tabelle */
-@media (max-width: 767px) {
-  .gaming-online {
-    .waffen-wrapper {
-      scroll-margin-top: 0px;
-    }
-
-    table,
-    thead,
-    tbody,
-    th,
-    tr,
-    td {
-      display: block;
-    }
-
-    thead {
-      display: none;
-    }
-
-    tr {
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    td {
-      display: grid;
-      grid-template-columns: 8rem 1fr;
-      gap: 0.5rem;
-      padding: 0.25rem 0;
-    }
-
-    td::before {
-      font-weight: 600;
-      opacity: 0.8;
-    }
-
-    /* thead jeweils als rechte Spalte, links Eigenschaftswerte */
-    td:nth-of-type(1)::before {
-      content: "Waffe";
-    }
-
-    td:nth-of-type(2)::before {
-      content: "Seltenheit";
-      color: var(--color-text-main);
-      letter-spacing: normal;
-    }
-
-    td:nth-of-type(3)::before {
-      content: "Beste Charaktere";
-    }
-  }
-}
-
-/* gaming-offline.html */
-/* Sortierpfeile im Header bei Tablet und Desktop */
-
-@media (min-width: 768px) {
-  .table-gaming-offline {
-    thead {
-      .asc::after {
-        content: " ▲";
-        opacity: 1;
-        color: #ff7b00;
-      }
-
-      .desc::after {
-        content: " ▼";
-        opacity: 1;
-        color: #ff7b00;
-      }
-    }
-  }
-}
-
 /* Dark-Scheme */
 @media (prefers-color-scheme: dark) {
   /* gaming-online.html */
+
   .gaming-online {
-    tbody tr {
-      border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
-    }
-
-    tbody tr:nth-child(even) {
-      background: color-mix(in srgb, var(--color-accent) 10%, transparent);
-    }
-
-    tbody tr:hover,
-    tbody tr:focus-within {
-      background: color-mix(in srgb, var(--color-accent) 60%, transparent);
-      color: var(--color-text-black);
-    }
-
     .charakter-liste {
-      li {
-        background: color-mix(in srgb, var(--color-accent) 20%, transparent);
-        color: var(--color-text-accent);
-      }
-
-      li:focus,
-      li:hover {
-        background: var(--color-second);
-        color: var(--color-text-accent);
-        outline: none;
-      }
-
       li.not-active {
         background: color-mix(in srgb, var(--color-accent) 80%, transparent);
         color: var(--color-text-black);
@@ -210,31 +40,6 @@
   /* gestapelte Tabelle für Waffenliste (Mobil)*/
   @media (max-width: 767px) {
     .gaming-online {
-      tbody tr {
-        background: color-mix(in srgb, var(--color-accent) 20%, transparent);
-      }
-
-      tbody tr:nth-child(even) {
-        background: color-mix(in srgb, var(--color-accent) 10%, transparent);
-      }
-
-      tbody tr:hover,
-      tbody tr:focus-within {
-        background: color-mix(in srgb, var(--color-accent) 40%, transparent);
-        color: var(--color-text-main);
-
-        td:nth-of-type(2)::before {
-          color: var(--color-text-main);
-        }
-      }
-
-      li:focus,
-      li:hover {
-        background: color-mix(in srgb, var(--color-second) 40%, transparent);
-        color: var(--color-text-accent);
-        outline: none;
-      }
-
       li.not-active {
         background: var(--color-accent);
         color: var(--color-text-main);
@@ -244,10 +49,26 @@
         background: color-mix(in srgb, var(--color-accent) 30%, transparent);
         box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
         color: var(--color-text-accent);
+      }
+    }
+  }
+}
 
-        td:nth-of-type(2)::before {
-          color: var(--color-text-main);
-        }
+/* gaming-offline.html */
+/* Sortierpfeile im Header bei Tablet und Desktop */
+@media (min-width: 768px) {
+  .table-gaming-offline {
+    thead {
+      .asc::after {
+        content: " ▲";
+        opacity: 1;
+        color: #ff7b00;
+      }
+
+      .desc::after {
+        content: " ▼";
+        opacity: 1;
+        color: #ff7b00;
       }
     }
   }
