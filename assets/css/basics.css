@@ -20,11 +20,8 @@
   --color-text-muted: rgba(255, 255, 255, 0.85);
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
-/* Links */
+/* Focus für Links */
 a:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
