@@ -81,886 +81,1025 @@
 
             <section>
 
-            <h3 class="text-xl font-bold mb-4">Filter</h3>
+                <h3 class="text-xl font-bold mb-4">Filter</h3>
 
-            <form class="filter-gaming-offline grid gap-8 grid-cols-1 md:grid-cols-3 mb-8">
+                <form class="filter-gaming-offline grid gap-8 grid-cols-1 md:grid-cols-3 mb-8">
 
-                <!-- Rating -->
-                <fieldset class="border border-[var(--color-neutral)] p-4 rounded-xl
-                bg-[var(--color-accent)] shadow-md md:bg-[var(--color-main)] md:text-[var(--color-text-accent)] dark:max-md:text-[var(--color-text-black)]">
+                    <!-- Rating -->
+                    <fieldset
+                        class="border border-[var(--color-neutral)] p-4 rounded-xl
+                            bg-[var(--color-accent)] shadow-md md:bg-[var(--color-main)] md:text-[var(--color-text-accent)] dark:max-md:text-[var(--color-text-black)]">
 
-                    <legend class="font-semibold px-1.5 py-0.5 rounded-md border border-[var(--color-neutral)]
-                    bg-[var(--color-main)] text-[var(--color-text-accent)] md:bg-[var(--color-accent)] md:text-[var(--color-text-main)] dark:text-[var(--color-text-black)] dark:max-md:text-[var(--color-text-main)] -translate-y-1">
-                    Rating
-                    </legend>
+                        <legend
+                            class="font-semibold px-1.5 py-0.5 rounded-md border border-[var(--color-neutral)]
+                                bg-[var(--color-main)] text-[var(--color-text-accent)] md:bg-[var(--color-accent)] md:text-[var(--color-text-main)] dark:text-[var(--color-text-black)] dark:max-md:text-[var(--color-text-main)] -translate-y-1">
+                            Rating
+                        </legend>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="rating[]" value="SS"
-                    class="accent-[var(--color-accent)] cursor-pointer peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">SS</span>
-                    </label>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="rating[]" value="SS"
+                                class="accent-[var(--color-accent)] cursor-pointer peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">SS</span>
+                        </label>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="rating[]" value="S"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">S</span>
-                    </label>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="rating[]" value="S" class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">S</span>
+                        </label>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="rating[]" value="A"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">A</span>
-                    </label>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="rating[]" value="A" class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">A</span>
+                        </label>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="rating[]" value="B"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">B</span>
-                    </label>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="rating[]" value="B" class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">B</span>
+                        </label>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="rating[]" value="C"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">C</span>
-                    </label>
-                </fieldset>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="rating[]" value="C" class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">C</span>
+                        </label>
+                    </fieldset>
 
+                    <!-- Erweiterungen -->
+                    <fieldset
+                        class="border border-[var(--color-neutral)] p-4 rounded-xl
+                            bg-[var(--color-accent)] shadow-md md:bg-[var(--color-main)] md:text-[var(--color-text-accent)] dark:max-md:text-[var(--color-text-black)]">
 
-                <!-- Erweiterungen -->
-                <fieldset class="border border-[var(--color-neutral)] p-4 rounded-xl
-                bg-[var(--color-accent)] shadow-md md:bg-[var(--color-main)] md:text-[var(--color-text-accent)] dark:max-md:text-[var(--color-text-black)]">
+                        <legend
+                            class="font-semibold px-1.5 py-0.5 rounded-md border border-[var(--color-neutral)]
+                                bg-[var(--color-main)] text-[var(--color-text-accent)] md:bg-[var(--color-accent)] md:text-[var(--color-text-main)] dark:text-[var(--color-text-black)] dark:max-md:text-[var(--color-text-main)] -translate-y-1">
+                            Erweiterungen
+                        </legend>
 
-                    <legend class="font-semibold px-1.5 py-0.5 rounded-md border border-[var(--color-neutral)]
-                    bg-[var(--color-main)] text-[var(--color-text-accent)] md:bg-[var(--color-accent)] md:text-[var(--color-text-main)] dark:text-[var(--color-text-black)] dark:max-md:text-[var(--color-text-main)] -translate-y-1">
-                    Erweiterungen
-                    </legend>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="erweiterungen[]" value="Grundspiel"
+                                class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Grundspiel</span>
+                        </label>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="erweiterungen[]" value="Grundspiel"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Grundspiel</span>
-                    </label>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="erweiterungen[]" value="Venus"
+                                class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Venus</span>
+                        </label>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="erweiterungen[]" value="Venus"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Venus</span>
-                    </label>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="erweiterungen[]" value="Präludium"
+                                class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Präludium</span>
+                        </label>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="erweiterungen[]" value="Präludium"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Präludium</span>
-                    </label>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="erweiterungen[]" value="Kolonien"
+                                class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Kolonien</span>
+                        </label>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="erweiterungen[]" value="Kolonien"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Kolonien</span>
-                    </label>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="erweiterungen[]" value="Aufruhr"
+                                class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Aufruhr</span>
+                        </label>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="erweiterungen[]" value="Aufruhr"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Aufruhr</span>
-                    </label>
+                        <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                            <input type="checkbox" name="erweiterungen[]" value="Konzerne"
+                                class="accent-[var(--color-accent)] peer">
+                            <span
+                                class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Konzerne</span>
+                        </label>
+                    </fieldset>
 
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="erweiterungen[]" value="Konzerne"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">Konzerne</span>
-                    </label>
+                    <!-- Schwierigkeitsgrad -->
+                    <fieldset
+                        class="border border-[var(--color-neutral)] p-4 rounded-xl
+                            bg-[var(--color-accent)] shadow-md md:bg-[var(--color-main)] md:text-[var(--color-text-accent)] dark:max-md:text-[var(--color-text-black)]">
 
-                </fieldset>
+                        <legend
+                            class="font-semibold px-1.5 py-0.5 rounded-md border border-[var(--color-neutral)]
+                                bg-[var(--color-main)] text-[var(--color-text-accent)] md:bg-[var(--color-accent)] md:text-[var(--color-text-main)] md:dark:text-[var(--color-text-black)] dark:max-md:text-[var(--color-text-main)] -translate-y-1">
+                            Schwierigkeitsgrad
+                        </legend>
 
+                        <div class="space-y-0">
+                            <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                                <input type="checkbox" name="schwierigkeitsgrad[]" value="einfach"
+                                    class="accent-[var(--color-accent)] peer">
+                                <span
+                                    class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">einfach</span>
+                            </label>
+                        </div>
 
-                <!-- Schwierigkeitsgrad -->
-                <fieldset class="border border-[var(--color-neutral)] p-4 rounded-xl
-                bg-[var(--color-accent)] shadow-md md:bg-[var(--color-main)] md:text-[var(--color-text-accent)] dark:max-md:text-[var(--color-text-black)]">
+                        <div class="space-y-0">
+                            <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                                <input type="checkbox" name="schwierigkeitsgrad[]" value="mittel"
+                                    class="accent-[var(--color-accent)] peer">
+                                <span
+                                    class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">mittel</span>
+                            </label>
+                        </div>
 
-                    <legend class="font-semibold px-1.5 py-0.5 rounded-md border border-[var(--color-neutral)]
-                    bg-[var(--color-main)] text-[var(--color-text-accent)] md:bg-[var(--color-accent)] md:text-[var(--color-text-main)] md:dark:text-[var(--color-text-black)] dark:max-md:text-[var(--color-text-main)] -translate-y-1">
-                    Schwierigkeitsgrad
-                    </legend>
+                        <div class="space-y-0">
+                            <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
+                                <input type="checkbox" name="schwierigkeitsgrad[]" value="schwer"
+                                    class="accent-[var(--color-accent)] peer">
+                                <span
+                                    class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">schwer</span>
+                            </label>
+                        </div>
+                    </fieldset>
 
-                    <div class="space-y-0">
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="schwierigkeitsgrad[]" value="einfach"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">einfach</span>
-                    </label>
-                    </div>
-
-                    <div class="space-y-0">
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="schwierigkeitsgrad[]" value="mittel"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">mittel</span>
-                    </label>
-                    </div>
-
-                    <div class="space-y-0">
-                    <label class="flex items-center gap-2 cursor-pointer rounded px-1 py-0">
-                    <input type="checkbox" name="schwierigkeitsgrad[]" value="schwer"
-                    class="accent-[var(--color-accent)] peer">
-                    <span class="peer-checked:font-semibold hover:bg-[color-mix(in_srgb,var(--color-accent)_15%,transparent)] rounded py-0.5">schwer</span>
-                    </label>
-                    </div>
-
-                </fieldset>
-
-
-            <button type="reset"
-            class="
-            bg-[var(--color-second)] text-[var(--color-text-accent)]
-            px-4 py-2 rounded-lg
-            hover:brightness-110">
-            Filter zurücksetzen
-            </button>
-
-            </form>
-
+                    <button type="reset" class="bg-[var(--color-second)] text-[var(--color-text-accent)] px-4 py-2 rounded-lg hover:brightness-110">
+                        Filter zurücksetzen
+                    </button>
+                </form>
             </section>
 
             <table class="table-gaming-offline w-full border-separate border-spacing-0 rounded-xl overflow-hidden">
 
-        <caption class="text-[var(--color-text-main)] text-lg font-extrabold mb-4 text-left">
-        Tier List der Konzerne in Terraforming Mars
-        </caption>
+                <caption class="text-[var(--color-text-main)] text-lg font-extrabold mb-4 text-left">
+                    Tier List der Konzerne in Terraforming Mars
+                </caption>
 
-        <thead class="md:table-header-group max-md:sr-only bg-[var(--color-neutral)] text-[var(--color-text-accent)]">
-        <tr>
-            <th scope="col" data-sort="text" tabindex="0" role="button" aria-sort="none"
-            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">Konzern</th>
+                <thead
+                    class="md:table-header-group max-md:sr-only bg-[var(--color-neutral)] text-[var(--color-text-accent)]">
+                    <tr>
+                        <th scope="col" data-sort="text" tabindex="0" role="button" aria-sort="none"
+                            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">
+                            Konzern</th>
 
-            <th scope="col" data-sort="ranking" tabindex="0" role="button" aria-sort="none"
-            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">Ranking</th>
+                        <th scope="col" data-sort="ranking" tabindex="0" role="button" aria-sort="none"
+                            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">
+                            Ranking</th>
 
-            <th scope="col" data-sort="text" tabindex="0" role="button" aria-sort="none"
-            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">Erweiterung</th>
+                        <th scope="col" data-sort="text" tabindex="0" role="button" aria-sort="none"
+                            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">
+                            Erweiterung</th>
 
-            <th scope="col" data-sort="text" tabindex="0" role="button" aria-sort="none"
-            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">Stärke</th>
+                        <th scope="col" data-sort="text" tabindex="0" role="button" aria-sort="none"
+                            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">
+                            Stärke</th>
 
-            <th scope="col" data-sort="text" tabindex="0" role="button" aria-sort="none"
-            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">Schwierigkeitsgrad</th>
-        </tr>
-        </thead>
+                        <th scope="col" data-sort="text" tabindex="0" role="button" aria-sort="none"
+                            class="p-3 text-left cursor-pointer select-none hover:bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]">
+                            Schwierigkeitsgrad</th>
+                    </tr>
+                </thead>
 
-        <tbody>
+                <tbody>
 
-        <!-- Tharsis Republic -->
-        <tr data-rating="SS" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                    <!-- Tharsis Republic -->
+                    <tr data-rating="SS" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
             p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
 
-            <td data-label="Konzern"
-            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3
                 border-none md:border-b md:border-[var(--color-neutral)] before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Tharsis Republic
-            </td>
+                            Tharsis Republic
+                        </td>
 
-            <td data-label="Ranking"
-            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            SS
-            </td>
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            SS
+                        </td>
 
-            <td data-label="Erweiterung"
-            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Grundspiel
-            </td>
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Grundspiel
+                        </td>
 
-            <td data-label="Stärke"
-            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Städte
-            </td>
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Städte
+                        </td>
 
-            <td data-label="Schwierigkeitsgrad"
-            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr>
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
 
-        <!-- Ecoline -->
-        <tr data-rating="SS" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                    <!-- Ecoline -->
+                    <tr data-rating="SS" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
             p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
 
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Ecoline
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            SS
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Grundspiel
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Pflanzen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr>
-
-
-        <!-- Helion -->
-        <tr data-rating="S" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Helion
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            S
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Grundspiel
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Wärme
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr>
-
-                <!-- Interplanetary Cinematics -->
-        <tr data-rating="S" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="einfach"
-                class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-                p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-            
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Interplanetary Cinematics
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            S
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Grundspiel
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Starteinkommen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr>
-
-        <!-- Mining Guild -->
-        <tr data-rating="A" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Mining Guild
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            A
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Grundspiel
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Ressourcen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr>
-
-        <!-- Inventrix -->
-        <tr data-rating="S" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
-                class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-                p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Inventrix
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            S
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Grundspiel
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            globale Bedingungen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr>
-
-        <!-- Thorgate -->
-        <tr data-rating="C" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Thorgate
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            C
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Grundspiel
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Energie
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr>
-
-        <!-- Credicore -->
-        <tr data-rating="B" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
-                class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-                p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Credicore
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            B
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Grundspiel
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Megacredits
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr>
-
-        <!-- United Nations Mars Initiative -->
-        <tr data-rating="C" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            United Nations Mars Initiative
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            C
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Grundspiel
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Terraforming-Werte
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr>
-
-        <!-- Celestic -->
-        <tr data-rating="A" data-erweiterung="Venus" data-schwierigkeitsgrad="mittel"
-                class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-                p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Celestic
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            A
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Venus
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Schweber
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr>        
-
-        <!-- Manutech -->
-        <tr data-rating="SS" data-erweiterung="Venus" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Manutech
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            SS
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Venus
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Ressourcen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr> 
-
-        <!-- Viron -->
-        <tr data-rating="S" data-erweiterung="Venus" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Viron
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            S
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Venus
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Aktionen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr> 
-
-        <!-- Aphrodite -->
-        <tr data-rating="C" data-erweiterung="Venus" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Aphrodite
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            C
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Venus
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Starteinkommen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr> 
-
-        <!-- Morning Star Inc. -->
-        <tr data-rating="B" data-erweiterung="Venus" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Morning Star Inc.
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            B
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Venus
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Starteinkommen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr> 
-
-        <!-- Vitor -->
-        <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Vitor
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            SS
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Präludium
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Terraforming-Werte
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr> 
-        
-        <!-- Robinson Industries -->
-        <tr data-rating="S" data-erweiterung="Präludium" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Robinson Industries
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            S
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Präludium
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Ressourcen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr> 
-
-        <!-- Point Luna -->
-        <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Point Luna
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            SS
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Präludium
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Karten
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr> 
-
-        <!-- Valley Trust -->
-        <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Valley Trust
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            SS
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Präludium
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Präludium
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr> 
-
-        <!-- Cheung Shing Mars -->
-        <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Cheung Shing Mars
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            SS
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Präludium
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Gebäudekarten
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr> 
-
-        <!-- Poseidon -->
-        <tr data-rating="SS" data-erweiterung="Kolonien" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Poseidon
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            SS
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Kolonien
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Kolonien
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr> 
-
-        <!-- Aridor -->
-        <tr data-rating="S" data-erweiterung="Kolonien" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Aridor
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            S
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Kolonien
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Einkommen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr> 
-
-        <!-- Stormcraft -->
-        <tr data-rating="C" data-erweiterung="Kolonien" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Stormcraft
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            C
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Kolonien
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Schweber
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr> 
-
-        <!-- Arklight -->
-        <tr data-rating="C" data-erweiterung="Kolonien" data-schwierigkeitsgrad="einfach"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Arklight
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            C
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Kolonien
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Tiere/Pflanzen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            einfach
-            </td>
-        </tr> 
-        
-        <!-- Polyphemos -->
-        <tr data-rating="B" data-erweiterung="Kolonien" data-schwierigkeitsgrad="schwer"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Polyphemos
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            B
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Kolonien
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Starteinkommen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            schwer
-            </td>
-        </tr> 
-
-        <!-- Splice -->
-        <tr data-rating="C" data-erweiterung="Konzerne" data-schwierigkeitsgrad="mittel"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Splice
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            C
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Konzerne
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Mikroben
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            mittel
-            </td>
-        </tr> 
-
-        <!-- Recyclon -->
-        <tr data-rating="C" data-erweiterung="Konzerne" data-schwierigkeitsgrad="schwer"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-            
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Recyclon
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            C
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Konzerne
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Pflanzen/Mikroben
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            schwer
-            </td>
-        </tr> 
-
-        <!-- Arcadian Communities -->
-        <tr data-rating="C" data-erweiterung="Konzerne" data-schwierigkeitsgrad="schwer"
-        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
-            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
-
-            <td data-label="Konzern" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Arcadian Communities
-            </td>
-
-            <td data-label="Ranking" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            C
-            </td>
-
-            <td data-label="Erweiterung" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Konzerne
-            </td>
-
-            <td data-label="Stärke" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            Aktionen
-            </td>
-
-            <td data-label="Schwierigkeitsgrad" class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
-            schwer
-            </td>
-        </tr> 
-</tbody>
-</table>
-
-
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Ecoline
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            SS
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Grundspiel
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Pflanzen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+
+                    <!-- Helion -->
+                    <tr data-rating="S" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Helion
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            S
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Grundspiel
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Wärme
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Interplanetary Cinematics -->
+                    <tr data-rating="S" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Interplanetary Cinematics
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            S
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Grundspiel
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Starteinkommen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Mining Guild -->
+                    <tr data-rating="A" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Mining Guild
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            A
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Grundspiel
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Ressourcen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Inventrix -->
+                    <tr data-rating="S" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Inventrix
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            S
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Grundspiel
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            globale Bedingungen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Thorgate -->
+                    <tr data-rating="C" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Thorgate
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            C
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Grundspiel
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Energie
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Credicore -->
+                    <tr data-rating="B" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Credicore
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            B
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Grundspiel
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Megacredits
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- United Nations Mars Initiative -->
+                    <tr data-rating="C" data-erweiterung="Grundspiel" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            United Nations Mars Initiative
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            C
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Grundspiel
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Terraforming-Werte
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Celestic -->
+                    <tr data-rating="A" data-erweiterung="Venus" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Celestic
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            A
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Venus
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Schweber
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Manutech -->
+                    <tr data-rating="SS" data-erweiterung="Venus" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Manutech
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            SS
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Venus
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Ressourcen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Viron -->
+                    <tr data-rating="S" data-erweiterung="Venus" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Viron
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            S
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Venus
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Aktionen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Aphrodite -->
+                    <tr data-rating="C" data-erweiterung="Venus" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Aphrodite
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            C
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Venus
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Starteinkommen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Morning Star Inc. -->
+                    <tr data-rating="B" data-erweiterung="Venus" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Morning Star Inc.
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            B
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Venus
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Starteinkommen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Vitor -->
+                    <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Vitor
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            SS
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Präludium
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Terraforming-Werte
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Robinson Industries -->
+                    <tr data-rating="S" data-erweiterung="Präludium" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Robinson Industries
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            S
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Präludium
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Ressourcen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Point Luna -->
+                    <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Point Luna
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            SS
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Präludium
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Karten
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Valley Trust -->
+                    <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Valley Trust
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            SS
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Präludium
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Präludium
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Cheung Shing Mars -->
+                    <tr data-rating="SS" data-erweiterung="Präludium" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Cheung Shing Mars
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            SS
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Präludium
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Gebäudekarten
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Poseidon -->
+                    <tr data-rating="SS" data-erweiterung="Kolonien" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Poseidon
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            SS
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Kolonien
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Kolonien
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Aridor -->
+                    <tr data-rating="S" data-erweiterung="Kolonien" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Aridor
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            S
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Kolonien
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Einkommen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Stormcraft -->
+                    <tr data-rating="C" data-erweiterung="Kolonien" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Stormcraft
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            C
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Kolonien
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Schweber
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Arklight -->
+                    <tr data-rating="C" data-erweiterung="Kolonien" data-schwierigkeitsgrad="einfach"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Arklight
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            C
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Kolonien
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Tiere/Pflanzen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            einfach
+                        </td>
+                    </tr>
+
+                    <!-- Polyphemos -->
+                    <tr data-rating="B" data-erweiterung="Kolonien" data-schwierigkeitsgrad="schwer"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Polyphemos
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            B
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Kolonien
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Starteinkommen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            schwer
+                        </td>
+                    </tr>
+
+                    <!-- Splice -->
+                    <tr data-rating="C" data-erweiterung="Konzerne" data-schwierigkeitsgrad="mittel"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Splice
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            C
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Konzerne
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Mikroben
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            mittel
+                        </td>
+                    </tr>
+
+                    <!-- Recyclon -->
+                    <tr data-rating="C" data-erweiterung="Konzerne" data-schwierigkeitsgrad="schwer"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_40%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Recyclon
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            C
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Konzerne
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Pflanzen/Mikroben
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            schwer
+                        </td>
+                    </tr>
+
+                    <!-- Arcadian Communities -->
+                    <tr data-rating="C" data-erweiterung="Konzerne" data-schwierigkeitsgrad="schwer"
+                        class="block md:table-row mb-5 md:mb-0 bg-[var(--color-main)] md:bg-[color-mix(in_srgb,var(--color-second)_90%,transparent)] rounded-xl md:rounded-none
+                            p-4 md:p-0 shadow md:shadow-none hover:bg-[color-mix(in_srgb,var(--color-accent)_20%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] transition">
+
+                        <td data-label="Konzern"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Arcadian Communities
+                        </td>
+
+                        <td data-label="Ranking"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            C
+                        </td>
+
+                        <td data-label="Erweiterung"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Konzerne
+                        </td>
+
+                        <td data-label="Stärke"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            Aktionen
+                        </td>
+
+                        <td data-label="Schwierigkeitsgrad"
+                            class="grid md:table-cell grid-cols-[minmax(6rem,40%)_1fr] md:grid-cols-none gap-2 md:gap-0 py-1 md:p-3 border-none md:border-b before:content-[attr(data-label)] md:before:content-none before:font-semibold before:text-[var(--color-accent)]">
+                            schwer
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 

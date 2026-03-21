@@ -52,195 +52,255 @@
                 die zu deinen Interessen passen.
             </p>
             <form class="quiz flex flex-col gap-8">
-                <fieldset class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
+                <fieldset
+                    class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
                     <legend class="font-semibold text-[1.1em] dark:bg-[var(--color-accent)] dark:rounded-lg dark:p-2">
                         Wie sieht deine Ernährung aus?
                     </legend>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-ernaehrung" value="hotel-mama" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-ernaehrung" value="hotel-mama" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
                         <span class="peer-checked:font-semibold">Hotel Mama schmeckt am besten.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-ernaehrung" value="mcdonalds" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-ernaehrung" value="mcdonalds" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
                         <span class="peer-checked:font-semibold">Ich bin Stammkunde bei McDonalds.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-ernaehrung" value="jagd" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-ernaehrung" value="jagd" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
                         <span class="peer-checked:font-semibold">Ich jage mir mein Essen selbst.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-ernaehrung" value="moehren" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Meine Möhrchen hole ich mir aus dem eigenen Garten.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-ernaehrung" value="moehren" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Meine Möhrchen hole ich mir aus dem eigenen
+                            Garten.</span>
                     </label>
                 </fieldset>
 
-                <fieldset class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
+                <fieldset
+                    class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
                     <legend class="font-semibold text-[1.1em] dark:bg-[var(--color-accent)] dark:rounded-lg dark:p-2">
                         Zockt das Kind in dir immer noch ab und zu gerne am PC?
                     </legend>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-gaming" value="tetris" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Mein Abakus schafft leider nicht mehr als Tetris.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-gaming" value="tetris" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Mein Abakus schafft leider nicht mehr als
+                            Tetris.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-gaming" value="controller" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Ich bin schon mit dem Controller in der Hand auf die Welt gekommen.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-gaming" value="controller" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Ich bin schon mit dem Controller in der Hand auf die
+                            Welt gekommen.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-gaming" value="minigames" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Die kostenlosen Mini-Games aus Computer-Zeitschriften sind als Zeitvertreib zwischendurch
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-gaming" value="minigames" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Die kostenlosen Mini-Games aus Computer-Zeitschriften
+                            sind als Zeitvertreib zwischendurch
                             mal ganz nett.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-gaming" value="programmierer" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-gaming" value="programmierer" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
                         <span class="peer-checked:font-semibold">Ich programmiere meine Spiele sogar selbst.</span>
                     </label>
                 </fieldset>
 
-                <fieldset class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
+                <fieldset
+                    class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
                     <legend class="font-semibold text-[1.1em] dark:bg-[var(--color-accent)] dark:rounded-lg dark:p-2">
                         Gehst du gerne wandern?
                     </legend>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-wandern" value="seilbahn" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Nur wenn die Seilbahn bis zum Gipfel fährt und es am Ziel eine deftige Brotzeit gibt.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-wandern" value="seilbahn" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Nur wenn die Seilbahn bis zum Gipfel fährt und es am
+                            Ziel eine deftige Brotzeit gibt.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-wandern" value="wegziel" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Der Weg ist das Ziel - Hauptsache viel Natur und wenig Zivilisation.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-wandern" value="wegziel" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Der Weg ist das Ziel - Hauptsache viel Natur und wenig
+                            Zivilisation.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-wandern" value="selfie" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Alles hat seinen Preis - auch ein Selfie am Gipfelkreuz.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-wandern" value="selfie" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Alles hat seinen Preis - auch ein Selfie am
+                            Gipfelkreuz.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-wandern" value="gewaltmarsch" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Bei weniger als 30 km Länge und 1500 Höhenmeter rentiert es sich gar nicht loszulaufen.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-wandern" value="gewaltmarsch" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Bei weniger als 30 km Länge und 1500 Höhenmeter
+                            rentiert es sich gar nicht loszulaufen.</span>
                     </label>
                 </fieldset>
 
-                <fieldset class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
+                <fieldset
+                    class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
                     <legend class="font-semibold text-[1.1em] dark:bg-[var(--color-accent)] dark:rounded-lg dark:p-2">
                         Was hältst du von einem Brettspieleabend?
                     </legend>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-brettspiele" value="froehlicher-abend" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Nur wenn wir möglichst schnell zum feucht-fröhlichen Teil des Abends übergehen.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-brettspiele" value="froehlicher-abend" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Nur wenn wir möglichst schnell zum feucht-fröhlichen
+                            Teil des Abends übergehen.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-brettspiele" value="regeln-mensch" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Wie waren nochmal die Regeln von Mensch ärgere dich nicht?</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-brettspiele" value="regeln-mensch" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Wie waren nochmal die Regeln von Mensch ärgere dich
+                            nicht?</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-brettspiele" value="komplexe-spielanleitung" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Wenn das Spiel nicht weniger als 30 Seiten Anleitung hat und mindestens 4 Stunden dauert,
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-brettspiele" value="komplexe-spielanleitung" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Wenn das Spiel nicht weniger als 30 Seiten Anleitung
+                            hat und mindestens 4 Stunden dauert,
                             bin ich sofort mit dabei.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-brettspiele" value="spielefundus" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Soll ich eine kleine Auswahl aus meinem 300-qm-Spielefundus mitbringen?</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-brettspiele" value="spielefundus" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Soll ich eine kleine Auswahl aus meinem
+                            300-qm-Spielefundus mitbringen?</span>
                     </label>
                 </fieldset>
 
-                <fieldset class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
+                <fieldset
+                    class="border-none p-6 bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_50%,transparent)] dark:text-[var(--color-text-black)] rounded-xl">
                     <legend class="font-semibold text-[1.1em] dark:bg-[var(--color-accent)] dark:rounded-lg dark:p-2">
                         Bist du sportbegeistert?
                     </legend>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-sport" value="chips" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-sport" value="chips" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
                         <span class="peer-checked:font-semibold">Ja - auf dem Sofa mit der Chipstüte neben mir.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-sport" value="fitnessapp" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Ja - sonst erreiche ich die Ziele meiner Fitness-App nicht.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-sport" value="fitnessapp" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Ja - sonst erreiche ich die Ziele meiner Fitness-App
+                            nicht.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-sport" value="masochist" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Nein - das Leben ist viel zu kurz, um sich derart masochistischen Freizeitaktivitäten zu widmen.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-sport" value="masochist" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Nein - das Leben ist viel zu kurz, um sich derart
+                            masochistischen Freizeitaktivitäten zu widmen.</span>
                     </label>
-                    <label class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
-                        hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
-                        focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
-                        has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
-                        has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
-                        <input type="radio" name="quiz-sport" value="sportpensum" required class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
-                        <span class="peer-checked:font-semibold">Wenn ich mein zweistündiges tägliches Sportpensum nicht erfüllt habe, bin ich ungenießbar.</span>
+                    <label
+                        class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-white cursor-pointer dark:bg-[var(--color-accent)]
+                            hover:bg-[var(--color-main)] hover:text-[var(--color-text-accent)]
+                            focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-second)] focus-within:outline-offset-2
+                            has-[input:checked]:bg-[var(--color-second)] has-[input:checked]:text-[var(--color-text-accent)] has-[input:checked]:font-semibold
+                            has-[input:checked]:outline has-[input:checked]:outline-2 has-[input:checked]:outline-[var(--color-second)] has-[input:checked]:outline-offset-2">
+                        <input type="radio" name="quiz-sport" value="sportpensum" required
+                            class="peer absolute opacity-0 w-0 h-0 focus:outline-none">
+                        <span class="peer-checked:font-semibold">Wenn ich mein zweistündiges tägliches Sportpensum nicht
+                            erfüllt habe, bin ich ungenießbar.</span>
                     </label>
                 </fieldset>
 
@@ -252,13 +312,15 @@
                 <h2 class="font-[Orbitron] text-2xl font-bold mb-6">Dein System könnte hier liegen:</h2>
 
                 <ul class="grid gap-6 list-none p-0 md:mr-8 dark:text-[var(--color-text-black)]">
-                        <li class="ergebnis-wandern" hidden>
-                            <a href="wandern.html"
-                                class="flex flex-col md:flex-row md:items-center bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_60%,transparent)] rounded-xl overflow-hidden no-underline text-inherit
+                    <li class="ergebnis-wandern" hidden>
+                        <a href="wandern.html"
+                            class="flex flex-col md:flex-row md:items-center bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_60%,transparent)] rounded-xl overflow-hidden no-underline text-inherit
                                 focus-visible:outline focus-visible:outline-3 focus-visible:outline-[var(--color-second)] focus-visible:outline-offset-4">
-                            <img src="assets/images/themes/wandern.png" class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4" alt="Illustration Gipfel-Diagramm">
+                            <img src="assets/images/themes/wandern.png"
+                                class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4"
+                                alt="Illustration Gipfel-Diagramm">
                             <div class="p-3 text-center md:text-left">
-                            <h3 class="mt-0 mb-4 font-bold text-lg">Wandern</h3>
+                                <h3 class="mt-0 mb-4 font-bold text-lg">Wandern</h3>
                                 <p>Die Seven Summits von Bodenmais - Natur pur auf den höchsten Gipfeln im Bayerischen
                                     Wald</p>
                             </div>
@@ -269,7 +331,9 @@
                         <a href="garten.html"
                             class="flex flex-col md:flex-row md:items-center bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_60%,transparent)] rounded-xl overflow-hidden no-underline text-inherit
                                 focus-visible:outline focus-visible:outline-3 focus-visible:outline-[var(--color-second)] focus-visible:outline-offset-4">
-                            <img src="assets/images/themes/garten.png" class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4" alt="Illustration Garten-Utensilien">
+                            <img src="assets/images/themes/garten.png"
+                                class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4"
+                                alt="Illustration Garten-Utensilien">
                             <div class="p-3 text-center md:text-left">
                                 <h3 class="mt-0 mb-4 font-bold text-lg">Garten</h3>
                                 <p>Unkrautpflege, Schneckenparadies und Ernteglück - Im Einklang mit der Natur mit einem
@@ -282,7 +346,9 @@
                         <a href="gaming-online.html"
                             class="flex flex-col md:flex-row md:items-center bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_60%,transparent)] rounded-xl overflow-hidden no-underline text-inherit
                                 focus-visible:outline focus-visible:outline-3 focus-visible:outline-[var(--color-second)] focus-visible:outline-offset-4">
-                            <img src="assets/images/themes/gaming-online.png" class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4" alt="Illustration Gaming-Equipment">
+                            <img src="assets/images/themes/gaming-online.png"
+                                class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4"
+                                alt="Illustration Gaming-Equipment">
                             <div class="ergebnis-text">
                                 <h3 class="mt-0 mb-4 font-bold text-lg">Gaming online</h3>
                                 <p>Genshin Impact - Tipps und Tricks rund um das beliebte Fantasy-Action-Rollenspiel</p>
@@ -294,7 +360,9 @@
                         <a href="gaming-offline.html"
                             class="flex flex-col md:flex-row md:items-center bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_60%,transparent)] rounded-xl overflow-hidden no-underline text-inherit
                                 focus-visible:outline focus-visible:outline-3 focus-visible:outline-[var(--color-second)] focus-visible:outline-offset-4">
-                            <img src="assets/images/themes/gaming-offline.png" class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4" alt="Illustration Brettspiel">
+                            <img src="assets/images/themes/gaming-offline.png"
+                                class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4"
+                                alt="Illustration Brettspiel">
                             <div class="p-3 text-center md:text-left">
                                 <h3 class="mt-0 mb-4 font-bold text-lg">Gaming offline</h3>
                                 <p>Terraforming Mars - Wir erobern uns systematisch den Mars</p>
@@ -306,7 +374,9 @@
                         <a href="radfahren.html"
                             class="flex flex-col md:flex-row md:items-center bg-[var(--color-accent)] dark:bg-[color-mix(in_srgb,var(--color-accent)_60%,transparent)] rounded-xl overflow-hidden no-underline text-inherit
                                 focus-visible:outline focus-visible:outline-3 focus-visible:outline-[var(--color-second)] focus-visible:outline-offset-4">
-                            <img src="assets/images/themes/fahrrad.png" class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4" alt="Illustration auseinandergebautes Fahrrad">
+                            <img src="assets/images/themes/fahrrad.png"
+                                class="w-[60%] max-w-[160px] mx-auto mt-4 block md:w-auto md:max-w-[180px] md:m-4"
+                                alt="Illustration auseinandergebautes Fahrrad">
                             <div class="p-3 text-center md:text-left">
                                 <h3 class="mt-0 mb-4 font-bold text-lg">Radfahren</h3>
                                 <p>On the road auf zwei Rädern - Touren, Kauftipps und mehr</p>
@@ -320,12 +390,12 @@
                 <h2 class="font-[Orbitron] text-2xl font-bold mb-6">404 - not found</h2>
                 <p class="mb-4">Sorry, aber du scheinst auf einem anderen Planeten zu leben.</p>
                 <p class="mb-4">Auf dieser Website wirst du leider nicht glücklich werden.</p>
-                <p class="mb-4">Mach es dir lieber mit deiner Tüte Chips auf der Couch gemütlich und zappe dich systematisch durch
+                <p class="mb-4">Mach es dir lieber mit deiner Tüte Chips auf der Couch gemütlich und zappe dich
+                    systematisch durch
                     das Fernsehprogramm.</p>
             </section>
         </section>
     </main>
-
 
     <site-footer></site-footer>
 
