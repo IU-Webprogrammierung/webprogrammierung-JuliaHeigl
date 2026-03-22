@@ -95,7 +95,7 @@ Barrierefreiheit nach WCAG-Richtlinien und WAI-ARIA min. auf Level AA
 - keine reine Farbkodierung von Inhalten
 
 ### Bedienbarkeit
-- Bedienbarkeit über Tastatur möglich (z. B. Skip-Link, Fokusnavigation)
+- Bedienbarkeit über Tastatur möglich (z. B. Skip-Link, Fokusnavigation, Zurück-nach-oben-Button)
 - einheitliche Navigation auf allen Seiten
 - sichtbarer Fokus für interaktive Elemente
 - Website auch bei kleinen Bildschirmgrößen sinnvoll nutzbar
@@ -251,6 +251,6 @@ Footer mit Links zu Impressum und Kontakt
 
 ## Qualitätssicherung (Lighthouse, Screenreader, etc.)
 - **verwendeter Browser**: Entwicklung und grundlegende Tests mit Firefox; zusätzliche finale Tests mit Microsoft, um die Kompatibilität mit der Blink-Engine sicherzustellen 
-- **Lighthouse**: In den Bereichen *Accessability* und *Best Practices* ergab eine Überprüfung der Website jeweils 100 %.
+- **Lighthouse**: In den Bereichen *Accessability* und *Best Practices* ergab eine Überprüfung der Website jeweils 100 % (sowohl für eigenes CSS als auch für Tailwind).
 - **Screenreader**: 
 
