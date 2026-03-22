@@ -134,7 +134,7 @@
       justify-self: center;
       align-self: center;
       max-height: 250px;
-      max-width: 300px;
+      max-width: 250px;
       border-radius: 8px;
       filter: contrast(1.05) saturate(1.05);
       /* Anpassung für Schärfe */
@@ -157,7 +157,6 @@
       /* Grid mit 2 Spalten */
       grid-template-columns: 1fr 2fr;
       column-gap: 3rem;
-
       scroll-margin-top: 40px;
 
       h2 {
