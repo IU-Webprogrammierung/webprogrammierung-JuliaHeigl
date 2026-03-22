@@ -706,6 +706,7 @@
           content: attr(data-label);
           font-weight: 600;
           color: var(--color-accent);
+          hyphens: auto;
         }
       }
     }
