@@ -19,6 +19,7 @@
 
     <script src="assets/js/header.js" defer></script>
     <script src="assets/js/side-nav.js" defer></script>
+    <script src="assets/js/zurueck-nach-oben.js" defer></script>
     <script src="assets/js/footer.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -217,7 +218,7 @@
                 </p>
             </article>
 
-            <article id="kleiner-arber" tabindex="-1" class="grid items-start gap-4 my-12 pb-8 border-b border-[var(--color-second)] first:border-t first:pt-8
+            <article id="kleiner-arber" tabindex="-1" class="grid items-start gap-4 my-12 pb-8 first:border-t first:pt-8
                         md:grid-cols-[minmax(320px,1fr)_2fr] md:gap-x-12 scroll-mt-24">
                 <h2 class="md:col-span-2 text-2xl font-bold mb-0">Kleiner Arber - 1384 m</h2>
                 <img src="assets/images/wandern/kleiner-arber.jpg"
@@ -242,6 +243,13 @@
                 </p>
             </article>
         </section>
+
+        <button id="nachObenButton"
+            class="fixed bottom-6 right-6 z-50 border bg-[var(--color-main)] text-[var(--color-text-accent)]
+                px-4 py-2 rounded-lg shadow-lg opacity-0 pointer-events-none transition duration-300 hover:brightness-110
+                focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent)] hover:brightness-110">
+            ↑
+        </button>
     </main>
 
     <site-footer></site-footer>
