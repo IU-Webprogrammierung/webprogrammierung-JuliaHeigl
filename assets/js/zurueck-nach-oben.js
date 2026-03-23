@@ -1,11 +1,13 @@
-const nachObenButton = document.querySelector(".nachObenButton");
+const nachObenButton = document.getElementById("nachObenButton");
 
 // Button anzeigen ab Scroll
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    nachObenButton.hidden = false;
+  if (window.scrollY > 100) {
+    nachObenButton.classList.remove("opacity-0", "pointer-events-none");
+    nachObenButton.classList.add("opacity-300");
   } else {
-    nachObenButton.hidden = true;
+    nachObenButton.classList.add("opacity-0", "pointer-events-none");
+    nachObenButton.classList.remove("opacity-100");
   }
 });
 
@@ -13,6 +15,3 @@ window.addEventListener("scroll", () => {
 nachObenButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
-
-

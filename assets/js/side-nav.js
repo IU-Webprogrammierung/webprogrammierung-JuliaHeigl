@@ -5,11 +5,11 @@ const closeBtn = document.querySelector('.button-side-nav-close');    // Button 
 
 // Seitennavigation öffnet sich mit Klick auf Button
 button.addEventListener('click', () => {
-  const isOpen = sideNav.classList.toggle('is-open');
-  button.setAttribute('aria-expanded', isOpen);
+  const isHidden = sideNav.classList.toggle('hidden');
+  button.setAttribute('aria-expanded', !isHidden);
+  sideNav.classList.toggle('flex');
 
-  // Fokus auf ersten Link
-  if (isOpen) {
+  if (!isHidden) {
     navLinks[0].focus();
   } else {
     button.focus();
@@ -19,14 +19,16 @@ button.addEventListener('click', () => {
 // Seitennavigation schließt mit Klick auf Bereich außerhalb der Navigation
 sideNav.addEventListener('click', (e) => {
   if (e.target === sideNav) {
-    sideNav.classList.remove('is-open');
+    sideNav.classList.add('hidden');
+    sideNav.classList.remove('flex');
     button.setAttribute('aria-expanded', 'false');
   }
 });
 
 // Button zum Schließen der Seitennavigation
 closeBtn.addEventListener('click', () => {
-  sideNav.classList.remove('is-open');
+  sideNav.classList.add('hidden');
+  sideNav.classList.remove('flex');
   button.setAttribute('aria-expanded', 'false');
 });
 
@@ -37,7 +39,8 @@ navLinks.forEach(link => {
     const targetId = link.getAttribute('href').substring(1);
     const target = document.getElementById(targetId);
 
-    sideNav.classList.remove('is-open');
+    sideNav.classList.add('hidden');
+    sideNav.classList.remove('flex');
     button.setAttribute('aria-expanded', 'false');
 
     if (target) {
@@ -48,8 +51,8 @@ navLinks.forEach(link => {
 
 // Seitennavigation schließt mit Esc
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && sideNav.classList.contains('is-open')) {
-    sideNav.classList.remove('is-open');
+  if (e.key === 'Escape' && !sideNav.classList.contains('hidden')) {
+    sideNav.classList.add('hidden');
     button.setAttribute('aria-expanded', 'false');
     button.focus();
   }

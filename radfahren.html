@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8">
@@ -9,6 +9,11 @@
     <title>System in die Sache bringen</title>
 
     <link rel="icon" href="assets/images/global/neuron.png">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- eigenes CSS -->
     <link rel="stylesheet" href="assets/css/basics.css">
     <link rel="stylesheet" href="assets/css/themes.css">
 
@@ -18,22 +23,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 
-<body>
-    <a href="#hauptinhalt" class="versteckt skip-link">
+<body class="font-[Barlow]">
+    <a href="#hauptinhalt"
+        class="sr-only focus:not-sr-only focus:absolute focus:mt-2 focus:ml-2 focus:px-4 focus:py-2 focus:underline focus:bg-[var(--color-accent)] focus:text-[var(--color-text-main)] focus:z-[3000]">
         Zum Hauptinhalt springen
     </a>
     <site-header></site-header>
 
-    <main class="seitenlayout radfahren" id="hauptinhalt">
-        <section class="content">
-            <h1>Radfahren - On the road auf zwei Rädern</h1>
-            <p role="status">
+    <main class="max-w-6xl mx-auto max-lg:mx-6 lg:mx-48 pt-6 text-[var(--color-text-main)]" id="hauptinhalt">
+        <section class="">
+            <h1 class="font-[Orbitron] text-3xl font-bold mb-6 mt-4">Radfahren - On the road auf zwei Rädern</h1>
+            <p role="status" class="mb-4">
                 Diese Themenseite befindet sich derzeit noch in Vorbereitung.
             </p>
-            <p>
+            <p class="mb-8">
                 Mein besattelter Testpartner sammelt aktuell fleißig Kilometer, testet Touren und arbeitet an
                 aussagekräftigen Streckenprofilen.
                 Langfristig wird es hier außerdem Kauftipps geben - für alle, die den perfekten Kameraden auf zwei
@@ -41,7 +46,6 @@
             </p>
 
             <img src="assets/images/radfahren/zerlegtes-fahrrad.png" alt="Illustration Fahrradteile" loading="lazy">
-
         </section>
     </main>
 

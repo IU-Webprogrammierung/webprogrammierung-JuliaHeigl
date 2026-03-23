@@ -6,31 +6,31 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = html;
 
     /* aktuelle Seite setzen */
-    const links = this.querySelectorAll('.main-nav a');
-    const aktuelleSeite = window.location.pathname.split('/').pop() || 'index.html';
+    const links = this.querySelectorAll('nav a');
+    const aktuelleSeite =
+      window.location.pathname.split('/').pop() || 'index.html';
 
     links.forEach(link => {
-      const linkHref = link.getAttribute('href');
-
-      if (linkHref === aktuelleSeite) {
+      if (link.getAttribute('href') === aktuelleSeite) {
         link.setAttribute('aria-current', 'page');
       }
     });
 
-    // ARIA-Attribute setzen
-    const toggle = this.querySelector('.nav-mobil');
-    const nav = this.querySelector('.main-nav');
+    /* Hamburger-Menü */
+    const toggle = this.querySelector('#nav-mobil');
+    const nav = this.querySelector('#nav-list');
 
     if (!toggle || !nav) return;
 
-    toggle.setAttribute('aria-expanded', 'false');
-
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('nav-open');
-      toggle.classList.toggle('is-open');
 
-      const isOpen = toggle.classList.contains('is-open');
-      toggle.setAttribute('aria-expanded', isOpen);
+      nav.classList.toggle('hidden');
+
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+
+      toggle.textContent = expanded ? '☰' : '✕';
+
     });
   }
 }

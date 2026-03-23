@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8">
@@ -9,6 +9,11 @@
     <title>System in die Sache bringen</title>
 
     <link rel="icon" href="assets/images/global/neuron.png">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- eigenes CSS -->
     <link rel="stylesheet" href="assets/css/basics.css">
     <link rel="stylesheet" href="assets/css/themes.css">
 
@@ -20,88 +25,151 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 
-<body>
-    <a href="#hauptinhalt" class="versteckt skip-link">
+<body class="font-[Barlow]">
+    <a href="#hauptinhalt"
+        class="sr-only focus:not-sr-only focus:absolute focus:mt-2 focus:ml-2 focus:px-4 focus:py-2 focus:underline focus:bg-[var(--color-accent)] focus:text-[var(--color-text-main)] focus:z-[3000]">
         Zum Hauptinhalt springen
     </a>
     <site-header></site-header>
 
-    <main class="seitenlayout garten">
+    <main class="max-lg:mx-6 lg:ml-8 pt-4 lg:grid lg:grid-cols-[150px_minmax(0,1fr)_160px] lg:gap-10">
 
-        <button class="button-side-nav" aria-label="Seitennavigation öffnen" aria-expanded="false"
-            aria-controls="seitennavigation-garten">
+        <button
+            class="button-side-nav inline-block w-full lg:hidden bg-[var(--color-second)] text-[var(--color-text-accent)] px-4 py-2 rounded-lg text-sm my-4 md:mt-0"
+            aria-label="Seitennavigation öffnen" aria-expanded="false" aria-controls="seitennavigation-garten">
             Inhalt anzeigen
         </button>
 
-        <nav class="side-nav" id="seitennavigation-garten" aria-label="Seitennavigation">
-            <div class="inner-side-nav">
-                <button class="button-side-nav-close" aria-label="Seitennavigation schließen">✕</button>
-                <ul>
-                    <li><a href="#schwarzwurzel">Schwarzwurzel</a></li>
-                    <li><a href="#tomaten">Tomaten</a></li>
-                    <li><a href="#kuerbis">Kürbis</a></li>
-                    <li><a href="#rote-bete">Rote Bete</a></li>
-                    <li><a href="#zucchini">Zucchini</a></li>
-                    <li><a href="#rettich">Rettich</a></li>
-                    <li><a href="#karotten">Karotten</a></li>
+        <nav id="seitennavigation-garten" aria-label="Seitennavigation" class="side-nav fixed inset-0 z-[2000] bg-black/40 hidden items-start justify-center pt-20 
+        lg:col-start-1 lg:row-start-1 lg:self-start lg:sticky lg:top-16 lg:static lg:block lg:bg-transparent lg:pt-0">
+
+            <div class="relative w-[90%] max-w-[400px] bg-[var(--color-second)] rounded-xl p-5 shadow-xl
+            lg:w-full lg:max-w-none lg:bg-[color-mix(in_srgb,var(--color-second)_92%,black)] lg:shadow-md">
+
+                <button class="button-side-nav-close mb-2 text-lg text-[var(--color-text-accent)] lg:hidden px-4 py-2"
+                    aria-label="Seitennavigation schließen">
+                    ✕
+                </button>
+
+                <ul
+                    class="list-none p-0 m-0 space-y-2 lg:space-y-2 text-[var(--color-text-accent)] lg:text-[var(--color-text-muted)] lg:text-sm lg:px-0 ">
+
+                    <li><a href="#schwarzwurzel"
+                            class="block max-lg:px-3 py-1.5 rounded-md lg:py-1 lg:px-2 hover:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] focus:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)]">
+                            Schwarzwurzel</a></li>
+
+                    <li><a href="#tomaten"
+                            class="block max-lg:px-3 py-1.5 lg:px-2 rounded-md hover:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] focus:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] lg:py-1">
+                            Tomaten</a></li>
+
+                    <li><a href="#kuerbis"
+                            class="block max-lg:px-3 py-1.5 lg:px-2 rounded-md hover:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] focus:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] lg:py-1">
+                            Kürbis</a></li>
+
+                    <li><a href="#rote-bete"
+                            class="block max-lg:px-3 py-1.5 lg:px-2 rounded-md hover:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] focus:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] lg:py-1">
+                            Rote Bete</a></li>
+
+                    <li><a href="#zucchini"
+                            class="block max-lg:px-3 py-1.5 lg:px-2 rounded-md hover:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] focus:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] lg:py-1">
+                            Zucchini</a></li>
+
+                    <li><a href="#rettich"
+                            class="block max-lg:px-3 py-1.5 lg:px-2 rounded-md hover:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] focus:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] lg:py-1">
+                            Rettich</a></li>
+
+                    <li><a href="#karotten"
+                            class="block max-lg:px-3 py-1.5 lg:px-2 rounded-md hover:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] focus:bg-[color-mix(in_srgb,var(--color-accent)_25%,transparent)] lg:py-1">
+                            Karotten</a></li>
                 </ul>
             </div>
         </nav>
 
-        <section class="content" id="hauptinhalt">
-            <h1>Nachhaltiges Gärtnern für faule Gemüsebauern</h1>
-            <p>
+        <section class="max-lg:mx-2 lg:mt-6 text-[var(--color-text-main)] lg:col-start-2" id="hauptinhalt">
+            <h1 class="font-[Orbitron] text-3xl font-bold mb-6">Nachhaltiges Gärtnern für faule Gemüsebauern</h1>
+            <p class="mb-4">
                 Ihr wolltet schon immer euer eigenes Gemüse anbauen, habt aber weder Zeit noch Lust, euch ausgiebig mit
                 Permakultur, Fruchtfolge und Co. zu beschäftigen?
                 Eure zwei grünen Daumen sind inzwischen eher grau und während Nachbars Garten immer perfekt aussieht,
                 kann man bei euch bestenfalls sagen, dass ihr euch „bemüht“ habt?
             </p>
-            <p>
+            <p class="pb-8 border-b border-[var(--color-second)]">
                 Dann seid ihr hier genau richtig.
                 Auf dieser Seite findet ihr Gemüsesteckbriefe und alltagstaugliche Tipps, die euch helfen,
                 einen Weg aus dem Schneckenfrust zu finden und eine Anbaustrategie zu entwickeln, die wirklich zu eurem
                 Garten - und eurem Zeitbudget - passt.
             </p>
 
-            <article class="pflanze" id="schwarzwurzel" tabindex="-1">
-                <h2>Schwarzwurzel</h2>
+            <article id="schwarzwurzel" tabindex="-1" class="grid gap-4 my-4 pb-8 border-b border-[var(--color-second)] first:border-t-2 first:border-[var(--color-second)] first:mt-10
+                md:grid-cols-[1fr_1.6fr] md:items-start md:gap-x-8 md:scroll-mt-16">
 
-                <p class="garten-kurzbeschreibung">
-                    Die letzte Rettung für den schneckengeplagten Garten
-                </p>
+                <h2 class="text-[1.8em] font-bold mb-0 md:col-span-2">Schwarzwurzel</h2>
+                <p class="italic opacity-80 mt-0 md:col-span-2">Die letzte Rettung für den schneckengeplagten Garten</p>
 
-                <div class="garten-bild-wrapper garten-bild-hoch">
-                    <img src="assets/images/garten/schwarzwurzel.png" alt="Illustration von zwei Comic-Schwarzwurzeln">
+                <div class="relative flex justify-center items-center p-12 max-w-[360px] mx-auto
+                    bg-[url('/assets/images/garten/rahmen-garten.png')] bg-contain bg-no-repeat bg-center">
+                    <img src="assets/images/garten/schwarzwurzel.png" alt="Illustration von zwei Comic-Schwarzwurzeln"
+                        class="max-h-[220px] w-auto" />
                 </div>
 
-                <dl>
-                    <dt>Standort</dt>
-                    <dd>verträgt auch Halbschatten</dd>
+                <dl
+                    class="bg-[color-mix(in_srgb,var(--color-second)_16%,transparent)] dark:bg-[var(--color-accent)]
+                    p-3 px-5 rounded-xl shadow grid grid-cols-[auto_1fr] gap-y-2 gap-x-5 md:grid-cols-[minmax(7rem,9rem)_1fr]">
 
-                    <dt>Boden</dt>
-                    <dd>gut gelockert, kommt aber auch mit schwereren Böden zurecht</dd>
+                    <dt class="font-semibold text-[var(--color-second)] px-3 pt-1">Standort</dt>
+                    <dd class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg">verträgt auch
+                        Halbschatten</dd>
 
-                    <dt>Aussaat</dt>
-                    <dd>März bis Mitte Mai</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Boden</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        gut gelockert, kommt aber auch mit schwereren Böden zurecht</dd>
 
-                    <dt>Ernte</dt>
-                    <dd>Oktober bis Dezember</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Aussaat</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        März bis Mitte Mai</dd>
 
-                    <dt>Wasserbedarf</dt>
-                    <dd>gering</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Ernte</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Oktober bis Dezember</dd>
 
-                    <dt>Pflegeaufwand</dt>
-                    <dd>sehr gering</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Wasserbedarf</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        gering</dd>
 
-                    <dt>Schneckenresistenz</dt>
-                    <dd>kein Interesse</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Pflegeaufwand</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        sehr gering</dd>
 
-                    <dt>Anbautipps</dt>
-                    <dd>
-                        <ul>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Schneckenresistenz</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        kein Interesse</dd>
+
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Anbautipps</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        <ul class="list-disc pl-6">
                             <li>Bei schweren Böden vor der Aussaat mindestens 40 cm tief umgraben.</li>
                             <li>Mit der Ernte bis zum ersten stärkeren Frost warten (für einen süßeren Geschmack).</li>
                             <li>Beim Schälen Handschuhe tragen, da die Wurzeln einen klebrigen weißen Saft absondern.
@@ -111,42 +179,73 @@
                 </dl>
             </article>
 
-            <article class="pflanze" id="tomaten" tabindex="-1">
-                <h2>Tomaten</h2>
+            <article id="tomaten" tabindex="-1" class="grid gap-4 my-4 pb-8 border-b border-[var(--color-second)] first:border-t-2 first:border-[var(--color-second)] first:mt-10
+                md:grid-cols-[1fr_1.6fr] md:items-start md:gap-x-8 lg:grid-cols-[1.6fr_1fr] md:scroll-mt-16">
 
-                <p class="garten-kurzbeschreibung">
-                    Maximale Sortenvielfalt für den Hobbygärtner
-                </p>
+                <h2 class="text-[1.8em] font-bold mb-0 md:col-span-2">Tomaten</h2>
+                <p class="italic opacity-80 mt-0 md:col-span-2">Maximale Sortenvielfalt für den Hobbygärtner</p>
 
-                <div class="garten-bild-wrapper garten-bild-hoch">
-                    <img src="assets/images/garten/tomaten.png" alt="Illustration von fünf zu einer Pyramide gestapelten Comic-Tomaten">
+                <div class="relative flex justify-center items-center p-12 max-w-[360px] mx-auto
+                    bg-[url('/assets/images/garten/rahmen-garten.png')] bg-contain bg-no-repeat bg-center lg:order-2">
+                    <img src="assets/images/garten/tomaten.png"
+                        alt="Illustration von fünf zu einer Pyramide gestapelten Comic-Tomaten"
+                        class="max-h-[220px] w-auto" />
                 </div>
 
-                <dl>
-                    <dt>Standort</dt>
-                    <dd>sonnig</dd>
+                <dl
+                    class="bg-[color-mix(in_srgb,var(--color-second)_16%,transparent)] dark:bg-[var(--color-accent)]
+                    p-3 px-5 rounded-xl shadow grid grid-cols-[auto_1fr] gap-y-2 gap-x-5 md:grid-cols-[minmax(7rem,9rem)_1fr] lg:order-1">
+                    <dt class="font-semibold text-[var(--color-second)] px-3 pt-1">Standort</dt>
+                    <dd class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg">sonnig</dd>
 
-                    <dt>Boden</dt>
-                    <dd>nährstoffreich</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Boden</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        nährstoffreich</dd>
 
-                    <dt>Aussaat</dt>
-                    <dd>Februar (Voranzucht) bis Mai</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Aussaat</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Februar (Voranzucht) bis Mai</dd>
 
-                    <dt>Ernte</dt>
-                    <dd>Juni bis Oktober</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Ernte</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Juni bis Oktober</dd>
 
-                    <dt>Wasserbedarf</dt>
-                    <dd>hoch</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Wasserbedarf</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        hoch</dd>
 
-                    <dt>Pflegeaufwand</dt>
-                    <dd>mittel bis hoch</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Pflegeaufwand</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        mittel bis hoch</dd>
 
-                    <dt>Schneckenresistenz</dt>
-                    <dd>mittel</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Schneckenresistenz</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        mittel</dd>
 
-                    <dt>Anbautipps</dt>
-                    <dd>
-                        <ul>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Anbautipps</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        <ul class="list-disc pl-6">
                             <li>Schneckengefahr bei Jungpflanzen. Am besten in Kübeln anpflanzen und mit Kupferband
                                 umwickeln</li>
                             <li>An einem regengeschützten Ort anpflanzen, um Tomatenfäule zu vermeiden.</li>
@@ -157,42 +256,74 @@
                 </dl>
             </article>
 
-            <article class="pflanze" id="kuerbis" tabindex="-1">
-                <h2>Kürbis</h2>
+            <article id="kuerbis" tabindex="-1" class="grid gap-4 my-4 pb-8 border-b border-[var(--color-second)] first:border-t-2 first:border-[var(--color-second)] first:mt-10
+                md:grid-cols-[1fr_1.6fr] md:items-start md:gap-x-8 md:scroll-mt-16">
 
-                <p class="garten-kurzbeschreibung">
-                    Ein Festmahl für Schnecken
-                </p>
+                <h2 class="text-[1.8em] font-bold mb-0 md:col-span-2">Kürbis</h2>
+                <p class="italic opacity-80 mt-0 md:col-span-2">Ein Festmahl für Schnecken</p>
 
-                <div class="garten-bild-wrapper garten-bild-hoch">
-                    <img src="assets/images/garten/kuerbis.png" alt="Illustration von drei zu einer Pyramide gestapelten Comic-Kürbissen">
+                <div class="relative flex justify-center items-center p-12 max-w-[360px] mx-auto
+                    bg-[url('/assets/images/garten/rahmen-garten.png')] bg-contain bg-no-repeat bg-center">
+                    <img src="assets/images/garten/kuerbis.png"
+                        alt="Illustration von drei zu einer Pyramide gestapelten Comic-Kürbissen"
+                        class="max-h-[220px] w-auto" />
                 </div>
 
-                <dl>
-                    <dt>Standort</dt>
-                    <dd>verträgt auch Halbschatten</dd>
+                <dl
+                    class="bg-[color-mix(in_srgb,var(--color-second)_16%,transparent)] dark:bg-[var(--color-accent)]
+                    p-3 px-5 rounded-xl shadow grid grid-cols-[auto_1fr] gap-y-2 gap-x-5 md:grid-cols-[minmax(7rem,9rem)_1fr]">
+                    <dt class="font-semibold text-[var(--color-second)] px-3 pt-1">Standort</dt>
+                    <dd class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg">verträgt auch
+                        Halbschatten</dd>
 
-                    <dt>Boden</dt>
-                    <dd>nährstoffreich, unbedingt zuvor reichhaltig mit Kompost anreichern</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Boden</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        nährstoffreich, unbedingt zuvor reichhaltig mit Kompost anreichern</dd>
 
-                    <dt>Aussaat</dt>
-                    <dd>April (Voranzucht) bis Mai</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Aussaat</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        April (Voranzucht) bis Mai</dd>
 
-                    <dt>Ernte</dt>
-                    <dd>Juli bis Oktober</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Ernte</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Juli bis Oktober</dd>
 
-                    <dt>Wasserbedarf</dt>
-                    <dd>hoch</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Wasserbedarf</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        hoch</dd>
 
-                    <dt>Pflegeaufwand</dt>
-                    <dd>mittel</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Pflegeaufwand</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        mittel</dd>
 
-                    <dt>Schneckenresistenz</dt>
-                    <dd>keine Chance</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Schneckenresistenz</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        keine Chance</dd>
 
-                    <dt>Anbautipps</dt>
-                    <dd>
-                        <ul>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Anbautipps</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        <ul class="list-disc pl-6">
                             <li>Vergebene Liebesmüh in einem schneckenfreundlichen Garten.</li>
                             <li>Unbedingt ausreichend Platz einplanen, da die Pflanze sehr stark wuchert.</li>
                             <li>Bei optimalen Bedingungen und hingebungsvoller Pflege hoher Ertrag/Beetfläche möglich,
@@ -202,42 +333,75 @@
                 </dl>
             </article>
 
-            <article class="pflanze" id="rote-bete" tabindex="-1">
-                <h2>Rote Bete</h2>
+            <article id="rote-bete" tabindex="-1" class="grid gap-4 my-4 pb-8 border-b border-[var(--color-second)] first:border-t-2 first:border-[var(--color-second)] first:mt-10
+                md:grid-cols-[1fr_1.6fr] md:items-start md:gap-x-8 lg:grid-cols-[1.6fr_1fr] md:scroll-mt-16">
 
-                <p class="garten-kurzbeschreibung">
-                    Pflegeleichter Farbtupfer
-                </p>
+                <h2 class="text-[1.8em] font-bold mb-0 md:col-span-2">Rote Bete</h2>
+                <p class="italic opacity-80 mt-0 md:col-span-2">Pflegeleichter Farbtupfer</p>
 
-                <div class="garten-bild-wrapper garten-bild-quer">
-                    <img src="assets/images/garten/rote-bete.png" alt="Illustration von drei sich an den Händen haltenden Comic-Rote-Bete-Knollen">
+                <div
+                    class="relative flex justify-center items-center p-12 max-w-[360px] mx-auto
+                    bg-[url('/assets/images/garten/rahmen-garten-quer.png')] bg-contain bg-no-repeat bg-center lg:order-2">
+                    <img src="assets/images/garten/rote-bete.png"
+                        alt="Illustration von drei sich an den Händen haltenden Comic-Rote-Bete-Knollen"
+                        class="max-w-full h-auto" />
                 </div>
 
-                <dl>
-                    <dt>Standort</dt>
-                    <dd>verträgt auch Halbschatten</dd>
+                <dl
+                    class="bg-[color-mix(in_srgb,var(--color-second)_16%,transparent)] dark:bg-[var(--color-accent)]
+                    p-3 px-5 rounded-xl shadow grid grid-cols-[auto_1fr] gap-y-2 gap-x-5 md:grid-cols-[minmax(7rem,9rem)_1fr] lg:order-1">
+                    <dt class="font-semibold text-[var(--color-second)] px-3 pt-1">Standort</dt>
+                    <dd class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg">verträgt auch
+                        Halbschatten</dd>
 
-                    <dt>Boden</dt>
-                    <dd>anspruchslos</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Boden</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        anspruchslos</dd>
 
-                    <dt>Aussaat</dt>
-                    <dd>April bis Juli</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Aussaat</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        April bis Juli</dd>
 
-                    <dt>Ernte</dt>
-                    <dd>Juli bis Oktober</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Ernte</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Juli bis Oktober</dd>
 
-                    <dt>Wasserbedarf</dt>
-                    <dd>gering</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Wasserbedarf</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        gering</dd>
 
-                    <dt>Pflegeaufwand</dt>
-                    <dd>gering</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Pflegeaufwand</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        gering</dd>
 
-                    <dt>Schneckenresistenz</dt>
-                    <dd>gefährdet in der Keimphase</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Schneckenresistenz</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        gefährdet in der Keimphase</dd>
 
-                    <dt>Anbautipps</dt>
-                    <dd>
-                        <ul>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Anbautipps</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        <ul class="list-disc pl-6">
                             <li>Große Sortenvielfalt von geringelten bis bunten Exemplaren.</li>
                             <li>Wächst sehr schnell und garantiert durchgehende Versorgung in Sommer und Herbst.</li>
                             <li>Sehr anspruchslos und widerstandsfähig, sobald die Pflänzchen die ersten Schneckenwellen
@@ -247,42 +411,74 @@
                 </dl>
             </article>
 
-            <article class="pflanze" id="zucchini" tabindex="-1">
-                <h2>Zucchini</h2>
+            <article id="zucchini" tabindex="-1" class="grid gap-4 my-4 pb-8 border-b border-[var(--color-second)] first:border-t-2 first:border-[var(--color-second)] first:mt-10
+                md:grid-cols-[1fr_1.6fr] md:items-start md:gap-x-8 md:scroll-mt-16">
 
-                <p class="garten-kurzbeschreibung">
-                    Italienisches Flair im Gemüsebeet
-                </p>
+                <h2 class="text-[1.8em] font-bold mb-0 md:col-span-2">Zucchini</h2>
+                <p class="italic opacity-80 mt-0 md:col-span-2">Italienisches Flair im Gemüsebeet</p>
 
-                <div class="garten-bild-wrapper garten-bild-quer">
-                    <img src="assets/images/garten/zucchini.png" alt="Illustration von zwei Comic-Zucchini, die eine dritte Zucchini tragen">
+                <div class="relative flex justify-center items-center p-12 max-w-[360px] mx-auto
+                    bg-[url('/assets/images/garten/rahmen-garten-quer.png')] bg-contain bg-no-repeat bg-center">
+                    <img src="assets/images/garten/zucchini.png"
+                        alt="Illustration von zwei Comic-Zucchini, die eine dritte Zucchini tragen"
+                        class="max-w-full h-auto" />
                 </div>
 
-                <dl>
-                    <dt>Standort</dt>
-                    <dd>verträgt auch Halbschatten</dd>
+                <dl
+                    class="bg-[color-mix(in_srgb,var(--color-second)_16%,transparent)] dark:bg-[var(--color-accent)]
+                    p-3 px-5 rounded-xl shadow grid grid-cols-[auto_1fr] gap-y-2 gap-x-5 md:grid-cols-[minmax(7rem,9rem)_1fr]">
+                    <dt class="font-semibold text-[var(--color-second)] px-3 pt-1">Standort</dt>
+                    <dd class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg">verträgt auch
+                        Halbschatten</dd>
 
-                    <dt>Boden</dt>
-                    <dd>nährstoffreich, unbedingt vorher mit Kompost anreichern</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Boden</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        nährstoffreich, unbedingt vorher mit Kompost anreichern</dd>
 
-                    <dt>Aussaat</dt>
-                    <dd>April (Voranzucht) bis Juni</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Aussaat</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        April (Voranzucht) bis Juni</dd>
 
-                    <dt>Ernte</dt>
-                    <dd>Juli bis Oktober</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Ernte</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Juli bis Oktober</dd>
 
-                    <dt>Wasserbedarf</dt>
-                    <dd>hoch</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Wasserbedarf</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        hoch</dd>
 
-                    <dt>Pflegeaufwand</dt>
-                    <dd>mittel</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Pflegeaufwand</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        mittel</dd>
 
-                    <dt>Schneckenresistenz</dt>
-                    <dd>Schneckenparadies</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Schneckenresistenz</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Schneckenparadies</dd>
 
-                    <dt>Anbautipps</dt>
-                    <dd>
-                        <ul>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Anbautipps</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        <ul class="list-disc pl-6">
                             <li>Erspart euch den Frust, wenn ihr einen schneckenreichen Garten habt.</li>
                             <li>Sehr ertragreich über viele Wochen hinweg: reicht für die ganze Nachbarschaft,
                                 Arbeitskollegen und den weiteren Familienkreis.</li>
@@ -292,42 +488,73 @@
                 </dl>
             </article>
 
-            <article class="pflanze" id="rettich" tabindex="-1">
-                <h2>Rettich</h2>
+            <article id="rettich" tabindex="-1" class="grid gap-4 my-4 pb-8 border-b border-[var(--color-second)] first:border-t-2 first:border-[var(--color-second)] first:mt-10
+                md:grid-cols-[1fr_1.6fr] md:items-start md:gap-x-8 lg:grid-cols-[1.6fr_1fr] md:scroll-mt-16">
 
-                <p class="garten-kurzbeschreibung">
-                    Rundum-sorglos-Paket für den faulen Gärtner
-                </p>
+                <h2 class="text-[1.8em] font-bold mb-0 md:col-span-2">Rettich</h2>
+                <p class="italic opacity-80 mt-0 md:col-span-2">Rundum-sorglos-Paket für den faulen Gärtner</p>
 
-                <div class="garten-bild-wrapper garten-bild-hoch">
-                    <img src="assets/images/garten/rettich.png" alt="Illustration von zwei Comic-Rettichen mit Blätterherz">
+                <div class="relative flex justify-center items-center p-12 max-w-[360px] mx-auto
+                    bg-[url('/assets/images/garten/rahmen-garten.png')] bg-contain bg-no-repeat bg-center lg:order-2">
+                    <img src="assets/images/garten/rettich.png"
+                        alt="Illustration von zwei Comic-Rettichen mit Blätterherz" class="max-h-[220px] w-auto" />
                 </div>
 
-                <dl>
-                    <dt>Standort</dt>
-                    <dd>verträgt auch Halbschatten</dd>
+                <dl
+                    class="bg-[color-mix(in_srgb,var(--color-second)_16%,transparent)] dark:bg-[var(--color-accent)]
+                    p-3 px-5 rounded-xl shadow grid grid-cols-[auto_1fr] gap-y-2 gap-x-5 md:grid-cols-[minmax(7rem,9rem)_1fr] lg:order-1">
+                    <dt class="font-semibold text-[var(--color-second)] px-3 pt-1">Standort</dt>
+                    <dd class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg">verträgt auch
+                        Halbschatten</dd>
 
-                    <dt>Boden</dt>
-                    <dd>anspruchslos</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Boden</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        anspruchslos</dd>
 
-                    <dt>Aussaat</dt>
-                    <dd>sortenabhängig</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Aussaat</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        sortenabhängig</dd>
 
-                    <dt>Ernte</dt>
-                    <dd>sortenabhängig</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Ernte</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        sortenabhängig</dd>
 
-                    <dt>Wasserbedarf</dt>
-                    <dd>gering</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Wasserbedarf</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        gering</dd>
 
-                    <dt>Pflegeaufwand</dt>
-                    <dd>gering</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Pflegeaufwand</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        gering</dd>
 
-                    <dt>Schneckenresistenz</dt>
-                    <dd>hoch bei frühen Sorten</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Schneckenresistenz</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        hoch bei frühen Sorten</dd>
 
-                    <dt>Anbautipps</dt>
-                    <dd>
-                        <ul>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Anbautipps</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        <ul class="list-disc pl-6">
                             <li>Einen Versuch wert in einem schneckengeplagten Garten: Schnecken meiden die leicht
                                 stacheligen Blätter.</li>
                             <li>Je nach Sorte durchgehende Versorgung mit Rettich über die ganze Saison hinweg.</li>
@@ -338,42 +565,74 @@
                 </dl>
             </article>
 
-            <article class="pflanze" id="karotten" tabindex="-1">
-                <h2>Karotten</h2>
+            <article id="karotten" tabindex="-1" class="grid gap-4 my-4 pb-8 border-b border-[var(--color-second)] first:border-t-2 first:border-[var(--color-second)] first:mt-10
+                md:grid-cols-[1fr_1.6fr] md:items-start md:gap-x-8 md:scroll-mt-16">
 
-                <p class="garten-kurzbeschreibung">
-                    Vielfältiger Klassiker
-                </p>
+                <h2 class="text-[1.8em] font-bold mb-0 md:col-span-2">Karotten</h2>
+                <p class="italic opacity-80 mt-0 md:col-span-2">Vielfältiger Klassiker</p>
 
-                <div class="garten-bild-wrapper garten-bild-hoch">
-                    <img src="assets/images/garten/karotten.png" alt="Illustration von drei sich an den Händen haltenden Comic-Karotten">
+                <div class="relative flex justify-center items-center p-12 max-w-[360px] mx-auto
+                    bg-[url('/assets/images/garten/rahmen-garten.png')] bg-contain bg-no-repeat bg-center">
+                    <img src="assets/images/garten/karotten.png"
+                        alt="Illustration von drei sich an den Händen haltenden Comic-Karotten"
+                        class="max-h-[220px] w-auto" />
                 </div>
 
-                <dl>
-                    <dt>Standort</dt>
-                    <dd>verträgt auch Halbschatten</dd>
+                <dl
+                    class="bg-[color-mix(in_srgb,var(--color-second)_16%,transparent)] dark:bg-[var(--color-accent)]
+                    p-3 px-5 rounded-xl shadow grid grid-cols-[auto_1fr] gap-y-2 gap-x-5 md:grid-cols-[minmax(7rem,9rem)_1fr]">
+                    <dt class="font-semibold text-[var(--color-second)] px-3 pt-1">Standort</dt>
+                    <dd class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg">verträgt auch
+                        Halbschatten</dd>
 
-                    <dt>Boden</dt>
-                    <dd>sandig</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Boden</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        sandig</dd>
 
-                    <dt>Aussaat</dt>
-                    <dd>März bis Juli</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Aussaat</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        März bis Juli</dd>
 
-                    <dt>Ernte</dt>
-                    <dd>Juni bis Oktober</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Ernte</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Juni bis Oktober</dd>
 
-                    <dt>Wasserbedarf</dt>
-                    <dd>gering</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Wasserbedarf</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        gering</dd>
 
-                    <dt>Pflegeaufwand</dt>
-                    <dd>mittel</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Pflegeaufwand</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        mittel</dd>
 
-                    <dt>Schneckenresistenz</dt>
-                    <dd>gefährdet in der Keimphase</dd>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Schneckenresistenz</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        gefährdet in der Keimphase</dd>
 
-                    <dt>Anbautipps</dt>
-                    <dd>
-                        <ul>
+                    <dt
+                        class="font-semibold text-[var(--color-second)] px-3 pt-1 border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        Anbautipps</dt>
+                    <dd
+                        class="m-0 bg-white/40 px-2 py-1 dark:bg-[var(--color-second)] rounded-lg border-t border-[color-mix(in_srgb,var(--color-second)_25%,transparent)]">
+                        <ul class="list-disc pl-6">
                             <li>Bei schweren Böden mit Sand anreichern und vor der Aussaat gut auflockern, da die
                                 Karotten anderenfalls Beine bekommen.</li>
                             <li>Achtung vor der Möhrenfliege - nicht mehrere Jahre in Folge im gleichen Beet anbauen.
@@ -385,11 +644,15 @@
                 </dl>
             </article>
         </section>
+
+        <button id="nachObenButton" aria-label="Nach oben"
+            class="fixed bottom-6 right-6 z-50 border bg-[var(--color-main)] text-[var(--color-text-accent)]
+                px-4 py-2 rounded-lg shadow-lg opacity-0 pointer-events-none transition duration-300 hover:brightness-110
+                focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent)] hover:brightness-110">
+            ↑
+        </button>
     </main>
 
-    <button hidden class="nachObenButton" aria-label="Nach oben">
-            ↑
-    </button>
     <site-footer></site-footer>
 
 </body>
