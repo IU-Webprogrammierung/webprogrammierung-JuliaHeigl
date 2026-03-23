@@ -45,7 +45,7 @@ webprogrammierung-JuliaHeigl/
 - **radfahren.html** – Platzhalterseite (bewusst noch nicht umgesetzt)  
 - **garten.html** – Steckbriefe zu Gemüsesorten (`article`, `dl`)  
 - **gaming-online.html** – Waffenempfehlungen für Charaktere in Genshin Impact (`table`)  
-- **gaming-offline.html** – Tier-List für Konzenre in Terraforming Mars (`fieldset`, `table`)  
+- **gaming-offline.html** – Tier-List für Konzerne in Terraforming Mars (`fieldset`, `table`)  
 - **quiz.html** – Quiz zur Ermittlung einer passenden Themenseite (`form`)
 - **impressum.html** – Impressum und rechtliche Hinweise  
 - **kontakt.html** – Kontaktformular (`form`)
@@ -71,12 +71,12 @@ Der Footer enthält Links zum Impressum und zum Kontaktformular.
 ### Seitenlayout
 Die grundlegende Seitenstruktur wird mithilfe von Flexbox umgesetzt, bei einzelnen Komponenten wird außerdem ein CSS-Grid verwendet.
 
-Die Website bietet ein dunkles Farbschema, dass sich dan den Dark-Mode-Einstellungen des Betriebssystems orientiert.
+Die Website bietet ein dunkles Farbschema, dass sich an den Dark-Mode-Einstellungen des Betriebssystems orientiert.
 
 ### Refactoring mit CSS-Framework Tailwind
-Neuer Branch in GitHub für Refactoring mit Tailwind am 11.03.2026 erstellt
+Neuer Branch in GitHub für Refactoring mit Tailwind am 11.03.2026 erstellt, letzte Änderungen an beiden Branches am 22.03.2026; gemerged am 23.03.2026
 
-Da im Rahmen dieses Studienprojekts ein Build-Prozess nicht praktikabel war, wurde Tailwind über das CDN eingebunden. Eine Auslagerung der Tailwind-Klassen in eine externe CSS-Datei war daher nicht möglich, sodass die Klassen direkt in den HTML-Elementen stehen und Wiederholungen unvermeidbar waren.
+Da im Rahmen dieses Studienprojekts ein Build-Prozess nicht praktikabel war, wurde Tailwind über das CDN eingebunden. Eine Auslagerung der Tailwind-Klassen in eine externe CSS-Datei war daher nicht möglich, sodass die Klassen direkt in den HTML-Elementen stehen und Wiederholungen unvermeidbar waren. 
 
 ## Responsives Konzept
 Für die responsive Darstellung werden zwei Breakpoints bei 768 Pixel und 1024 Pixel definiert. Daraus ergeben sich folgende Ansichten:
@@ -157,7 +157,7 @@ Jede Kachel als `a`, bestehend aus
 
 ### wandern.html
 #### Beschreibung
-Themenseite Wandern mit Wanderberichte zu den Seven Summits von Bodenmais
+Themenseite Wandern mit Wanderberichten zu den Seven Summits von Bodenmais
 #### Layout
 Jeder Wanderbericht als `article`, bestehend aus
   - `img`:  Foto des Gipfels, Standard 300px, für High-DPI mit `srcset` 600px
@@ -251,6 +251,10 @@ Footer mit Links zu Impressum und Kontakt
 
 ## Qualitätssicherung (Lighthouse, Screenreader, etc.)
 - **verwendeter Browser**: Entwicklung und grundlegende Tests mit Firefox; zusätzliche finale Tests mit Microsoft, um die Kompatibilität mit der Blink-Engine sicherzustellen 
-- **Lighthouse**: In den Bereichen *Accessability* und *Best Practices* ergab eine Überprüfung der Website jeweils 100 % (sowohl für eigenes CSS als auch für Tailwind).
-- **Screenreader**: 
+- **Lighthouse**: 100 % in den Bereichen *Accessability* und *Best Practices* (eigenes CSS und Tailwind)
+- **Screenreader**: stichprobenartige Überprüfung mit Screenreader NVDA mit Fokus auf Tastaturbedienbarkeit, korrekte semantische HTML-Struktur, interaktive Elemente
+
+## Quellen für Themenseiten
+- **Wandern, Garten, Terraforming Mars**: eigene Erfahrungen
+- **Genshin Impact**: Genshin Builds (https://genshin-builds.com/de)
 
